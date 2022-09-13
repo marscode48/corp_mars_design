@@ -1,0 +1,135 @@
+@use "../globals" as *;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: $cBgGray;
+  color: $cBlack;
+  @extend .font-md;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  color: $cBlack;
+  @extend .font-md;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* マージン */
+.mb-sm {
+  margin-bottom: 34px !important;
+
+  @include mq(lg) {
+    margin-bottom: 50px !important;
+  }
+
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+
+  @include mq(lg) {
+    margin-bottom: 120px !important;
+  }
+}
+
+/* パディング */
+.pb-sm {
+  padding-bottom: 20px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+/* フォント */
+.font-sm {
+  font-size: 0.75rem;
+}
+.font-md {
+  font-size: 0.875rem;
+}
+.font-lr {
+  font-size: 1.125rem;
+}
+.font-lg {
+  font-size: 2.25rem;
+}
+
+/* 共通クラス */
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+  padding: 0 16px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  
+  @include mq(lg) {
+    flex-direction: row;
+  }
+}
+
+/*
+h1タグ用
+line-height にh1タグの高さよりも小さい値「1px」を指定することで、
+h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
+*/
+.logo {
+  width: 80px;
+  margin: 8px 0;
+  line-height: 1px;
+
+  & a {
+    display: block;
+  }
+
+  @include mq(lg) {
+    width: 100px;
+    margin-right: 60px;
+  }
+}
+
+.section-title {
+  @extend .mb-sm;
+  font-weight: normal;
+  line-height: 1;
+
+  &::after {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: $cBlack;
+    display: block;
+  }
+
+  & .en {
+    display: block;
+    @extend .font-lg;
+    letter-spacing: 0.3em;
+    margin-bottom: 10px;
+  }
+
+  & .ja {
+    display: block;
+    @extend .font-md;
+    margin-bottom: 24px;
+
+    @include mq(lg) {
+      margin-bottom: 36px;
+    }
+  }
+}

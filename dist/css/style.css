@@ -1,0 +1,460 @@
+@charset "UTF-8";
+.mobile-menu__btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+}
+.mobile-menu__btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.mobile-menu__btn span:nth-child(1) {
+  top: 10px;
+}
+.mobile-menu__btn span:nth-child(2) {
+  bottom: 10px;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #F0F0F0;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* マージン */
+.mb-sm, .section-title {
+  margin-bottom: 34px !important;
+}
+@media screen and (min-width: 960px) {
+  .mb-sm, .section-title {
+    margin-bottom: 50px !important;
+  }
+}
+
+.mb-lg, #mainvisual, .news, .about, .business {
+  margin-bottom: 80px !important;
+}
+@media screen and (min-width: 960px) {
+  .mb-lg, #mainvisual, .news, .about, .business {
+    margin-bottom: 120px !important;
+  }
+}
+
+/* パディング */
+.pb-sm, .footer__copyright {
+  padding-bottom: 20px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+/* フォント */
+.font-sm, .header__contact, .news__date span {
+  font-size: 0.75rem;
+}
+
+.font-md, .section-title .ja, body, a {
+  font-size: 0.875rem;
+}
+
+.font-lr {
+  font-size: 1.125rem;
+}
+
+.font-lg, .section-title .en {
+  font-size: 2.25rem;
+}
+
+/* 共通クラス */
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1032px;
+  padding: 0 16px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 960px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+/*
+h1タグ用
+line-height にh1タグの高さよりも小さい値「1px」を指定することで、
+h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
+*/
+.logo {
+  width: 80px;
+  margin: 8px 0;
+  line-height: 1px;
+}
+.logo a {
+  display: block;
+}
+@media screen and (min-width: 960px) {
+  .logo {
+    width: 100px;
+    margin-right: 60px;
+  }
+}
+
+.section-title {
+  font-weight: normal;
+  line-height: 1;
+}
+.section-title::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000000;
+  display: block;
+}
+.section-title .en {
+  display: block;
+  letter-spacing: 0.3em;
+  margin-bottom: 10px;
+}
+.section-title .ja {
+  display: block;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 960px) {
+  .section-title .ja {
+    margin-bottom: 36px;
+  }
+}
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 960px) {
+  .header__inner {
+    display: flex;
+    align-items: center;
+  }
+}
+.header__ul {
+  display: flex;
+  align-items: center;
+}
+.header__li {
+  margin-right: 30px;
+}
+.header__li:last-child {
+  margin-right: 0;
+}
+.header__contact {
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  .header__contact {
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: inline-block;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 960px) {
+  .header__contact:hover {
+    background-color: #333;
+  }
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual img {
+  width: 100%;
+  height: calc(100vh - 80px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*-------------------------------------------
+News
+-------------------------------------------*/
+@media screen and (min-width: 960px) {
+  .news__ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.news__li {
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 960px) {
+  .news__li {
+    width: 33.3333333333%;
+    border-right: 1px solid #000000;
+    padding: 10px 20px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .news__li:first-child {
+    padding-left: 0;
+  }
+}
+.news__li:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 960px) {
+  .news__li:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+.news__date {
+  margin-bottom: 16px;
+}
+.news__date span {
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #000000;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-left: 10px;
+  text-align: center;
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+@media screen and (min-width: 960px) {
+  .about {
+    display: flex;
+  }
+}
+.about__img {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 960px) {
+  .about__img {
+    width: 55%;
+    margin-bottom: 0;
+  }
+}
+.about__img img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 960px) {
+  .about__img img {
+    height: 400px;
+  }
+}
+.about__text {
+  padding: 0 16px;
+}
+@media screen and (min-width: 960px) {
+  .about__text {
+    width: 45%;
+    padding: 180px 5% 0 5%;
+  }
+}
+.about__text p {
+  line-height: 2.2;
+}
+
+/*-------------------------------------------
+Business
+-------------------------------------------*/
+@media screen and (min-width: 960px) {
+  .business__flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+  }
+}
+.business__left {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 960px) {
+  .business__left {
+    width: 46%;
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .business__right {
+    width: 46%;
+  }
+}
+.business__item {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 960px) {
+  .business__item {
+    margin-bottom: 50px;
+  }
+}
+.business__item:last-child {
+  margin-bottom: 0;
+}
+.business__title {
+  font-weight: bold;
+  margin: 0 0 10px 18px;
+  position: relative;
+}
+.business__title::before {
+  content: "";
+  width: 8px;
+  height: 1px;
+  background-color: #000000;
+  position: absolute;
+  top: 50%;
+  left: -18px;
+}
+
+/*-------------------------------------------
+Company
+-------------------------------------------*/
+@media screen and (min-width: 960px) {
+  .company {
+    height: 750px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+.company__text {
+  background-color: #FFFFFF;
+  padding: 40px 20px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 960px) {
+  .company__text {
+    width: 55%;
+    padding: 100px 8% 100px 6%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@media screen and (min-width: 960px) {
+  .company__img {
+    width: 53%;
+    position: absolute;
+    top: 115px;
+    right: 0;
+  }
+}
+.company__img img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.company__info {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 960px) {
+  .company__info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.company dt {
+  margin-top: 20px;
+}
+@media screen and (min-width: 960px) {
+  .company dt {
+    width: 20%;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .company dt:first-of-type {
+    margin-top: 0;
+  }
+}
+.company dd {
+  margin-top: 5px;
+  padding-left: 14px;
+}
+@media screen and (min-width: 960px) {
+  .company dd {
+    width: 80%;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .company dd:first-of-type {
+    margin-top: 0;
+  }
+}
+.company__add {
+  margin-left: 20%;
+}
+
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+.footer {
+  background-color: #FFFFFF;
+  padding-bottom: 20px;
+}
+.footer__flex {
+  padding: 40px 0;
+}
+@media screen and (min-width: 960px) {
+  .footer__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.footer .logo {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 960px) {
+  .footer .logo {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
