@@ -126,7 +126,7 @@ function startAppServer() {
   ]).on('change', browserSync.reload);
 }
 
-const build = series(clean, parallel(imagemin,extras, styles, series(lint, scripts)));
+const build = series(clean, parallel(imagemin, extras, styles, series(lint, scripts)));
 const serve = series(build, startAppServer);
 
 exports.icon = icon;

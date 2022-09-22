@@ -1,4 +1,45 @@
 @charset "UTF-8";
+.mobile-menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  color: #fff;
+  padding: 50px 0 0 50px;
+  transition: all 0.5s;
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+}
+.mobile-menu a {
+  color: #000000;
+}
+.mobile-menu__ul {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+.mobile-menu__li {
+  margin-bottom: 20px;
+  transform: translate3d(0, 0, -1000px);
+  transition: transform 1s, opacity 1s;
+  opacity: 0;
+}
+.mobile-menu__li:last-child {
+  margin-bottom: 0px;
+}
+.mobile-menu__li.gif {
+  height: 150px;
+  width: 100px;
+  position: relative;
+  top: 0px;
+  right: 15px;
+}
+.mobile-menu__li.gif > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .mobile-menu__btn {
   width: 30px;
   height: 30px;
@@ -7,10 +48,14 @@
   cursor: pointer;
   z-index: 20;
 }
+@media screen and (min-width: 960px) {
+  .mobile-menu__btn {
+    display: none;
+  }
+}
 .mobile-menu__btn span {
   display: block;
   position: absolute;
-  width: 30px;
   height: 2px;
   background-color: #333;
   border-radius: 4px;
@@ -18,9 +63,85 @@
 }
 .mobile-menu__btn span:nth-child(1) {
   top: 10px;
+  width: 30px;
 }
 .mobile-menu__btn span:nth-child(2) {
   bottom: 10px;
+  width: 20px;
+}
+.mobile-menu__cover {
+  height: 100vh;
+  width: 250px;
+  background-color: #FFFFFF;
+  transition: all 0.5s;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  z-index: 20;
+  cursor: pointer;
+  box-shadow: inset 0 0 30px #c8c850;
+  visibility: hidden;
+}
+.mobile-menu__mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.menu-open .mobile-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.menu-open .mobile-menu__li {
+  transform: none;
+  opacity: 1;
+}
+.menu-open .mobile-menu__li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.menu-open .mobile-menu__li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.menu-open .mobile-menu__li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.menu-open .mobile-menu__li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.menu-open .mobile-menu__li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.menu-open .mobile-menu__li:nth-child(6) {
+  transition-delay: 0.6s;
+}
+.menu-open .mobile-menu__li:nth-child(7) {
+  transition-delay: 0.7s;
+}
+.menu-open .mobile-menu__btn span {
+  background-color: #FFFFFF;
+}
+.menu-open .mobile-menu__btn span:nth-child(1) {
+  transform: translateY(4px) rotate(-45deg);
+}
+.menu-open .mobile-menu__btn span:nth-child(2) {
+  transform: translateY(-4px) rotate(45deg);
+  width: 30px;
+}
+.menu-open .mobile-menu__cover {
+  transform: translateX(250px);
+  visibility: visible;
+}
+.menu-open .mobile-menu__mask {
+  width: calc(100% - 250px);
+  height: 100vh;
+  background: #000000;
+  opacity: 0.3;
+  z-index: 10;
+  cursor: pointer;
+  visibility: visible;
 }
 
 html {
@@ -75,7 +196,7 @@ li {
 }
 
 /* フォント */
-.font-sm, .header__contact, .news__date span {
+.font-sm, .header__reserve, .news__date span {
   font-size: 0.75rem;
 }
 
@@ -159,15 +280,33 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 header
 -------------------------------------------*/
 .header {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
   height: 80px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+.header.triggered {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
 }
 @media screen and (min-width: 960px) {
   .header__inner {
-    display: flex;
     align-items: center;
+  }
+}
+.header__nav {
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  .header__nav {
+    display: block;
   }
 }
 .header__ul {
@@ -180,11 +319,11 @@ header
 .header__li:last-child {
   margin-right: 0;
 }
-.header__contact {
+.header__reserve {
   display: none;
 }
 @media screen and (min-width: 960px) {
-  .header__contact {
+  .header__reserve {
     width: 200px;
     height: 80px;
     line-height: 80px;
@@ -195,7 +334,7 @@ header
   }
 }
 @media screen and (min-width: 960px) {
-  .header__contact:hover {
+  .header__reserve:hover {
     background-color: #333;
   }
 }
@@ -205,7 +344,7 @@ Mainvisual
 -------------------------------------------*/
 #mainvisual img {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
 }

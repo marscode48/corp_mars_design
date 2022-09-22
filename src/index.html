@@ -13,186 +13,215 @@
 
 
   <body>
-    <header class="header">
-      <div class="header__inner wrapper">
-        <h1 class="logo">
-          <a href="index.html">
-            <img src="images/logo.svg" alt="Mars House" />
-          </a>
-        </h1>
-        
-        <nav>
-          <ul class="header__ul">
-            <li class="header__li"><a href="#news">NEWS</a></li>
-            <li class="header__li"><a href="#about">ABOUT</a></li>
-            <li class="header__li"><a href="#business">BUSINESS</a></li>
-            <li class="header__li"><a href="#company">COMPANY</a></li>
-          </ul>
-        </nav>
+    <div id="global-container">
+      <div id="container">
+        <div class="nav-trigger"></div>
+        <div class="mobile-menu__cover"></div>
+        <header class="header">
+          <div class="header__inner wrapper">
+            <h1 class="logo">
+              <a href="index.html">
+                <img src="images/logo.svg" alt="Mars House" />
+              </a>
+            </h1>
+            
+            <nav class="header__nav">
+              <ul class="header__ul">
+                <li class="header__li"><a href="#about">私達について</a></li>
+                <li class="header__li"><a href="#news">お知らせ</a></li>
+                <li class="header__li"><a href="#service">家づくりコラム</a></li>
+                <li class="header__li"><a href="#reserve">商談会予約</a></li>
+              </ul>
+            </nav>
+            
+            <a class="header__reserve" href="#">商談会予約</a>
+            
+            <div class="mobile-menu__btn">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="mobile-menu__mask"></div>
+    
+          </div>
+        </header>
+    
+    
+        <main>
+          <div id="mainvisual">
+            <img src="images/mainvisual.jpeg" alt="" />
+          </div>
+    
+    
+          <section id="news" class="news wrapper">
+            <h2 class="section-title">
+              <span class="en">NEWS</span>
+              <span class="ja">ニュース</span>
+            </h2>
+    
+            
+            <ul class="news__ul">
+              <li class="news__li">
+                <div class="news__date">
+                  <time datetime="2021-01-01">2021.01.01</time>
+                  <span>NEWS</span>
+                </div>
+                <p>タイトルタイトルタイトルタイトル</p>
+              </li>
+              <li class="news__li">
+                <div class="news__date">
+                  <time datetime="2021-01-01">2021.01.01</time>
+                  <span>PRESS</span>
+                </div>
+                <p>タイトルタイトルタイトルタイトル</p>
+              </li>
+              <li class="news__li">
+                <div class="news__date">
+                  <time datetime="2021-01-01">2021.01.01</time>
+                  <span>NEWS</span>
+                </div>
+                <p>タイトルタイトルタイトルタイトル</p>
+              </li>
+            </ul>
+          </section>
+    
+    
+          <section id="about" class="about">
+            <div class="about__img">
+              <img src="images/about.jpeg" alt="" />
+            </div>
+    
+    
+            <div class="about__text">
+              <h2 class="section-title">
+                <span class="en">ABOUT</span>
+                <span class="ja">私たちについて</span>
+              </h2>
+              <p>
+                テキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキスト
+              </p>
+              <p>
+                テキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキスト
+              </p>
+              <p>
+                テキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </section>
+    
+    
+          <section id="business" class="business wrapper">
+            <h2 class="section-title">
+              <span class="en">BUSINESS</span>
+              <span class="ja">事業内容</span>
+            </h2>
+            <div class="business__flex">
+              <div class="business__left">
+                <div class="business__item">
+                  <p class="business__title">
+                    Web制作・マーケティング
+                  </p>
+                  <img src="images/business1.jpeg" alt="">
+                </div>
+                <div class="business__item">
+                  <p class="business__title">
+                    インターネットメディア事業
+                  </p>
+                  <img src="images/business2.jpeg" alt="">
+                </div>
+              </div>
+              <div class="business__right">
+                <div class="business__item">
+                  <p class="business__title">
+                    プロモーション企画・制作
+                  </p>
+                  <img src="images/business3.jpeg" alt="">
+                </div>
+                <div class="business__item">
+                  <p class="business__title">
+                    ソーシャル企画・運営
+                  </p>
+                  <img src="images/business4.jpeg" alt="">
+                </div>
+              </div>
+            </div>
+          </section>
+    
+    
+          <section id="company" class="company wrapper">
+            <div class="company__text">
+              <h2 class="section-title">
+                <span class="en">COMPANY</span>
+                <span class="ja">会社概要</span>
+              </h2>
+              <dl class="company__info">
+                <dt>会社名</dt>
+                <dd>ウェブエンターテイメントデザイン株式会社</dd>
+                <dt>所在地</dt>
+                <dd>東京都渋谷区桜丘町99-9 West Building 3F</dd>
+                <dt>代表</dt>
+                <dd>ＸＸＸＸＸＸ</dd>
+                <dt>設立</dt>
+                <dd>2021年1月1日</dd>
+                <dt>資本金</dt>
+                <dd>3,000,000円</dd>
+                <dt>事業内容</dt>
+                <dd>Web制作・マーケティング</dd>
+                <dd class="company__add">インターネットメディア事業</dd>
+                <dd class="company__add">プロモーション企画・制作</dd>
+                <dd class="company__add">ソーシャル企画・運営</dd>
+              </dl>
+            </div>
+    
+    
+            <div class="company__img">
+              <img src="images/company.jpeg" alt="">
+            </div>
+          </section>
+        </main>
+    
+    
+        <footer class="footer">
+          <div class="wrapper">
+            <div class="footer__flex">
+              <div class="logo">
+                <img src="images/logo.svg" alt="Mars House">
+              </div>
+              <div class="footer__info">
+                <p>
+                  Web Entertainment Design Inc.<br>
+                  West Building 3F<br>
+                  9-99 Sakuragaokacho Shibuya-ku<br>
+                  Tokyo, Japan 150-0031<br>
+                  T/99-9999-9999            
+                </p>
+              </div>
+            </div>
+            <div class="footer__copyright">
+              &copy; Web Entertainment Design Inc.
+            </div>
+          </div>
+        </footer>
 
       </div>
-      <a class="header__contact" href="#">お問い合わせ</a>
-    </header>
 
-
-    <main>
-      <div id="mainvisual">
-        <img src="images/mainvisual.jpeg" alt="" />
-      </div>
-
-
-      <section id="news" class="news wrapper">
-        <h2 class="section-title">
-          <span class="en">NEWS</span>
-          <span class="ja">ニュース</span>
-        </h2>
-
-        
-        <ul class="news__ul">
-          <li class="news__li">
-            <div class="news__date">
-              <time datetime="2021-01-01">2021.01.01</time>
-              <span>NEWS</span>
-            </div>
-            <p>タイトルタイトルタイトルタイトル</p>
-          </li>
-          <li class="news__li">
-            <div class="news__date">
-              <time datetime="2021-01-01">2021.01.01</time>
-              <span>PRESS</span>
-            </div>
-            <p>タイトルタイトルタイトルタイトル</p>
-          </li>
-          <li class="news__li">
-            <div class="news__date">
-              <time datetime="2021-01-01">2021.01.01</time>
-              <span>NEWS</span>
-            </div>
-            <p>タイトルタイトルタイトルタイトル</p>
-          </li>
+      <!-- モバイルメニュー -->
+      <nav class="mobile-menu">
+        <ul class="mobile-menu__ul">
+          <li class="mobile-menu__li"><a href="#about">私達について</a></li>
+          <li class="mobile-menu__li"><a href="#news">お知らせ</a></li>
+          <li class="mobile-menu__li"><a href="#service">家づくりコラム</a></li>
+          <li class="mobile-menu__li"><a href="#reserve">商談会予約</a></li>
+          <li class="mobile-menu__li gif"><img src="images/giphy.gif" alt=""></li>
         </ul>
-      </section>
-
-
-      <section id="about" class="about">
-        <div class="about__img">
-          <img src="images/about.jpeg" alt="" />
-        </div>
-
-
-        <div class="about__text">
-          <h2 class="section-title">
-            <span class="en">ABOUT</span>
-            <span class="ja">私たちについて</span>
-          </h2>
-          <p>
-            テキストテキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキストテキスト
-          </p>
-          <p>
-            テキストテキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキストテキスト
-          </p>
-          <p>
-            テキストテキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキストテキスト
-          </p>
-        </div>
-      </section>
-
-
-      <section id="business" class="business wrapper">
-        <h2 class="section-title">
-          <span class="en">BUSINESS</span>
-          <span class="ja">事業内容</span>
-        </h2>
-        <div class="business__flex">
-          <div class="business__left">
-            <div class="business__item">
-              <p class="business__title">
-                Web制作・マーケティング
-              </p>
-              <img src="images/business1.jpeg" alt="">
-            </div>
-            <div class="business__item">
-              <p class="business__title">
-                インターネットメディア事業
-              </p>
-              <img src="images/business2.jpeg" alt="">
-            </div>
-          </div>
-          <div class="business__right">
-            <div class="business__item">
-              <p class="business__title">
-                プロモーション企画・制作
-              </p>
-              <img src="images/business3.jpeg" alt="">
-            </div>
-            <div class="business__item">
-              <p class="business__title">
-                ソーシャル企画・運営
-              </p>
-              <img src="images/business4.jpeg" alt="">
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="company" class="company wrapper">
-        <div class="company__text">
-          <h2 class="section-title">
-            <span class="en">COMPANY</span>
-            <span class="ja">会社概要</span>
-          </h2>
-          <dl class="company__info">
-            <dt>会社名</dt>
-            <dd>ウェブエンターテイメントデザイン株式会社</dd>
-            <dt>所在地</dt>
-            <dd>東京都渋谷区桜丘町99-9 West Building 3F</dd>
-            <dt>代表</dt>
-            <dd>ＸＸＸＸＸＸ</dd>
-            <dt>設立</dt>
-            <dd>2021年1月1日</dd>
-            <dt>資本金</dt>
-            <dd>3,000,000円</dd>
-            <dt>事業内容</dt>
-            <dd>Web制作・マーケティング</dd>
-            <dd class="company__add">インターネットメディア事業</dd>
-            <dd class="company__add">プロモーション企画・制作</dd>
-            <dd class="company__add">ソーシャル企画・運営</dd>
-          </dl>
-        </div>
-
-
-        <div class="company__img">
-          <img src="images/company.jpeg" alt="">
-        </div>
-      </section>
-    </main>
-
-
-    <footer class="footer">
-      <div class="wrapper">
-        <div class="footer__flex">
-          <div class="logo">
-            <img src="images/logo.svg" alt="Mars House">
-          </div>
-          <div class="footer__info">
-            <p>
-              Web Entertainment Design Inc.<br>
-              West Building 3F<br>
-              9-99 Sakuragaokacho Shibuya-ku<br>
-              Tokyo, Japan 150-0031<br>
-              T/99-9999-9999            
-            </p>
-          </div>
-        </div>
-        <div class="footer__copyright">
-          &copy; Web Entertainment Design Inc.
-        </div>
-      </div>
-    </footer>
-    <script src="scripts/main.js"></script>
+      </nav>
+      
+    </div>
+    <script src="js/vendors/scroll-polyfill.js"></script>
+    <script src="js/libs/menu-open.js"></script>
+    <script src="js/libs/scroll-observer.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

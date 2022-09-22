@@ -1,0 +1,150 @@
+@use "../globals" as *;
+
+.mobile-menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  color: #fff;
+  padding: 50px 0  0 50px;
+  transition: all 0.5s;
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+
+  & a {
+    color: $cBlack;
+  }
+
+  &__ul {
+    perspective: 2000px;
+    transform-style: preserve-3d;
+  }
+
+  &__li {
+    margin-bottom: 20px;
+    transform: translate3d(0, 0, -1000px);
+    transition: transform 1s, opacity 1s;
+    opacity: 0;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &.gif {
+      height: 150px;
+      width: 100px;
+      position: relative;
+      top: 0px;
+      right: 15px;
+  
+      & > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 20;
+
+    @include mq(lg) {
+      display: none;
+    }
+  
+    & span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      background-color: #333;
+      border-radius: 4px;
+      transition: all 0.5s;
+      
+      &:nth-child(1) {
+        top: 10px;
+        width: 30px;
+      }
+  
+      &:nth-child(2) {
+        bottom: 10px;
+        width: 20px;
+      }
+    }
+  }
+
+  &__cover {
+    height: 100vh;
+    width: 250px;
+    background-color: $cWhite;
+    transition: all 0.5s;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    z-index: 20;
+    cursor: pointer;
+    box-shadow: inset 0 0 30px $cBgYellow;
+    visibility: hidden;
+  }
+
+  &__mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+}
+
+.menu-open {
+
+  & .mobile-menu {
+    opacity: 1;
+    visibility: visible;
+
+    &__li {
+      transform: none;
+      opacity: 1;
+
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.1s;
+        }
+      }
+    }
+
+    &__btn span {
+      background-color: $cWhite;
+
+      &:nth-child(1) {
+        transform: translateY(4px) rotate(-45deg);
+      }
+  
+      &:nth-child(2) {
+        transform: translateY(-4px) rotate(45deg);
+        width: 30px;
+      }
+    }
+
+    &__cover {
+      transform: translateX(250px);
+      visibility: visible;
+    }
+
+    &__mask {
+      width: calc(100% - 250px);
+      height: 100vh;
+      background: $cBlack;
+      opacity: 0.3;
+      z-index: 10;
+      cursor: pointer;
+      visibility: visible;
+    }
+  }
+}

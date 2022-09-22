@@ -6,16 +6,34 @@
 header
 -------------------------------------------*/
 .header {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
+
   height: 80px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  &.triggered {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+  }
   
   &__inner {
+    display: flex;
+    justify-content: space-between;
     
     @include mq(lg) {
-      display: flex;
       align-items: center;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include mq(lg) {
+      display: block;
     }
   }
 
@@ -32,7 +50,7 @@ header
     }
   }
 
-  &__contact {
+  &__reserve {
     display: none;
     @extend .font-sm;
 
@@ -64,7 +82,7 @@ Mainvisual
 
   & img {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100vh;
     object-fit: cover;
   }
 }
