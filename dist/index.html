@@ -8,6 +8,7 @@
     <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト"/>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="css/vendors/ress.min.css" />
+    <link rel="stylesheet" href="css/vendors/swiper.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -47,10 +48,60 @@
     
     
         <main>
-          <div id="mainvisual">
-            <img src="images/mainvisual.jpeg" alt="" />
+
+          <!-- メインビジュアル -->
+          <div class="mainvisual hero">
+
+            <!-- swiper.js-->
+            <!-- <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="hero__title">Enjoy Rich</div>
+                  <img src="images/image-1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero__title">Fantastic</div>
+                  <img src="images/image-2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero__title">Experience</div>
+                  <img src="images/image-3.jpg" alt="" />
+                </div>
+              </div>
+              <div class="hero__footer">
+                <img class="hero__downarrow" src="images/arrow.svg" />
+                <span class="hero__scrolltext">scroll</span>
+              </div>
+            </div> -->
+
+            
+            <!-- swiper.js-->
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="hero__title">Enjoy Rich</div>
+                  <img src="images/image-1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero__title">Fantastic</div>
+                  <img src="images/image-2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero__title">Experience</div>
+                  <img src="images/image-3.jpg" alt="" />
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+              
+              <div class="hero__footer">
+                <!-- <img class="hero__downarrow" src="images/arrow.svg" />
+                <span class="hero__scrolltext">scroll</span> -->
+                <span class="hero__scrolltext">scroll</span>
+              </div>
+            </div>
           </div>
-    
+      
     
           <section id="news" class="news wrapper">
             <h2 class="section-title">
@@ -219,8 +270,10 @@
       </nav>
       
     </div>
+    <script src="js/vendors/swiper-bundle.min.js"></script>
     <script src="js/vendors/scroll-polyfill.js"></script>
     <script src="js/libs/menu-open.js"></script>
+    <script src="js/libs/hero-slider.js"></script>
     <script src="js/libs/scroll-observer.js"></script>
     <script src="js/main.js"></script>
   </body>

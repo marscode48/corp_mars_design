@@ -7,6 +7,7 @@ class Main {
     // this.side = document.querySelector('#side-btn');
     // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
+    this.hero = new HeroSlider('.swiper');
     this._init();
   }
 
@@ -62,6 +63,7 @@ class Main {
 
   _scrollInit() {
     new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
+    new ScrollObserver('.swiper', this.#toggleSlideAnimation.bind(this), { once: false })
     // new ScrollObserver('.menu__item', this._inviewAnimation);
     // new ScrollObserver('.site-title', this._inviewAnimation);
     // new ScrollObserver('.cover-slide', this._inviewAnimation);
@@ -70,4 +72,12 @@ class Main {
     // new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
     // new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
   }
+
+  #toggleSlideAnimation(el, inview) {
+    if(inview) {
+        this.hero.start();
+    } else {
+        this.hero.stop();
+    }
+}
 }

@@ -6,17 +6,28 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
+function _classPrivateMethodInitSpec(obj, privateSet) { _checkPrivateRedeclaration(obj, privateSet); privateSet.add(obj); }
+
+function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
+
+function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
+
 document.addEventListener('DOMContentLoaded', function () {
   var main = new Main();
 });
+
+var _toggleSlideAnimation = /*#__PURE__*/new WeakSet();
 
 var Main = /*#__PURE__*/function () {
   function Main() {
     _classCallCheck(this, Main);
 
+    _classPrivateMethodInitSpec(this, _toggleSlideAnimation);
+
     // this.side = document.querySelector('#side-btn');
     // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
+    this.hero = new HeroSlider('.swiper');
 
     this._init();
   }
@@ -73,6 +84,9 @@ var Main = /*#__PURE__*/function () {
     value: function _scrollInit() {
       new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {
         once: false
+      });
+      new ScrollObserver('.swiper', _classPrivateMethodGet(this, _toggleSlideAnimation, _toggleSlideAnimation2).bind(this), {
+        once: false
       }); // new ScrollObserver('.menu__item', this._inviewAnimation);
       // new ScrollObserver('.site-title', this._inviewAnimation);
       // new ScrollObserver('.cover-slide', this._inviewAnimation);
@@ -85,4 +99,12 @@ var Main = /*#__PURE__*/function () {
 
   return Main;
 }();
+
+function _toggleSlideAnimation2(el, inview) {
+  if (inview) {
+    this.hero.start();
+  } else {
+    this.hero.stop();
+  }
+}
 //# sourceMappingURL=main.js.map

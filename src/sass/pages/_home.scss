@@ -77,14 +77,8 @@ header
 /*-------------------------------------------
 Mainvisual
 -------------------------------------------*/
-#mainvisual {
+.mainvisual {
   @extend .mb-lg;
-
-  & img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-  }
 }
 
 
