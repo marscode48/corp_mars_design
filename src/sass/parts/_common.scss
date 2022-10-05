@@ -63,7 +63,7 @@ li {
   font-size: 1.125rem;
 }
 .font-lg {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 
 /* 共通クラス */
@@ -104,16 +104,12 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 }
 
 .section-title {
-  @extend .mb-sm;
+  margin-bottom: 58px;
   font-weight: normal;
   line-height: 1;
 
-  &::after {
-    content: "";
-    width: 40px;
-    height: 1px;
-    background-color: $cBlack;
-    display: block;
+  @include mq(lg) {
+    margin-bottom: 70px;
   }
 
   & .en {
@@ -121,15 +117,18 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
     @extend .font-lg;
     letter-spacing: 0.3em;
     margin-bottom: 10px;
+
+    @include mq(lg) {
+      font-size: 2rem;
+    }
   }
 
   & .ja {
     display: block;
-    @extend .font-md;
-    margin-bottom: 24px;
+    @extend .font-sm;
 
     @include mq(lg) {
-      margin-bottom: 36px;
+      font-size: 0.875rem;
     }
   }
 }

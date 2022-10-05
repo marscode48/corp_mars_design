@@ -141,20 +141,28 @@ News
 }
 
 /*-------------------------------------------
-About
+Concept
 -------------------------------------------*/
-.about {
+.concept {
   @extend .mb-lg;
 
-  @include mq(lg) {
+  &__inner {
     display: flex;
+    justify-content: space-between;
+    background: #e2e2d6;
+    padding: 15px;
+
+    @include mq(lg) {
+      padding: 50px;
+    }
   }
 
   &__img {
+    width: 45%;
     margin-bottom: 30px;
   
     @include mq(lg) {
-      width: 55%;
+      width: 65%;
       margin-bottom: 0;
     }
 
@@ -164,22 +172,121 @@ About
       object-fit: cover;
 
       @include mq(lg) {     
-        height: 400px;
+        height: 500px;
       }
     }
   }
 
   &__text {
-    padding: 0 16px;
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+
     @include mq(lg) {
-      width: 45%;
-      padding: 180px 5% 0 5%;
+      width: 30%;
+    }
+
+    &.inview {
+      & .concept__text-inner .en::before {
+        @include animation($name: scaleX, $duration: 0.3s, $delay: 1s);
+      }
     }
   
-    p {
-      line-height: 2.2;
+    &-inner .en {
+      position: relative;
+
+      &::before {
+        display: none;
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 100px;
+        top: 50%;
+        left: -120px;
+        background: $cBlack;
+        transform: scaleX(0);
+        transform-origin: right;
+  
+        @include mq(lg) {
+          display: block;
+        }
+      }
     }
+  }
+
+  &__message {
+    margin: 0 auto;
+    writing-mode: vertical-rl;
+    vertical-align: top;
+    letter-spacing: 0.3em;
+    line-height: 3;
+    @extend .font-md;
+    @extend .mb-sm;
+    
+    @include mq(lg) {
+      font-size: 1rem;
+      letter-spacing: 0.5em;
+      line-height: 3.5;
+    }
+  }
+
+  &__footer {
+    text-align: right;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  &__arrow-text {
+    display: block;
+    letter-spacing: 0.25em;
+    padding-right: 20px;
+    @extend .font-sm;
+    
+    @include mq(lg) {
+      letter-spacing: 0.35em;
+      font-size: 0.875rem;
+      padding-right: 25px;
+    }
+  }
+
+  &__rightarrow {
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    width: 30px;
+    @include animation(
+      $name: kf-arrow-anime,
+      $iteration-count: infinite,
+      $duration: 2s,
+      $timing-function: linear
+      );
+      
+      @include mq(lg) {
+      top: 6px;
+      left: 30px;
+      width: 35px;
+    }
+  }
+}
+
+@keyframes scaleX {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes kf-arrow-anime {
+  0%,
+  50%,
+  100% {
+    transform: translateX(-15%);
+  }
+  30% {
+    transform: none;
   }
 }
 

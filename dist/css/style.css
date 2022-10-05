@@ -1,4 +1,59 @@
 @charset "UTF-8";
+.appear.up .item {
+  transform: translateY(6px);
+}
+
+.appear.down .item {
+  transform: translateY(-6px);
+}
+
+.appear.left .item {
+  transform: translateX(40px);
+}
+
+.appear.right .item {
+  transform: translateX(-40px);
+}
+
+.appear .item {
+  transition: all 0.8s;
+  opacity: 0;
+}
+.appear.inview .item {
+  opacity: 1;
+  transform: none;
+}
+.appear.inview .item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.appear.inview .item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.appear.inview .item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.appear.inview .item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.appear.inview .item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.appear.inview .item:nth-child(6) {
+  transition-delay: 0.6s;
+}
+.appear.inview .item:nth-child(7) {
+  transition-delay: 0.7s;
+}
+.appear.inview .item:nth-child(8) {
+  transition-delay: 0.8s;
+}
+.appear.inview .item:nth-child(9) {
+  transition-delay: 0.9s;
+}
+.appear.inview .item:nth-child(10) {
+  transition-delay: 1s;
+}
+
 .swiper {
   width: 100%;
   height: calc(100vh - 80px);
@@ -346,20 +401,20 @@ li {
 }
 
 /* マージン */
-.mb-sm, .section-title {
+.mb-sm, .concept__message {
   margin-bottom: 34px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-sm, .section-title {
+  .mb-sm, .concept__message {
     margin-bottom: 50px !important;
   }
 }
 
-.mb-lg, .mainvisual, .news, .about, .business {
+.mb-lg, .mainvisual, .news, .concept, .business {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .mainvisual, .news, .about, .business {
+  .mb-lg, .mainvisual, .news, .concept, .business {
     margin-bottom: 120px !important;
   }
 }
@@ -374,11 +429,11 @@ li {
 }
 
 /* フォント */
-.font-sm, .header__reserve, .news__date span {
+.font-sm, .header__reserve, .news__date span, .concept__arrow-text, .section-title .ja {
   font-size: 0.75rem;
 }
 
-.font-md, .section-title .ja, body, a {
+.font-md, .concept__message, body, a {
   font-size: 0.875rem;
 }
 
@@ -387,7 +442,7 @@ li {
 }
 
 .font-lg, .section-title .en {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 
 /* 共通クラス */
@@ -429,28 +484,31 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 }
 
 .section-title {
+  margin-bottom: 58px;
   font-weight: normal;
   line-height: 1;
 }
-.section-title::after {
-  content: "";
-  width: 40px;
-  height: 1px;
-  background-color: #000000;
-  display: block;
+@media screen and (min-width: 960px) {
+  .section-title {
+    margin-bottom: 70px;
+  }
 }
 .section-title .en {
   display: block;
   letter-spacing: 0.3em;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 960px) {
+  .section-title .en {
+    font-size: 2rem;
+  }
+}
 .section-title .ja {
   display: block;
-  margin-bottom: 24px;
 }
 @media screen and (min-width: 960px) {
   .section-title .ja {
-    margin-bottom: 36px;
+    font-size: 0.875rem;
   }
 }
 
@@ -569,46 +627,179 @@ News
 }
 
 /*-------------------------------------------
-About
+Concept
 -------------------------------------------*/
+.concept__inner {
+  display: flex;
+  justify-content: space-between;
+  background: #e2e2d6;
+  padding: 15px;
+}
 @media screen and (min-width: 960px) {
-  .about {
-    display: flex;
+  .concept__inner {
+    padding: 50px;
   }
 }
-.about__img {
+.concept__img {
+  width: 45%;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 960px) {
-  .about__img {
-    width: 55%;
+  .concept__img {
+    width: 65%;
     margin-bottom: 0;
   }
 }
-.about__img img {
+.concept__img img {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (min-width: 960px) {
-  .about__img img {
-    height: 400px;
+  .concept__img img {
+    height: 500px;
   }
 }
-.about__text {
-  padding: 0 16px;
+.concept__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
 }
 @media screen and (min-width: 960px) {
-  .about__text {
-    width: 45%;
-    padding: 180px 5% 0 5%;
+  .concept__text {
+    width: 30%;
   }
 }
-.about__text p {
-  line-height: 2.2;
+.concept__text.inview .concept__text-inner .en::before {
+  -webkit-animation-name: scaleX;
+          animation-name: scaleX;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.concept__text-inner .en {
+  position: relative;
+}
+.concept__text-inner .en::before {
+  display: none;
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100px;
+  top: 50%;
+  left: -120px;
+  background: #000000;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+@media screen and (min-width: 960px) {
+  .concept__text-inner .en::before {
+    display: block;
+  }
+}
+.concept__message {
+  margin: 0 auto;
+  writing-mode: vertical-rl;
+  vertical-align: top;
+  letter-spacing: 0.3em;
+  line-height: 3;
+}
+@media screen and (min-width: 960px) {
+  .concept__message {
+    font-size: 1rem;
+    letter-spacing: 0.5em;
+    line-height: 3.5;
+  }
+}
+.concept__footer {
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+}
+.concept__arrow-text {
+  display: block;
+  letter-spacing: 0.25em;
+  padding-right: 20px;
+}
+@media screen and (min-width: 960px) {
+  .concept__arrow-text {
+    letter-spacing: 0.35em;
+    font-size: 0.875rem;
+    padding-right: 25px;
+  }
+}
+.concept__rightarrow {
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  width: 30px;
+  -webkit-animation-name: kf-arrow-anime;
+          animation-name: kf-arrow-anime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@media screen and (min-width: 960px) {
+  .concept__rightarrow {
+    top: 6px;
+    left: 30px;
+    width: 35px;
+  }
 }
 
+@-webkit-keyframes scaleX {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scaleX {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes kf-arrow-anime {
+  0%, 50%, 100% {
+    transform: translateX(-15%);
+  }
+  30% {
+    transform: none;
+  }
+}
+@keyframes kf-arrow-anime {
+  0%, 50%, 100% {
+    transform: translateX(-15%);
+  }
+  30% {
+    transform: none;
+  }
+}
 /*-------------------------------------------
 Business
 -------------------------------------------*/
