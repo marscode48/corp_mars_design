@@ -429,7 +429,7 @@ li {
 }
 
 /* フォント */
-.font-sm, .header__reserve, .news__date span, .concept__arrow-text, .section-title .ja {
+.font-sm, .header__reserve, .news__date span, .section-link__text, .section-title .ja {
   font-size: 0.75rem;
 }
 
@@ -512,6 +512,70 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
   }
 }
 
+.section-link {
+  text-align: right;
+  position: relative;
+}
+.section-link > a {
+  display: block;
+}
+.section-link__text {
+  display: block;
+  letter-spacing: 0.25em;
+  padding-right: 20px;
+}
+@media screen and (min-width: 960px) {
+  .section-link__text {
+    letter-spacing: 0.35em;
+    font-size: 0.875rem;
+    padding-right: 25px;
+  }
+}
+.section-link__arrow {
+  position: absolute;
+  right: 4.5rem;
+  top: 5px;
+  width: 30px;
+  -webkit-animation-name: kf-arrow-anime;
+          animation-name: kf-arrow-anime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@media screen and (min-width: 960px) {
+  .section-link__arrow {
+    top: 6px;
+    right: 6rem;
+    width: 35px;
+  }
+}
+
+@-webkit-keyframes kf-arrow-anime {
+  0%, 50%, 100% {
+    transform: translateX(-15%);
+  }
+  30% {
+    transform: none;
+  }
+}
+
+@keyframes kf-arrow-anime {
+  0%, 50%, 100% {
+    transform: translateX(-15%);
+  }
+  30% {
+    transform: none;
+  }
+}
 /*-------------------------------------------
 header
 -------------------------------------------*/
@@ -581,6 +645,27 @@ Mainvisual
 /*-------------------------------------------
 News
 -------------------------------------------*/
+.news__inner {
+  position: relative;
+}
+.news__inner::before {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  height: 40rem;
+  width: 100%;
+  background: #e5e5e5;
+  z-index: -5;
+}
+@media screen and (min-width: 960px) {
+  .news__inner::before {
+    bottom: -60px;
+  }
+}
+.news__container {
+  position: relative;
+}
 @media screen and (min-width: 960px) {
   .news__ul {
     display: flex;
@@ -602,9 +687,6 @@ News
   .news__li:first-child {
     padding-left: 0;
   }
-}
-.news__li:last-child {
-  margin-bottom: 0;
 }
 @media screen and (min-width: 960px) {
   .news__li:last-child {
@@ -708,6 +790,14 @@ Concept
     display: block;
   }
 }
+.concept__text-inner .section-link__arrow {
+  right: 6rem;
+}
+@media screen and (min-width: 960px) {
+  .concept__text-inner .section-link__arrow {
+    right: 8rem;
+  }
+}
 .concept__message {
   margin: 0 auto;
   writing-mode: vertical-rl;
@@ -720,50 +810,6 @@ Concept
     font-size: 1rem;
     letter-spacing: 0.5em;
     line-height: 3.5;
-  }
-}
-.concept__footer {
-  text-align: right;
-  position: relative;
-  overflow: hidden;
-}
-.concept__arrow-text {
-  display: block;
-  letter-spacing: 0.25em;
-  padding-right: 20px;
-}
-@media screen and (min-width: 960px) {
-  .concept__arrow-text {
-    letter-spacing: 0.35em;
-    font-size: 0.875rem;
-    padding-right: 25px;
-  }
-}
-.concept__rightarrow {
-  position: absolute;
-  left: 20px;
-  top: 5px;
-  width: 30px;
-  -webkit-animation-name: kf-arrow-anime;
-          animation-name: kf-arrow-anime;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-@media screen and (min-width: 960px) {
-  .concept__rightarrow {
-    top: 6px;
-    left: 30px;
-    width: 35px;
   }
 }
 
@@ -782,22 +828,6 @@ Concept
   }
   100% {
     transform: scaleX(1);
-  }
-}
-@-webkit-keyframes kf-arrow-anime {
-  0%, 50%, 100% {
-    transform: translateX(-15%);
-  }
-  30% {
-    transform: none;
-  }
-}
-@keyframes kf-arrow-anime {
-  0%, 50%, 100% {
-    transform: translateX(-15%);
-  }
-  30% {
-    transform: none;
   }
 }
 /*-------------------------------------------

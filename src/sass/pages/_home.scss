@@ -88,6 +88,29 @@ News
 .news {
   @extend .mb-lg;
 
+  &__inner {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      height: 40rem;
+      width: 100%;
+      background: #e5e5e5;
+      z-index: -5;
+      
+      @include mq(lg) {
+        bottom: -60px;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
   &__ul {
     
     @include mq(lg) {
@@ -114,7 +137,6 @@ News
     }
     
     &:last-child {
-      margin-bottom: 0;
       
       @include mq(lg) {
         border-right: none;
@@ -213,6 +235,14 @@ Concept
         }
       }
     }
+
+    &-inner .section-link__arrow {
+      right: 6rem;
+
+      @include mq(lg) {
+        right: 8rem;
+      }
+    }
   }
 
   &__message {
@@ -230,44 +260,6 @@ Concept
       line-height: 3.5;
     }
   }
-
-  &__footer {
-    text-align: right;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  &__arrow-text {
-    display: block;
-    letter-spacing: 0.25em;
-    padding-right: 20px;
-    @extend .font-sm;
-    
-    @include mq(lg) {
-      letter-spacing: 0.35em;
-      font-size: 0.875rem;
-      padding-right: 25px;
-    }
-  }
-
-  &__rightarrow {
-    position: absolute;
-    left: 20px;
-    top: 5px;
-    width: 30px;
-    @include animation(
-      $name: kf-arrow-anime,
-      $iteration-count: infinite,
-      $duration: 2s,
-      $timing-function: linear
-      );
-      
-      @include mq(lg) {
-      top: 6px;
-      left: 30px;
-      width: 35px;
-    }
-  }
 }
 
 @keyframes scaleX {
@@ -279,16 +271,7 @@ Concept
   }
 }
 
-@keyframes kf-arrow-anime {
-  0%,
-  50%,
-  100% {
-    transform: translateX(-15%);
-  }
-  30% {
-    transform: none;
-  }
-}
+
 
 
 /*-------------------------------------------
