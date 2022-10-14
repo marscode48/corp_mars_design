@@ -27,7 +27,7 @@ var Main = /*#__PURE__*/function () {
     // this.side = document.querySelector('#side-btn');
     // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
-    this.hero = new HeroSlider('.swiper');
+    this.hero = new HeroSlider('.swiper-hero');
 
     this._init();
   }
@@ -36,7 +36,9 @@ var Main = /*#__PURE__*/function () {
     key: "_init",
     value: function _init() {
       // new MvScaleChange();
-      new MenuOpen(); // new MenuFadeIn(520);
+      new MenuOpen();
+      new StepSliderMain('.swiper-main');
+      new StepSliderSub('.swiper-sub'); // new MenuFadeIn(520);
       // new SmoothScroll(80);
       // Pace.on('done', this._paceDone.bind(this));
 
@@ -87,7 +89,7 @@ var Main = /*#__PURE__*/function () {
       new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {
         once: false
       });
-      new ScrollObserver('.swiper', _classPrivateMethodGet(this, _toggleSlideAnimation, _toggleSlideAnimation2).bind(this), {
+      new ScrollObserver('.swiper-hero', _classPrivateMethodGet(this, _toggleSlideAnimation, _toggleSlideAnimation2).bind(this), {
         once: false
       }); // new ScrollObserver('.menu__item', this._inviewAnimation);
       // new ScrollObserver('.site-title', this._inviewAnimation);
@@ -105,8 +107,10 @@ var Main = /*#__PURE__*/function () {
 function _toggleSlideAnimation2(el, inview) {
   if (inview) {
     this.hero.start();
+    console.log('start is called');
   } else {
     this.hero.stop();
+    console.log('stop is called');
   }
 }
 //# sourceMappingURL=main.js.map

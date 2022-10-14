@@ -161,4 +161,4 @@ var StepSliderSub = /*#__PURE__*/function (_HeroSlider2) {
 
   return StepSliderSub;
 }(HeroSlider);
-//# sourceMappingURL=hero-slider.js.map
+//# sourceMappingURL=swiper-slider.js.map

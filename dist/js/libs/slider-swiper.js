@@ -102,16 +102,16 @@ var StepSliderMain = /*#__PURE__*/function (_HeroSlider) {
         centeredSlides: true,
         grabCursor: true,
         pagination: {
-          el: '.flow01 .swiper-pagination-main',
+          el: '.flow .swiper-pagination-main',
           clickable: true,
           renderBullet: function renderBullet(index, className) {
             var num = ('00' + (index + 1)).slice(-2);
-            return '<span class="' + className + '"><span class="step">STEP.</span>' + num + '</span>';
+            return "<span class=\"".concat(className, "\"><span class=\"step\">STEP.</span>").concat(num, "</span>");
           }
         },
         navigation: {
-          nextEl: '.flow01 .swiper-button-next',
-          prevEl: '.flow01 .swiper-button-prev'
+          nextEl: '.flow .swiper-button-next',
+          prevEl: '.flow .swiper-button-prev'
         },
         breakpoints: {
           1025: {
@@ -152,7 +152,7 @@ var StepSliderSub = /*#__PURE__*/function (_HeroSlider2) {
         grabCursor: true,
         nested: true,
         pagination: {
-          el: '.flow01 .swiper-pagination-sub',
+          el: '.flow .swiper-pagination-sub',
           clickable: true
         }
       });
@@ -161,4 +161,4 @@ var StepSliderSub = /*#__PURE__*/function (_HeroSlider2) {
 
   return StepSliderSub;
 }(HeroSlider);
-//# sourceMappingURL=hero-slider.js.map
+//# sourceMappingURL=slider-swiper.js.map

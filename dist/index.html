@@ -52,8 +52,8 @@
           <!-- メインビジュアル -->
           <div class="mainvisual hero">
 
-            <!-- swiper.js-->
-            <div class="swiper">
+            <!-- Hero Slider -->
+            <div class="swiper swiper-hero">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="hero__title">Enjoy Rich</div>
@@ -120,7 +120,7 @@
             <div class="news__header wrapper appear up">
               <h2 class="section-title">
                 <span class="en item">NEWS</span>
-                <span class="ja item">ニュース</span>
+                <span class="ja item">お知らせ</span>
               </h2>
             </div>
             
@@ -161,43 +161,107 @@
             </div>
           </section>
     
-          
-          <!-- Service -->
-          <section id="business" class="business wrapper">
+
+          <!-- Flow -->
+          <section id="flow" class="flow wrapper">
             <h2 class="section-title">
-              <span class="en">BUSINESS</span>
-              <span class="ja">事業内容</span>
+              <span class="en">FLOW</span>
+              <span class="ja">家が出来上がるまで</span>
             </h2>
-            <div class="business__flex">
-              <div class="business__left">
-                <div class="business__item">
-                  <p class="business__title">
-                    Web制作・マーケティング
-                  </p>
-                  <img src="images/business1.jpeg" alt="">
+
+            <div class="flow__inner">
+            
+              <div class="swiper-pagination-main"></div>
+
+              <!-- StepSliderMain -->
+              <div class="swiper swiper-main">
+                <div class="swiper-wrapper">
+          
+                  <!-- Step1 -->
+                  <div class="swiper-slide">
+                    <div class="mainslide">
+                      <div class="mainslide-title">ヒアリング・プラン提案</div>
+                      <!-- StepSliderSub -->
+                      <div class="swiper swiper-sub">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="subslide">
+                              <div class="subslide-media"><img src="https://placehold.jp/300x300.png" alt=""></div>
+                              <p class="subslide-text">お客様のご意見やご要望を徹底的にお伺いします。</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="subslide">
+                              <div class="subslide-media"><img src="https://placehold.jp/300x300.png" alt=""></div>
+                              <p class="subslide-text">弊社の担当者がお伺いします。</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="subslide">
+                              <div class="subslide-media"><img src="https://placehold.jp/300x300.png" alt=""></div>
+                              <p class="subslide-text">何なりとご相談ください。</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination-sub"></div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Step2 -->
+                  <div class="swiper-slide">
+                    <div class="mainslide">
+                      <div class="mainslide-title">ご契約</div>
+                      <div class="subslide">
+                        <div class="subslide-media"><img src="https://placehold.jp/300x300.png" alt=""></div>
+                        <p class="subslide-text">ご契約まで責任を持って準備します。</p>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Step3 -->
+                  <div class="swiper-slide">
+                    <div class="mainslide">
+                      <div class="mainslide-title">着工・完成
+                      </div>
+                      
+                      <!-- StepSliderSub -->
+                      <div class="swiper swiper-sub">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="subslide">
+                              <div class="subslide-media"><img src="https://placehold.jp/300x300.png" alt=""></div>
+                              <p class="subslide-text">着工して半年ほどで完成します。</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="subslide">
+                              <div class="subslide-media"><img src="https://placehold.jp/300x300.png" alt=""></div>
+                              <p class="subslide-text">弊社のプロフェッショナルな技術者が施工します。</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="subslide">
+                              <div class="subslide-media"><img src="https://placehold.jp/300x300.png" alt=""></div>
+                              <p class="subslide-text">完成してからの</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination-sub"></div>
+                      </div>
+                    </div>
+                  </div>
+          
                 </div>
-                <div class="business__item">
-                  <p class="business__title">
-                    インターネットメディア事業
-                  </p>
-                  <img src="images/business2.jpeg" alt="">
-                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
               </div>
-              <div class="business__right">
-                <div class="business__item">
-                  <p class="business__title">
-                    プロモーション企画・制作
-                  </p>
-                  <img src="images/business3.jpeg" alt="">
-                </div>
-                <div class="business__item">
-                  <p class="business__title">
-                    ソーシャル企画・運営
-                  </p>
-                  <img src="images/business4.jpeg" alt="">
-                </div>
-              </div>
+          
             </div>
+
+            <!-- <div class="flow01 l-section">
+
+            </div> -->
           </section>
     
     
@@ -266,8 +330,8 @@
       <!-- モバイルメニュー -->
       <nav class="mobile-menu">
         <ul class="mobile-menu__ul">
-          <li class="mobile-menu__li"><a href="#about">私達について</a></li>
-          <li class="mobile-menu__li"><a href="#news">お知らせ</a></li>
+          <li class="mobile-menu__li"><a href="#concept.html">Concept</a></li>
+          <li class="mobile-menu__li"><a href="#news.html">News</a></li>
           <li class="mobile-menu__li"><a href="#service">家づくりコラム</a></li>
           <li class="mobile-menu__li"><a href="#reserve">商談会予約</a></li>
           <li class="mobile-menu__li gif"><img src="images/giphy.gif" alt=""></li>
@@ -278,7 +342,7 @@
     <script src="js/vendors/swiper-bundle.min.js"></script>
     <script src="js/vendors/scroll-polyfill.js"></script>
     <script src="js/libs/menu-open.js"></script>
-    <script src="js/libs/hero-slider.js"></script>
+    <script src="js/libs/slider-swiper.js"></script>
     <script src="js/libs/scroll-observer.js"></script>
     <script src="js/main.js"></script>
   </body>

@@ -272,64 +272,25 @@ Concept
 }
 
 
-
-
 /*-------------------------------------------
-Business
+Flow
 -------------------------------------------*/
-.business {
+.flow {
   @extend .mb-lg;
-
-  &__flex {
-
-    @include mq(lg) {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 10%;
-    }
+  
+  & .section-title {
+    text-align: center;
   }
   
-  &__left {
-    margin-bottom: 30px;
-  
-    @include mq(lg) {
-      width: 46%;
-      margin-top: 100px;
-    }
-  }
-  
-  &__right {
-
-    @include mq(lg) {
-      width: 46%;
-    }
-  }
-  
-  &__item {
-    margin-bottom: 30px;
-  
-    @include mq(lg) {
-      margin-bottom: 50px;
-    }
-  
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  
-  &__title {
-    font-weight: bold;
-    margin: 0 0 10px 18px;
+  &__inner {
+    overflow: hidden;
     position: relative;
-  
-    &::before {
-      content: "";
-      width: 8px;
-      height: 1px;
-      background-color: $cBlack;
-      position: absolute;
-      top: 50%;
-      left: -18px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    background-color: $cWhite;
+    
+    @include mq(lg) {
+      padding: 8rem 8rem;
     }
   }
 }

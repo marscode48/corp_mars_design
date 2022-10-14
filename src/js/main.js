@@ -7,13 +7,15 @@ class Main {
     // this.side = document.querySelector('#side-btn');
     // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
-    this.hero = new HeroSlider('.swiper');
+    this.hero = new HeroSlider('.swiper-hero');
     this._init();
   }
 
   _init() {
     // new MvScaleChange();
     new MenuOpen();
+    new StepSliderMain('.swiper-main');
+    new StepSliderSub('.swiper-sub');
     // new MenuFadeIn(520);
     // new SmoothScroll(80);
     // Pace.on('done', this._paceDone.bind(this));
@@ -63,7 +65,7 @@ class Main {
 
   _scrollInit() {
     new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
-    new ScrollObserver('.swiper', this.#toggleSlideAnimation.bind(this), { once: false })
+    new ScrollObserver('.swiper-hero', this.#toggleSlideAnimation.bind(this), { once: false });
     // new ScrollObserver('.menu__item', this._inviewAnimation);
     // new ScrollObserver('.site-title', this._inviewAnimation);
     // new ScrollObserver('.cover-slide', this._inviewAnimation);
@@ -76,8 +78,10 @@ class Main {
   #toggleSlideAnimation(el, inview) {
     if(inview) {
         this.hero.start();
+        console.log('start is called')
     } else {
         this.hero.stop();
+        console.log('stop is called')
     }
-}
+  }
 }
