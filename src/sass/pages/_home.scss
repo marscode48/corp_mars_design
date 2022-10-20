@@ -352,6 +352,36 @@ Houses
 }
 
 /*-------------------------------------------
+Reserve
+-------------------------------------------*/
+.reserve {
+  @extend .mb-lg;
+  position: relative;
+
+  & .section-title {
+    margin-bottom: 38px;
+
+    @include mq(lg) {
+      margin-bottom: 50px;
+    }
+  }
+  
+  & p {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  & .section-link__arrow {
+    right: 6.5rem;
+
+    @include mq(lg) {
+      right: 8rem;
+    }
+  }
+}
+
+
+/*-------------------------------------------
 Company
 -------------------------------------------*/
 .company {

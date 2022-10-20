@@ -657,11 +657,11 @@ li {
   }
 }
 
-.mb-lg, .mainvisual, .news, .concept, .flow, .houses {
+.mb-lg, .mainvisual, .news, .concept, .flow, .houses, .reserve {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .mainvisual, .news, .concept, .flow, .houses {
+  .mb-lg, .mainvisual, .news, .concept, .flow, .houses, .reserve {
     margin-bottom: 120px !important;
   }
 }
@@ -1149,6 +1149,33 @@ Houses
 @media screen and (min-width: 960px) {
   .houses .section-link__arrow {
     right: 7.5rem;
+  }
+}
+
+/*-------------------------------------------
+Reserve
+-------------------------------------------*/
+.reserve {
+  position: relative;
+}
+.reserve .section-title {
+  margin-bottom: 38px;
+}
+@media screen and (min-width: 960px) {
+  .reserve .section-title {
+    margin-bottom: 50px;
+  }
+}
+.reserve p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.reserve .section-link__arrow {
+  right: 6.5rem;
+}
+@media screen and (min-width: 960px) {
+  .reserve .section-link__arrow {
+    right: 8rem;
   }
 }
 
