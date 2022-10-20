@@ -427,6 +427,58 @@
   }
 }
 
+.houses .swiper {
+  margin-bottom: 20px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+@media screen and (min-width: 960px) {
+  .houses .swiper:hover .slide:not(:hover) {
+    opacity: 0.3;
+  }
+}
+.houses .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+.houses .swiper-slide {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.houses .slide {
+  overflow: hidden;
+  width: 14rem;
+}
+@media screen and (min-width: 960px) {
+  .houses .slide {
+    width: 20rem;
+    transition: all 0.25s ease-out;
+  }
+  .houses .slide:hover {
+    transform: translateY(-16px);
+  }
+  .houses .slide:hover img {
+    transform: translateY(0);
+  }
+}
+.houses .slide-media {
+  position: relative;
+  overflow: hidden;
+  padding-top: 100%;
+}
+.houses .slide-media img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 16px);
+  transform: translateY(-16px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.25s ease-out;
+}
+
 .mobile-menu {
   position: fixed;
   top: 0px;
@@ -605,11 +657,11 @@ li {
   }
 }
 
-.mb-lg, .mainvisual, .news, .concept, .flow {
+.mb-lg, .mainvisual, .news, .concept, .flow, .houses {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .mainvisual, .news, .concept, .flow {
+  .mb-lg, .mainvisual, .news, .concept, .flow, .houses {
     margin-bottom: 120px !important;
   }
 }
@@ -1028,6 +1080,14 @@ Concept
 /*-------------------------------------------
 Flow
 -------------------------------------------*/
+.flow {
+  padding: 0;
+}
+@media screen and (min-width: 960px) {
+  .flow {
+    padding: 0 16px;
+  }
+}
 .flow .section-title {
   text-align: center;
 }
@@ -1041,6 +1101,54 @@ Flow
 @media screen and (min-width: 960px) {
   .flow__inner {
     padding: 8rem 8rem;
+  }
+}
+
+/*-------------------------------------------
+Houses
+-------------------------------------------*/
+.houses {
+  position: relative;
+}
+.houses::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  bottom: -40px;
+  width: 100%;
+  background: #e5e5e5;
+  z-index: -5;
+}
+@media screen and (min-width: 960px) {
+  .houses::before {
+    top: -60px;
+    bottom: -60px;
+  }
+}
+.houses .section-title {
+  margin-bottom: 38px;
+}
+@media screen and (min-width: 960px) {
+  .houses .section-title {
+    margin-bottom: 50px;
+  }
+}
+.houses__inner {
+  position: relative;
+  padding: 0;
+}
+@media screen and (min-width: 960px) {
+  .houses__inner {
+    padding: 0 16px;
+  }
+}
+.houses .section-link__arrow {
+  right: 6rem;
+}
+@media screen and (min-width: 960px) {
+  .houses .section-link__arrow {
+    right: 7.5rem;
   }
 }
 

@@ -3,6 +3,7 @@ class HeroSlider {
         this.el = el;
         this.swiper = this._initSwiper();
         console.log(this.el)
+        console.log(this._initSwiper)
     }
 
     _initSwiper() {
@@ -80,8 +81,6 @@ class StepSliderMain extends HeroSlider {
 class StepSliderSub extends HeroSlider {
     constructor(el) {
         super(el);
-        // this.el = el;
-        // this.swiper = this._initSwiper();
         console.log(this.el)
     }
   
@@ -96,7 +95,41 @@ class StepSliderSub extends HeroSlider {
             el: '.flow .swiper-pagination-sub',
             clickable: true,
         },
-  
       });
     }
-  }
+}
+
+class HousesSider extends HeroSlider {
+    constructor(el) {
+        super(el);
+        console.log(this.el)
+        this.slideLength = document.querySelectorAll('.houses .swiper-slide').length;
+        console.log(this.slideLength);
+    }
+
+    _initSwiper() {
+        return new Swiper(this.el, {
+            allowTouchMove: false,
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            loop: true,
+            loopedSlides: this.slideLength,
+            speed: 6000,
+            grabCursor: true,        
+        });
+    }
+
+    start(options = {
+        delay: 0,
+        disableOnInteraction: false
+    }
+        ) {
+        options = Object.assign({
+            delay: 4000,
+            disableOnInteraction: false
+        }, options);
+        
+        this.swiper.params.autoplay = options;
+        this.swiper.autoplay.start();
+    }
+}

@@ -29,6 +29,7 @@ var HeroSlider = /*#__PURE__*/function () {
     this.el = el;
     this.swiper = this._initSwiper();
     console.log(this.el);
+    console.log(this._initSwiper);
   }
 
   _createClass(HeroSlider, [{
@@ -135,9 +136,7 @@ var StepSliderSub = /*#__PURE__*/function (_HeroSlider2) {
 
     _classCallCheck(this, StepSliderSub);
 
-    _this2 = _super2.call(this, el); // this.el = el;
-    // this.swiper = this._initSwiper();
-
+    _this2 = _super2.call(this, el);
     console.log(_this2.el);
     return _this2;
   }
@@ -160,5 +159,54 @@ var StepSliderSub = /*#__PURE__*/function (_HeroSlider2) {
   }]);
 
   return StepSliderSub;
+}(HeroSlider);
+
+var HousesSider = /*#__PURE__*/function (_HeroSlider3) {
+  _inherits(HousesSider, _HeroSlider3);
+
+  var _super3 = _createSuper(HousesSider);
+
+  function HousesSider(el) {
+    var _this3;
+
+    _classCallCheck(this, HousesSider);
+
+    _this3 = _super3.call(this, el);
+    console.log(_this3.el);
+    _this3.slideLength = document.querySelectorAll('.houses .swiper-slide').length;
+    console.log(_this3.slideLength);
+    return _this3;
+  }
+
+  _createClass(HousesSider, [{
+    key: "_initSwiper",
+    value: function _initSwiper() {
+      return new Swiper(this.el, {
+        allowTouchMove: false,
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        loop: true,
+        loopedSlides: this.slideLength,
+        speed: 6000,
+        grabCursor: true
+      });
+    }
+  }, {
+    key: "start",
+    value: function start() {
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+        delay: 0,
+        disableOnInteraction: false
+      };
+      options = Object.assign({
+        delay: 4000,
+        disableOnInteraction: false
+      }, options);
+      this.swiper.params.autoplay = options;
+      this.swiper.autoplay.start();
+    }
+  }]);
+
+  return HousesSider;
 }(HeroSlider);
 //# sourceMappingURL=slider-swiper.js.map

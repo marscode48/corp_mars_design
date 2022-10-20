@@ -16,18 +16,23 @@ document.addEventListener('DOMContentLoaded', function () {
   var main = new Main();
 });
 
-var _toggleSlideAnimation = /*#__PURE__*/new WeakSet();
+var _toggleHeroAnimation = /*#__PURE__*/new WeakSet();
+
+var _toggleHousesAnimation = /*#__PURE__*/new WeakSet();
 
 var Main = /*#__PURE__*/function () {
   function Main() {
     _classCallCheck(this, Main);
 
-    _classPrivateMethodInitSpec(this, _toggleSlideAnimation);
+    _classPrivateMethodInitSpec(this, _toggleHousesAnimation);
+
+    _classPrivateMethodInitSpec(this, _toggleHeroAnimation);
 
     // this.side = document.querySelector('#side-btn');
     // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
     this.hero = new HeroSlider('.swiper-hero');
+    this.houses = new HousesSider('.swiper-houses');
 
     this._init();
   }
@@ -89,7 +94,10 @@ var Main = /*#__PURE__*/function () {
       new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {
         once: false
       });
-      new ScrollObserver('.swiper-hero', _classPrivateMethodGet(this, _toggleSlideAnimation, _toggleSlideAnimation2).bind(this), {
+      new ScrollObserver('.swiper-hero', _classPrivateMethodGet(this, _toggleHeroAnimation, _toggleHeroAnimation2).bind(this), {
+        once: false
+      });
+      new ScrollObserver('.swiper-houses', _classPrivateMethodGet(this, _toggleHousesAnimation, _toggleHousesAnimation2).bind(this), {
         once: false
       }); // new ScrollObserver('.menu__item', this._inviewAnimation);
       // new ScrollObserver('.site-title', this._inviewAnimation);
@@ -104,13 +112,23 @@ var Main = /*#__PURE__*/function () {
   return Main;
 }();
 
-function _toggleSlideAnimation2(el, inview) {
+function _toggleHeroAnimation2(el, inview) {
   if (inview) {
     this.hero.start();
-    console.log('start is called');
+    console.log('hero start is called');
   } else {
     this.hero.stop();
-    console.log('stop is called');
+    console.log('hero stop is called');
+  }
+}
+
+function _toggleHousesAnimation2(el, inview) {
+  if (inview) {
+    this.houses.start();
+    console.log('houses start is called');
+  } else {
+    this.houses.stop();
+    console.log('houses stop is called');
   }
 }
 //# sourceMappingURL=main.js.map

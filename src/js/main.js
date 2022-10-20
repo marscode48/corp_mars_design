@@ -8,6 +8,7 @@ class Main {
     // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
     this.hero = new HeroSlider('.swiper-hero');
+    this.houses = new HousesSider('.swiper-houses');
     this._init();
   }
 
@@ -65,7 +66,8 @@ class Main {
 
   _scrollInit() {
     new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
-    new ScrollObserver('.swiper-hero', this.#toggleSlideAnimation.bind(this), { once: false });
+    new ScrollObserver('.swiper-hero', this.#toggleHeroAnimation.bind(this), { once: false });
+    new ScrollObserver('.swiper-houses', this.#toggleHousesAnimation.bind(this), { once: false });
     // new ScrollObserver('.menu__item', this._inviewAnimation);
     // new ScrollObserver('.site-title', this._inviewAnimation);
     // new ScrollObserver('.cover-slide', this._inviewAnimation);
@@ -75,13 +77,23 @@ class Main {
     // new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
   }
 
-  #toggleSlideAnimation(el, inview) {
+  #toggleHeroAnimation(el, inview) {
     if(inview) {
         this.hero.start();
-        console.log('start is called')
+        console.log('hero start is called')
     } else {
         this.hero.stop();
-        console.log('stop is called')
+        console.log('hero stop is called')
+    }
+  }
+
+  #toggleHousesAnimation(el, inview) {
+    if(inview) {
+        this.houses.start();
+        console.log('houses start is called')
+    } else {
+        this.houses.stop();
+        console.log('houses stop is called')
     }
   }
 }
