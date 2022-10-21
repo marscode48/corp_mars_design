@@ -44,8 +44,8 @@ var Main = /*#__PURE__*/function () {
       new MenuOpen();
       new StepSliderMain('.swiper-main');
       new StepSliderSub('.swiper-sub'); // new MenuFadeIn(520);
-      // new SmoothScroll(80);
-      // Pace.on('done', this._paceDone.bind(this));
+
+      new SmoothScroll(80); // Pace.on('done', this._paceDone.bind(this));
 
       this._scrollInit();
     } // _paceDone() {

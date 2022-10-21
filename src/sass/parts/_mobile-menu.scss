@@ -31,18 +31,19 @@
       margin-bottom: 0px;
     }
 
-    &.gif {
-      height: 150px;
-      width: 100px;
-      position: relative;
-      top: 0px;
-      right: 15px;
+    &.logo {
+    /* height: 150px; */
+    width: 100px;
+    /* position: relative; */
+    /* top: 150px; */
+    /* right: 15px; */
+    margin-bottom: 50px;
   
-      & > img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
+      // & > img {
+      //   object-fit: cover;
+      //   width: 100%;
+      //   height: 100%;
+      // }
     }
   }
 
@@ -88,7 +89,7 @@
     left: -250px;
     z-index: 20;
     cursor: pointer;
-    box-shadow: inset 0 0 30px $cBgYellow;
+    box-shadow: inset 0 0 30px #cbcbcb;
     visibility: hidden;
   }
 

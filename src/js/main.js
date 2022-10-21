@@ -18,7 +18,7 @@ class Main {
     new StepSliderMain('.swiper-main');
     new StepSliderSub('.swiper-sub');
     // new MenuFadeIn(520);
-    // new SmoothScroll(80);
+    new SmoothScroll(80);
     // Pace.on('done', this._paceDone.bind(this));
     this._scrollInit();
   }
