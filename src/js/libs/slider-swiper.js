@@ -115,7 +115,7 @@ class HousesSider extends HeroSlider {
             loop: true,
             loopedSlides: this.slideLength,
             speed: 6000,
-            grabCursor: true,        
+            grabCursor: true,
         });
     }
 

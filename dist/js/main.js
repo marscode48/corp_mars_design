@@ -40,10 +40,13 @@ var Main = /*#__PURE__*/function () {
   _createClass(Main, [{
     key: "_init",
     value: function _init() {
-      // new MvScaleChange();
+      gsap.registerPlugin(ScrollTrigger); // new MvScaleChange();
+
       new MenuOpen();
       new StepSliderMain('.swiper-main');
-      new StepSliderSub('.swiper-sub'); // new MenuFadeIn(520);
+      new StepSliderSub('.swiper-sub'); // new TopParallaxAnimation('.gsap-top-title', '.gsap-top-image');
+      // new SideParallaxAnimation('.gsap-side-image');
+      // new MenuFadeIn(520);
 
       new SmoothScroll(80); // Pace.on('done', this._paceDone.bind(this));
 
@@ -67,17 +70,25 @@ var Main = /*#__PURE__*/function () {
       if (inview) {
         el.classList.add('inview');
       }
+    }
+  }, {
+    key: "_topParallaxAnimation",
+    value: function _topParallaxAnimation(el, inview) {
+      if (inview) {
+        new TopParallaxAnimation('.gsap-top-title', '.gsap-top-image');
+      }
+    }
+  }, {
+    key: "_sideParallaxAnimation",
+    value: function _sideParallaxAnimation(el, inview) {
+      if (inview) {
+        new SideParallaxAnimation('.gsap-side-image');
+      }
     } // _sideAnimation(el, inview) {
     //   if (inview) {
     //     this.side.classList.add('inview');
     //   } else {
     //     this.side.classList.remove('inview');
-    //   }
-    // }
-    // _textAnimation(el, inview) {
-    //   if (inview) {
-    //     const ta = new TweenTextAnimation(el);
-    //     ta.animate();
     //   }
     // }
     // _fadeInAnimation(el, inview) {
@@ -103,8 +114,9 @@ var Main = /*#__PURE__*/function () {
       // new ScrollObserver('.site-title', this._inviewAnimation);
       // new ScrollObserver('.cover-slide', this._inviewAnimation);
 
-      new ScrollObserver('.appear', this._inviewAnimation); // new ScrollObserver('.tween-animate-title', this._textAnimation, { rootMargin: '-100px 0px' });
-      // new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
+      new ScrollObserver('.appear', this._inviewAnimation);
+      new ScrollObserver('.top-parallax', this._topParallaxAnimation);
+      new ScrollObserver('.side-parallax', this._sideParallaxAnimation); // new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
       // new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
     }
   }]);

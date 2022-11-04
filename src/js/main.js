@@ -13,10 +13,13 @@ class Main {
   }
 
   _init() {
+    gsap.registerPlugin(ScrollTrigger);
     // new MvScaleChange();
     new MenuOpen();
     new StepSliderMain('.swiper-main');
     new StepSliderSub('.swiper-sub');
+    // new TopParallaxAnimation('.gsap-top-title', '.gsap-top-image');
+    // new SideParallaxAnimation('.gsap-side-image');
     // new MenuFadeIn(520);
     new SmoothScroll(80);
     // Pace.on('done', this._paceDone.bind(this));
@@ -41,6 +44,18 @@ class Main {
     }
   }
 
+  _topParallaxAnimation(el, inview) {
+    if (inview) {
+      new TopParallaxAnimation('.gsap-top-title', '.gsap-top-image');
+    }
+  }
+
+  _sideParallaxAnimation(el, inview) {
+    if (inview) {
+      new SideParallaxAnimation('.gsap-side-image');
+    }
+  }
+
   // _sideAnimation(el, inview) {
   //   if (inview) {
   //     this.side.classList.add('inview');
@@ -49,12 +64,6 @@ class Main {
   //   }
   // }
 
-  // _textAnimation(el, inview) {
-  //   if (inview) {
-  //     const ta = new TweenTextAnimation(el);
-  //     ta.animate();
-  //   }
-  // }
 
   // _fadeInAnimation(el, inview) {
   //   if (inview) {
@@ -72,28 +81,29 @@ class Main {
     // new ScrollObserver('.site-title', this._inviewAnimation);
     // new ScrollObserver('.cover-slide', this._inviewAnimation);
     new ScrollObserver('.appear', this._inviewAnimation);
-    // new ScrollObserver('.tween-animate-title', this._textAnimation, { rootMargin: '-100px 0px' });
+    new ScrollObserver('.top-parallax', this._topParallaxAnimation);
+    new ScrollObserver('.side-parallax', this._sideParallaxAnimation);
     // new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
     // new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
   }
 
   #toggleHeroAnimation(el, inview) {
-    if(inview) {
-        this.hero.start();
-        console.log('hero start is called')
+    if (inview) {
+      this.hero.start();
+      console.log('hero start is called');
     } else {
-        this.hero.stop();
-        console.log('hero stop is called')
+      this.hero.stop();
+      console.log('hero stop is called');
     }
   }
 
   #toggleHousesAnimation(el, inview) {
-    if(inview) {
-        this.houses.start();
-        console.log('houses start is called')
+    if (inview) {
+      this.houses.start();
+      console.log('houses start is called');
     } else {
-        this.houses.stop();
-        console.log('houses stop is called')
+      this.houses.stop();
+      console.log('houses stop is called');
     }
   }
 }

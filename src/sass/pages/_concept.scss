@@ -1,0 +1,106 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+.top-parallax {
+  height: 60vh;
+  width: 100%;
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  & .gsap-top-image {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    height: calc(60vh - 80px);
+    width: 100%;
+    background-image: url("https://picsum.photos/id/10/1920/1200");
+    background-repeat: no-repeat;
+  }
+
+  & .gsap-top-title {
+    color: $cWhite;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+    z-index: 1;
+    @include mq(lg) {
+      font-size: 3rem;
+    }
+  
+    & .char {
+      display: inline-block;
+    }
+  }
+}
+
+.card.wrapper {
+  padding-bottom: 150px;
+}
+
+.concept {
+
+  &__card {
+    margin-top: 200px;
+
+    @include mq(lg) {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      
+    }
+  }
+
+  &__intro {
+    & p {
+      line-height: 2.2;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+
+  &__title {
+    font-weight: normal;
+    @extend .font-lg;
+    margin-bottom: 20px;
+  }
+  
+  &__text {
+    line-height: 1.8;
+  }
+  
+}
+
+.bottom {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.7s ease-out;
+  overflow: hidden;
+}
+.bottom_text {
+  font-size: 12vw;
+  font-weight: bold;
+}
+.bottom.is-crossed {
+  background: #333333;
+}
+.bottom.is-crossed .bottom_text {
+  color: #ffffff;
+}
