@@ -7,42 +7,35 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 var SmoothScroll = /*#__PURE__*/function () {
-  function SmoothScroll(g) {
+  function SmoothScroll(gap) {
     _classCallCheck(this, SmoothScroll);
 
     this.DOM = {};
-    this.g = g;
-    this.DOM.trigger = document.querySelectorAll('a[href^="#"]');
+    this.gap = gap;
+    this.DOM.links = document.querySelectorAll('a[href^="#"]');
 
-    this._scroll();
+    this._smoothScroll();
   }
 
   _createClass(SmoothScroll, [{
-    key: "_scroll",
-    value: function _scroll() {
+    key: "_smoothScroll",
+    value: function _smoothScroll() {
       var _this = this;
 
-      var _loop = function _loop(i) {
-        _this.DOM.trigger[i].addEventListener('click', function (e) {
+      this.DOM.links.forEach(function (link) {
+        link.addEventListener('click', function (e) {
           e.preventDefault();
-
-          var href = _this.DOM.trigger[i].getAttribute('href');
-
-          var targetElement = document.getElementById(href.replace('#', ''));
-          var rect = targetElement.getBoundingClientRect().top;
-          var offset = window.pageYOffset;
-          var gap = _this.g;
-          var target = rect + offset - gap;
+          var hrefLink = link.getAttribute('href');
+          var targetContent = document.getElementById(hrefLink.replace("#", ""));
+          var rectTop = targetContent.getBoundingClientRect().top;
+          var positionY = window.pageYOffset;
+          var target = rectTop + positionY + _this.gap;
           window.scrollTo({
             top: target,
             behavior: "smooth"
           });
         });
-      };
-
-      for (var i = 0; i < this.DOM.trigger.length; i++) {
-        _loop(i);
-      }
+      });
     }
   }]);
 

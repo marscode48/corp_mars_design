@@ -43,12 +43,12 @@ var Main = /*#__PURE__*/function () {
       gsap.registerPlugin(ScrollTrigger); // new MvScaleChange();
 
       new MenuOpen();
+      new SmoothScroll(0);
       new StepSliderMain('.swiper-main');
       new StepSliderSub('.swiper-sub'); // new TopParallaxAnimation('.gsap-top-title', '.gsap-top-image');
       // new SideParallaxAnimation('.gsap-side-image');
       // new MenuFadeIn(520);
-
-      new SmoothScroll(80); // Pace.on('done', this._paceDone.bind(this));
+      // Pace.on('done', this._paceDone.bind(this));
 
       this._scrollInit();
     } // _paceDone() {
