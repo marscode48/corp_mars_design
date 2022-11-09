@@ -958,6 +958,14 @@ News
 /*-------------------------------------------
 Concept
 -------------------------------------------*/
+.concept {
+  padding: 0;
+}
+@media screen and (min-width: 960px) {
+  .concept {
+    padding: 0 16px;
+  }
+}
 .concept__inner {
   display: flex;
   justify-content: space-between;

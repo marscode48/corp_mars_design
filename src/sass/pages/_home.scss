@@ -167,6 +167,11 @@ Concept
 -------------------------------------------*/
 .concept {
   @extend .mb-lg;
+  padding: 0;
+    
+  @include mq(lg) {
+    padding: 0 16px;
+  }
 
   &__inner {
     display: flex;
