@@ -26,13 +26,13 @@ var SmoothScroll = /*#__PURE__*/function () {
         link.addEventListener('click', function (e) {
           e.preventDefault();
           var hrefLink = link.getAttribute('href');
-          var targetContent = document.getElementById(hrefLink.replace("#", ""));
+          var targetContent = document.getElementById(hrefLink.replace('#', ''));
           var rectTop = targetContent.getBoundingClientRect().top;
           var positionY = window.pageYOffset;
           var target = rectTop + positionY + _this.gap;
           window.scrollTo({
             top: target,
-            behavior: "smooth"
+            behavior: 'smooth'
           });
         });
       });

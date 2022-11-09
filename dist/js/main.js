@@ -84,6 +84,13 @@ var Main = /*#__PURE__*/function () {
       if (inview) {
         new SideParallaxAnimation('.gsap-side-image');
       }
+    }
+  }, {
+    key: "_reserveParallaxAnimaion",
+    value: function _reserveParallaxAnimaion(el, inview) {
+      if (inview) {
+        new ReserveParallaxAnimation(el);
+      }
     } // _sideAnimation(el, inview) {
     //   if (inview) {
     //     this.side.classList.add('inview');
@@ -116,7 +123,8 @@ var Main = /*#__PURE__*/function () {
 
       new ScrollObserver('.appear', this._inviewAnimation);
       new ScrollObserver('.top-parallax', this._topParallaxAnimation);
-      new ScrollObserver('.side-parallax', this._sideParallaxAnimation); // new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
+      new ScrollObserver('.side-parallax', this._sideParallaxAnimation);
+      new ScrollObserver('.reserve-parallax', this._reserveParallaxAnimaion); // new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
       // new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
     }
   }]);

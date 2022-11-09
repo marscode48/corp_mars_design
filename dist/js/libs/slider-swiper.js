@@ -16,6 +16,12 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -61,7 +67,7 @@ var HeroSlider = /*#__PURE__*/function () {
         disableOnInteraction: false,
         waitForTransition: false
       };
-      options = Object.assign({
+      options = _objectSpread({
         delay: 4000,
         disableOnInteraction: false
       }, options);
@@ -106,7 +112,7 @@ var StepSliderMain = /*#__PURE__*/function (_HeroSlider) {
           el: '.flow .swiper-pagination-main',
           clickable: true,
           renderBullet: function renderBullet(index, className) {
-            var num = ('00' + (index + 1)).slice(-2);
+            var num = "00".concat(index + 1).slice(-2);
             return "<span class=\"".concat(className, "\"><span class=\"step\">STEP.</span>").concat(num, "</span>");
           }
         },
@@ -198,7 +204,7 @@ var HousesSider = /*#__PURE__*/function (_HeroSlider3) {
         delay: 0,
         disableOnInteraction: false
       };
-      options = Object.assign({
+      options = _objectSpread({
         delay: 4000,
         disableOnInteraction: false
       }, options);

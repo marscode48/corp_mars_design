@@ -93,4 +93,46 @@ var SideParallaxAnimation = /*#__PURE__*/function () {
 
   return SideParallaxAnimation;
 }();
+
+var ReserveParallaxAnimation = /*#__PURE__*/function () {
+  function ReserveParallaxAnimation(el) {
+    _classCallCheck(this, ReserveParallaxAnimation);
+
+    this.DOM = {};
+    this.DOM.el = el;
+    console.log(el);
+    this.animate();
+  }
+
+  _createClass(ReserveParallaxAnimation, [{
+    key: "animate",
+    value: function animate() {
+      ScrollTrigger.create({
+        trigger: this.DOM.el,
+        start: 'top 75%',
+        toggleClass: 'active'
+      });
+      var reserveTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: this.DOM.el,
+          start: 'top bottom',
+          end: 'center center',
+          scrub: 1.5,
+          markers: false
+        }
+      });
+      reserveTl.fromTo('.reserve-parallax .reserve__left', {
+        xPercent: -100
+      }, {
+        xPercent: 0
+      }).fromTo('.reserve-parallax .reserve__right', {
+        xPercent: 100
+      }, {
+        xPercent: 0
+      }, '<');
+    }
+  }]);
+
+  return ReserveParallaxAnimation;
+}();
 //# sourceMappingURL=parallax-animation.js.map
