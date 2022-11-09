@@ -107,6 +107,7 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
   margin-bottom: 58px;
   font-weight: normal;
   line-height: 1;
+  text-align: center;
 
   @include mq(lg) {
     margin-bottom: 70px;

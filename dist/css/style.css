@@ -734,6 +734,7 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
   margin-bottom: 58px;
   font-weight: normal;
   line-height: 1;
+  text-align: center;
 }
 @media screen and (min-width: 960px) {
   .section-title {
@@ -1175,7 +1176,6 @@ Reserve
   }
 }
 .reserve__inner {
-  margin-bottom: 20px;
   padding: 0;
 }
 @media screen and (min-width: 960px) {
@@ -1191,6 +1191,7 @@ Reserve
   align-items: center;
   width: 100%;
   height: 50vh;
+  margin-bottom: 20px;
   overflow: hidden;
   background-image: url(../../images/reserve.jpg);
   background-size: cover;
