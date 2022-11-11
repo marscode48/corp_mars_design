@@ -2,9 +2,8 @@
 @use "../parts/common" as *;
 
 .concept {
-
   &__card {
-    margin-top: 150px;
+    margin-top: calc(20vh + 80px);;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,10 +89,15 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -10%;
+      bottom: -15%;
       width: 100%;
-      height: 120%;
+      height: 130%;
       background-color: #e2e2d6;
+
+      @include mq(lg) {
+        bottom: -20%;
+        height: 140%;
+      }
     }
   }
 
@@ -106,24 +110,6 @@
       flex-basis: 48%;
     }
   }
-
-  &__image {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-
-    @include mq(lg) {
-      flex-basis: 48%;
-    }
-
-    & img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
 
   &__title {
     @extend .font-lr;
@@ -143,6 +129,23 @@
     @include mq(lg) {
       line-height: 2.2;
       font-size: 0.875rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    @include mq(lg) {
+      flex-basis: 48%;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
     }
   }
 }

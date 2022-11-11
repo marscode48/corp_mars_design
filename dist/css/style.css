@@ -1335,7 +1335,7 @@ Footer
 }
 
 .concept__card {
-  margin-top: 150px;
+  margin-top: calc(20vh + 80px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1388,10 +1388,16 @@ Footer
   content: "";
   position: absolute;
   left: 0;
-  bottom: -10%;
+  bottom: -15%;
   width: 100%;
-  height: 120%;
+  height: 130%;
   background-color: #e2e2d6;
+}
+@media screen and (min-width: 960px) {
+  .concept__card::before {
+    bottom: -20%;
+    height: 140%;
+  }
 }
 .concept__intro {
   padding: 0 16px 40px;
@@ -1402,22 +1408,6 @@ Footer
   .concept__intro {
     flex-basis: 48%;
   }
-}
-.concept__image {
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-}
-@media screen and (min-width: 960px) {
-  .concept__image {
-    flex-basis: 48%;
-  }
-}
-.concept__image img {
-  width: 100%;
-  height: auto;
 }
 .concept__title {
   font-weight: normal;
@@ -1437,5 +1427,21 @@ Footer
     line-height: 2.2;
     font-size: 0.875rem;
   }
+}
+.concept__image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (min-width: 960px) {
+  .concept__image {
+    flex-basis: 48%;
+  }
+}
+.concept__image img {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
