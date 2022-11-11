@@ -484,6 +484,40 @@
   transition: all 0.25s ease-out;
 }
 
+.top-parallax {
+  height: 80vh;
+  width: 100%;
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.top-parallax .gsap-top-image {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  height: calc(80vh - 80px);
+  width: 100%;
+  background-image: url("https://picsum.photos/id/10/1920/1200");
+  background-repeat: no-repeat;
+}
+.top-parallax .gsap-top-title {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+  z-index: 1;
+}
+@media screen and (min-width: 960px) {
+  .top-parallax .gsap-top-title {
+    font-size: 3rem;
+  }
+}
+.top-parallax .gsap-top-title .char {
+  display: inline-block;
+}
+
 .mobile-menu {
   position: fixed;
   top: 0px;
@@ -1298,40 +1332,6 @@ Footer
 }
 .footer__copyright {
   text-align: center;
-}
-
-.top-parallax {
-  height: 80vh;
-  width: 100%;
-  padding-top: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.top-parallax .gsap-top-image {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  height: calc(80vh - 80px);
-  width: 100%;
-  background-image: url("https://picsum.photos/id/10/1920/1200");
-  background-repeat: no-repeat;
-}
-.top-parallax .gsap-top-title {
-  color: #FFFFFF;
-  font-size: 1.5rem;
-  font-weight: normal;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
-  z-index: 1;
-}
-@media screen and (min-width: 960px) {
-  .top-parallax .gsap-top-title {
-    font-size: 3rem;
-  }
-}
-.top-parallax .gsap-top-title .char {
-  display: inline-block;
 }
 
 .concept__card {

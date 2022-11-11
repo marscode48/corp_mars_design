@@ -167,15 +167,15 @@ var StepSliderSub = /*#__PURE__*/function (_HeroSlider2) {
   return StepSliderSub;
 }(HeroSlider);
 
-var HousesSider = /*#__PURE__*/function (_HeroSlider3) {
-  _inherits(HousesSider, _HeroSlider3);
+var HousesSlider = /*#__PURE__*/function (_HeroSlider3) {
+  _inherits(HousesSlider, _HeroSlider3);
 
-  var _super3 = _createSuper(HousesSider);
+  var _super3 = _createSuper(HousesSlider);
 
-  function HousesSider(el) {
+  function HousesSlider(el) {
     var _this3;
 
-    _classCallCheck(this, HousesSider);
+    _classCallCheck(this, HousesSlider);
 
     _this3 = _super3.call(this, el);
     console.log(_this3.el);
@@ -184,7 +184,7 @@ var HousesSider = /*#__PURE__*/function (_HeroSlider3) {
     return _this3;
   }
 
-  _createClass(HousesSider, [{
+  _createClass(HousesSlider, [{
     key: "_initSwiper",
     value: function _initSwiper() {
       return new Swiper(this.el, {
@@ -213,6 +213,6 @@ var HousesSider = /*#__PURE__*/function (_HeroSlider3) {
     }
   }]);
 
-  return HousesSider;
+  return HousesSlider;
 }(HeroSlider);
 //# sourceMappingURL=slider-swiper.js.map

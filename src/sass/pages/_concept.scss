@@ -1,41 +1,6 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-.top-parallax {
-  height: 80vh;
-  width: 100%;
-  padding-top: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-
-  & .gsap-top-image {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    height: calc(80vh - 80px);
-    width: 100%;
-    background-image: url("https://picsum.photos/id/10/1920/1200");
-    background-repeat: no-repeat;
-  }
-
-  & .gsap-top-title {
-    color: $cWhite;
-    font-size: 1.5rem;
-    font-weight: normal;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
-    z-index: 1;
-    @include mq(lg) {
-      font-size: 3rem;
-    }
-  
-    & .char {
-      display: inline-block;
-    }
-  }
-}
-
 .concept {
 
   &__card {

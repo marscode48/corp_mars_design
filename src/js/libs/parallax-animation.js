@@ -47,7 +47,7 @@ class TopParallaxAnimation {
   }
 }
 
-class SideParallaxAnimation {
+class ConceptParallaxAnimation {
   constructor(els) {
     this.DOM = {};
     console.log(els);

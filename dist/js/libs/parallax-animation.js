@@ -60,9 +60,9 @@ var TopParallaxAnimation = /*#__PURE__*/function () {
   return TopParallaxAnimation;
 }();
 
-var SideParallaxAnimation = /*#__PURE__*/function () {
-  function SideParallaxAnimation(els) {
-    _classCallCheck(this, SideParallaxAnimation);
+var ConceptParallaxAnimation = /*#__PURE__*/function () {
+  function ConceptParallaxAnimation(els) {
+    _classCallCheck(this, ConceptParallaxAnimation);
 
     this.DOM = {};
     console.log(els);
@@ -71,7 +71,7 @@ var SideParallaxAnimation = /*#__PURE__*/function () {
     this.animate();
   }
 
-  _createClass(SideParallaxAnimation, [{
+  _createClass(ConceptParallaxAnimation, [{
     key: "animate",
     value: function animate() {
       this.DOM.els.forEach(function (el) {
@@ -91,7 +91,7 @@ var SideParallaxAnimation = /*#__PURE__*/function () {
     }
   }]);
 
-  return SideParallaxAnimation;
+  return ConceptParallaxAnimation;
 }();
 
 var ReserveParallaxAnimation = /*#__PURE__*/function () {

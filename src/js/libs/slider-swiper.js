@@ -101,7 +101,7 @@ class StepSliderSub extends HeroSlider {
   }
 }
 
-class HousesSider extends HeroSlider {
+class HousesSlider extends HeroSlider {
   constructor(el) {
     super(el);
     console.log(this.el);

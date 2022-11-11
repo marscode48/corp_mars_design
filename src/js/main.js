@@ -8,7 +8,7 @@ class Main {
     // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
     this.hero = new HeroSlider('.swiper-hero');
-    this.houses = new HousesSider('.swiper-houses');
+    this.houses = new HousesSlider('.swiper-houses');
     this._init();
   }
 
@@ -50,9 +50,9 @@ class Main {
     }
   }
 
-  _sideParallaxAnimation(el, inview) {
+  _conceptParallaxAnimation(el, inview) {
     if (inview) {
-      new SideParallaxAnimation('.gsap-side-image');
+      new ConceptParallaxAnimation('.gsap-concept-image');
     }
   }
 
@@ -88,7 +88,7 @@ class Main {
     // new ScrollObserver('.cover-slide', this._inviewAnimation);
     new ScrollObserver('.appear', this._inviewAnimation);
     new ScrollObserver('.top-parallax', this._topParallaxAnimation);
-    new ScrollObserver('.side-parallax', this._sideParallaxAnimation);
+    new ScrollObserver('.concept-parallax', this._conceptParallaxAnimation);
     new ScrollObserver('.reserve-parallax', this._reserveParallaxAnimaion);
     // new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
     // new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
