@@ -184,7 +184,7 @@ Concept
     }
   }
 
-  &__img {
+  &__feature {
     width: 45%;
     margin-bottom: 30px;
   
@@ -204,7 +204,7 @@ Concept
     }
   }
 
-  &__text {
+  &__heading {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,7 +215,7 @@ Concept
     }
 
     &.inview {
-      & .concept__text-inner .en::before {
+      & .concept__heading-inner .en::before {
         @include animation($name: scaleX, $duration: 0.3s, $delay: 1s);
       }
     }

@@ -1012,39 +1012,39 @@ Concept
     padding: 50px;
   }
 }
-.concept__img {
+.concept__feature {
   width: 45%;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 960px) {
-  .concept__img {
+  .concept__feature {
     width: 65%;
     margin-bottom: 0;
   }
 }
-.concept__img img {
+.concept__feature img {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (min-width: 960px) {
-  .concept__img img {
+  .concept__feature img {
     height: 500px;
   }
 }
-.concept__text {
+.concept__heading {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 45%;
 }
 @media screen and (min-width: 960px) {
-  .concept__text {
+  .concept__heading {
     width: 30%;
   }
 }
-.concept__text.inview .concept__text-inner .en::before {
+.concept__heading.inview .concept__heading-inner .en::before {
   -webkit-animation-name: scaleX;
           animation-name: scaleX;
   -webkit-animation-duration: 0.3s;
@@ -1060,10 +1060,10 @@ Concept
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.concept__text-inner .en {
+.concept__heading-inner .en {
   position: relative;
 }
-.concept__text-inner .en::before {
+.concept__heading-inner .en::before {
   display: none;
   position: absolute;
   content: "";
@@ -1076,15 +1076,15 @@ Concept
   transform-origin: right;
 }
 @media screen and (min-width: 960px) {
-  .concept__text-inner .en::before {
+  .concept__heading-inner .en::before {
     display: block;
   }
 }
-.concept__text-inner .section-link__arrow {
+.concept__heading-inner .section-link__arrow {
   right: 6rem;
 }
 @media screen and (min-width: 960px) {
-  .concept__text-inner .section-link__arrow {
+  .concept__heading-inner .section-link__arrow {
     right: 8rem;
   }
 }
