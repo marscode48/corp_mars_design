@@ -710,7 +710,7 @@ li {
 }
 
 /* フォント */
-.font-sm, .concept__description, .header__reserve, .news__date span, .section-link__text, .section-title .ja {
+.font-sm, .concept__description, .header__reserve, .news__date span, .arrow-anime, .section-title .ja {
   font-size: 0.75rem;
 }
 
@@ -796,28 +796,65 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 
 .section-link {
   text-align: right;
-  position: relative;
+  padding-right: 2rem;
+}
+@media screen and (min-width: 960px) {
+  .section-link {
+    padding-right: 0;
+  }
 }
 .section-link > a {
   display: block;
 }
-.section-link__text {
-  display: block;
-  letter-spacing: 0.25em;
-  padding-right: 20px;
+.section-link .arrow-anime::before {
+  right: 24%;
 }
 @media screen and (min-width: 960px) {
-  .section-link__text {
-    letter-spacing: 0.35em;
-    font-size: 0.875rem;
-    padding-right: 25px;
+  .section-link .arrow-anime::before {
+    right: 10%;
   }
 }
-.section-link__arrow {
+
+.home-link {
+  text-align: center;
+  margin-top: 80px;
+  padding-left: 3rem;
+}
+@media screen and (min-width: 960px) {
+  .home-link {
+    margin-top: 120px;
+  }
+}
+.home-link > a {
+  display: block;
+}
+.home-link .arrow-anime::before {
+  right: 60%;
+}
+@media screen and (min-width: 960px) {
+  .home-link .arrow-anime::before {
+    right: 55%;
+  }
+}
+
+.arrow-anime {
+  position: relative;
+  display: block;
+  letter-spacing: 0.25em;
+}
+@media screen and (min-width: 960px) {
+  .arrow-anime {
+    letter-spacing: 0.35em;
+    font-size: 0.875rem;
+  }
+}
+.arrow-anime::before {
+  content: "";
   position: absolute;
-  right: 4.5rem;
-  top: 5px;
-  width: 30px;
+  width: 2em;
+  height: 1em;
+  top: 32%;
+  background-image: url(../../images/arrowright.svg);
   -webkit-animation-name: kf-arrow-anime;
           animation-name: kf-arrow-anime;
   -webkit-animation-duration: 2s;
@@ -832,13 +869,6 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
           animation-direction: normal;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-@media screen and (min-width: 960px) {
-  .section-link__arrow {
-    top: 6px;
-    right: 6rem;
-    width: 35px;
-  }
 }
 
 @-webkit-keyframes kf-arrow-anime {
@@ -945,8 +975,30 @@ News
     bottom: -60px;
   }
 }
+.news__inner .arrow-anime::before {
+  right: 17%;
+}
+@media screen and (min-width: 960px) {
+  .news__inner .arrow-anime::before {
+    right: 7%;
+  }
+}
 .news__container {
   position: relative;
+  padding: 0;
+}
+@media screen and (min-width: 960px) {
+  .news__container {
+    padding: 0 16px;
+  }
+}
+.news__ul {
+  padding: 0 16px;
+}
+@media screen and (min-width: 960px) {
+  .news__ul {
+    padding: 0;
+  }
 }
 @media screen and (min-width: 960px) {
   .news__ul {
@@ -1080,13 +1132,12 @@ Concept
     display: block;
   }
 }
-.concept__heading-inner .section-link__arrow {
-  right: 6rem;
+.concept__heading-inner .section-link {
+  padding-right: 1rem;
 }
-@media screen and (min-width: 960px) {
-  .concept__heading-inner .section-link__arrow {
-    right: 8rem;
-  }
+.concept__heading-inner .section-link .arrow-anime::before {
+  top: 30%;
+  right: 60%;
 }
 .concept__message {
   margin: 0 auto;
@@ -1398,6 +1449,9 @@ Footer
     bottom: -20%;
     height: 140%;
   }
+}
+.concept__card:last-child {
+  margin-bottom: 80px;
 }
 .concept__intro {
   padding: 0 16px 40px;

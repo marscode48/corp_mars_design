@@ -99,6 +99,10 @@
         height: 140%;
       }
     }
+
+    &:last-child {
+      margin-bottom: 80px;
+    }
   }
 
   &__intro {

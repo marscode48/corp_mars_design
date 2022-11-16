@@ -105,13 +105,33 @@ News
         bottom: -60px;
       }
     }
+
+    & .arrow-anime::before {
+      right: 17%;
+
+      @include mq(lg) {
+        right: 7%;
+      }
+    }
   }
 
   &__container {
     position: relative;
+
+    padding: 0;
+
+    @include mq(lg) {
+      padding: 0 16px;
+    }
   }
 
   &__ul {
+
+    padding: 0 16px;
+
+    @include mq(lg) {
+      padding: 0;
+    }
     
     @include mq(lg) {
       display: flex;
@@ -241,11 +261,12 @@ Concept
       }
     }
 
-    &-inner .section-link__arrow {
-      right: 6rem;
+    &-inner .section-link {
+      padding-right: 1rem;
 
-      @include mq(lg) {
-        right: 8rem;
+      & .arrow-anime::before {
+        top: 30%;
+        right: 60%;
       }
     }
   }
