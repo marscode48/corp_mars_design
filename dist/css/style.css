@@ -1058,6 +1058,7 @@ Concept
   justify-content: space-between;
   background: #e2e2d6;
   padding: 15px;
+  overflow: hidden;
 }
 @media screen and (min-width: 960px) {
   .concept__inner {

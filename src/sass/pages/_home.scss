@@ -198,6 +198,7 @@ Concept
     justify-content: space-between;
     background: #e2e2d6;
     padding: 15px;
+    overflow: hidden;
 
     @include mq(lg) {
       padding: 50px;
