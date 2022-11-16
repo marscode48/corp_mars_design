@@ -1334,33 +1334,36 @@ Footer
 .footer .top-link {
   position: absolute;
   transform: rotate(-90deg);
-  width: 30px;
-  right: 2rem;
-  top: 12.5rem;
+  width: 80px;
+  height: 40px;
+  right: 5%;
+  top: 30%;
   z-index: 2;
 }
 @media screen and (min-width: 960px) {
   .footer .top-link {
-    width: 35px;
-    top: 10rem;
-    right: 1rem;
+    right: 0%;
+    top: -15%;
   }
 }
-.footer .top-link__arrow {
-  -webkit-animation-name: kf-arrow-anime;
-          animation-name: kf-arrow-anime;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+.footer .top-link > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.footer .top-link .arrow-anime {
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+.footer .top-link .arrow-anime::before {
+  top: 35%;
+  right: 10%;
+}
+@media screen and (min-width: 960px) {
+  .footer .top-link .arrow-anime::before {
+    right: 0%;
+  }
 }
 .footer__flex {
   padding: 40px 0;

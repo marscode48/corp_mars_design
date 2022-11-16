@@ -474,24 +474,36 @@ Footer
   & .top-link {
     position: absolute;
     transform: rotate(-90deg);
-    width: 30px;
-    right: 2rem;
-    top: 12.5rem;
+    width: 80px;
+    height: 40px;
+    right: 5%;
+    top: 30%;
     z-index: 2;
 
     @include mq(lg) {
-      width: 35px;
-      top: 10rem;
-      right: 1rem;
+      right: 0%;
+      top: -15%;
     }
 
-    &__arrow {
-      @include animation(
-        $name: kf-arrow-anime,
-        $iteration-count: infinite,
-        $duration: 2s,
-        $timing-function: linear
-      );
+    & > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    & .arrow-anime {
+      width: 100%;
+      height: 100%;
+      line-height: 40px;
+
+      &::before {
+        top: 35%;
+        right: 10%;
+
+        @include mq(lg) {
+          right: 0%;  
+        }
+      }
     }
   }
 
