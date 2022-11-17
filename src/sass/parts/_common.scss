@@ -195,6 +195,9 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
     height: 1em;
     top: 32%;
     background-image: url(../../images/arrowright.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
   
     @include animation(
       $name: kf-arrow-anime,
