@@ -176,11 +176,6 @@
   letter-spacing: 0.05em;
 }
 
-/* フェードモード時 共通調整 */
-.swiper-fade .swiper-slide {
-  transition-property: opacity !important;
-}
-
 @-webkit-keyframes hero-title-fadeIn {
   0% {
     opacity: 0;
@@ -484,6 +479,154 @@
   transition: all 0.25s ease-out;
 }
 
+.houses-page {
+  overflow: hidden;
+}
+.houses-page .swiper {
+  max-width: 720px;
+  margin: auto;
+}
+.houses-page .swiper-main {
+  overflow: visible;
+}
+.houses-page .swiper-thumb {
+  padding-top: 8px;
+}
+.houses-page .swiper-fade .swiper-slide-active {
+  pointer-events: auto;
+}
+.houses-page .swiper-controller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 62.5%;
+}
+.houses-page .swiper-button-prev, .houses-page .swiper-button-next {
+  display: grid;
+  place-content: center;
+  width: 6.4rem;
+  height: 6.4rem;
+  cursor: pointer;
+  transition: 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.houses-page .swiper-button-prev::before, .houses-page .swiper-button-next::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  border-radius: 50%;
+  box-shadow: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05), -0.8rem -0.8rem 1.2rem #fff;
+}
+.houses-page .swiper-button-prev::after, .houses-page .swiper-button-next::after {
+  width: 1.2rem;
+  height: 1.2rem;
+  content: "";
+  border: solid #ddd;
+  border-width: 3px 3px 0 0;
+}
+.houses-page .swiper-button-prev {
+  right: calc(100% + 3.2rem);
+}
+.houses-page .swiper-button-prev::after {
+  margin-left: 0.4rem;
+  transform: rotate(-135deg);
+}
+.houses-page .swiper-button-next {
+  left: calc(100% + 3.2rem);
+}
+.houses-page .swiper-button-next::after {
+  margin-right: 0.4rem;
+  transform: rotate(45deg);
+}
+.houses-page .swiper-button-disabled {
+  pointer-events: none;
+  opacity: 0;
+}
+.houses-page .swiper-scrollbar {
+  position: relative;
+  margin-top: 1.6rem;
+}
+.houses-page .swiper-scrollbar::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  margin: auto;
+  content: "";
+  background-color: #eee;
+}
+.houses-page .swiper-scrollbar-drag {
+  height: 20px;
+  padding: 8px 0;
+  cursor: pointer;
+  background-color: #f5695f;
+  background-clip: content-box;
+}
+.houses-page .swiper-scrollbar-drag:active {
+  background-color: #f5695f;
+}
+.houses-page .slide {
+  display: block;
+  overflow: hidden;
+}
+.houses-page .slide-media, .houses-page .thumb-media {
+  position: relative;
+  overflow: hidden;
+}
+.houses-page .slide-media img, .houses-page .thumb-media img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.houses-page .slide-media {
+  padding-top: 62.5%;
+  border-radius: 4px;
+}
+.houses-page .slide-media img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.houses-page .slide-title {
+  font-weight: bold;
+  line-height: 1.6;
+  padding: 3.2rem 0;
+}
+.houses-page .thumb-media {
+  padding-top: 100%;
+  transition: 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+  border-radius: 4px;
+}
+.houses-page .thumb-media img {
+  height: calc(100% + 8px);
+  transition: 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+  transform: translateY(-8px);
+}
+.houses-page .swiper-slide-thumb-active {
+  transition: 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+  opacity: 0.3;
+}
+.houses-page .swiper-slide-thumb-active .thumb-media {
+  transform: translateY(-8px);
+}
+.houses-page .swiper-slide-thumb-active .thumb-media img {
+  transform: translateY(0);
+}
+
 .top-parallax {
   height: 80vh;
   width: 100%;
@@ -691,11 +834,11 @@ li {
   }
 }
 
-.mb-lg, .mainvisual, .news, .concept, .flow, .houses, .reserve {
+.mb-lg, #category .houses-page, .mainvisual, .news, .concept, .flow, .houses, .reserve {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .mainvisual, .news, .concept, .flow, .houses, .reserve {
+  .mb-lg, #category .houses-page, .mainvisual, .news, .concept, .flow, .houses, .reserve {
     margin-bottom: 120px !important;
   }
 }
@@ -871,6 +1014,11 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
           animation-direction: normal;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+/* フェードモード時 共通調整 */
+.swiper-fade .swiper-slide {
+  transition-property: opacity !important;
 }
 
 @-webkit-keyframes kf-arrow-anime {
@@ -1567,5 +1715,9 @@ Footer
 }
 #category .news .page-nation a:hover {
   opacity: 0.7;
+}
+
+#category .houses-page .houses__inner {
+  margin-top: calc(20vh + 80px);
 }
 /*# sourceMappingURL=style.css.map */
