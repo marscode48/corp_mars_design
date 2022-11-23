@@ -122,15 +122,6 @@
   }
 }
 
-
-/* フェードモード時 共通調整 */
-.swiper-fade {
-  .swiper-slide {
-    transition-property: opacity !important;
-  }
-}
-
-
 @keyframes hero-title-fadeIn {
   0% {
     opacity: 0;

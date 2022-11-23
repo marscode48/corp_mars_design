@@ -208,6 +208,13 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
   }
 }
 
+/* フェードモード時 共通調整 */
+.swiper-fade {
+  .swiper-slide {
+    transition-property: opacity !important;
+  }
+}
+
 @keyframes kf-arrow-anime {
   0%,
   50%,
