@@ -17,8 +17,10 @@ class Main {
     // new MvScaleChange();
     new MenuOpen();
     new SmoothScroll(0);
-    new StepSliderMain('.swiper-main');
-    new StepSliderSub('.swiper-sub');
+    new StepSliderMain('.flow .swiper-main');
+    new StepSliderSub('.flow .swiper-sub');
+    // new HousesGallerySliderSub();
+    new HousesGallerySlider('.houses-page .swiper-thumb', '.houses-page .swiper-main');
     // new TopParallaxAnimation('.gsap-top-title', '.gsap-top-image');
     // new SideParallaxAnimation('.gsap-side-image');
     // new MenuFadeIn(520);

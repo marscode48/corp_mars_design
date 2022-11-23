@@ -135,3 +135,47 @@ class HousesSlider extends HeroSlider {
     this.swiper.autoplay.start();
   }
 }
+
+class HousesGallerySlider {
+  constructor(el, el2) {
+    this.el = el
+    this.el2 = el2
+    this.swiperSub = this._initSwiperSub();
+    this.swiper = this._initSwiperMain();
+    console.log(this.swiperSub);
+  }
+
+  _initSwiperSub() {
+    return new Swiper(this.el, {
+      slidesPerView: 5,
+      spaceBetween: 8,
+      grabCursor: true,
+      scrollbar: {
+        el: '.houses-page .swiper-scrollbar',
+        draggable: true,
+      },
+      breakpoints: {
+        600: {
+          slidesPerView: 7,
+        },
+      },
+    });
+  }
+
+  _initSwiperMain() {
+    return new Swiper(this.el2, {
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+      speed: 500,
+      navigation: {
+        nextEl: '.houses-page .swiper-button-next',
+        prevEl: '.houses-page .swiper-button-prev',
+      },
+      thumbs: {
+        swiper: this.swiperSub,
+      },
+    });
+  }
+}

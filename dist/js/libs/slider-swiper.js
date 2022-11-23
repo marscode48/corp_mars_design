@@ -215,4 +215,56 @@ var HousesSlider = /*#__PURE__*/function (_HeroSlider3) {
 
   return HousesSlider;
 }(HeroSlider);
+
+var HousesGallerySlider = /*#__PURE__*/function () {
+  function HousesGallerySlider(el, el2) {
+    _classCallCheck(this, HousesGallerySlider);
+
+    this.el = el;
+    this.el2 = el2;
+    this.swiperSub = this._initSwiperSub();
+    this.swiper = this._initSwiperMain();
+    console.log(this.swiperSub);
+  }
+
+  _createClass(HousesGallerySlider, [{
+    key: "_initSwiperSub",
+    value: function _initSwiperSub() {
+      return new Swiper(this.el, {
+        slidesPerView: 5,
+        spaceBetween: 8,
+        grabCursor: true,
+        scrollbar: {
+          el: '.houses-page .swiper-scrollbar',
+          draggable: true
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 7
+          }
+        }
+      });
+    }
+  }, {
+    key: "_initSwiperMain",
+    value: function _initSwiperMain() {
+      return new Swiper(this.el2, {
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        speed: 500,
+        navigation: {
+          nextEl: '.houses-page .swiper-button-next',
+          prevEl: '.houses-page .swiper-button-prev'
+        },
+        thumbs: {
+          swiper: this.swiperSub
+        }
+      });
+    }
+  }]);
+
+  return HousesGallerySlider;
+}();
 //# sourceMappingURL=slider-swiper.js.map
