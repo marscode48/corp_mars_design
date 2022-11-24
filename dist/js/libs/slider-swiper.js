@@ -231,8 +231,8 @@ var HousesGallerySlider = /*#__PURE__*/function () {
     key: "_initSwiperSub",
     value: function _initSwiperSub() {
       return new Swiper(this.el, {
-        slidesPerView: 5,
-        spaceBetween: 8,
+        slidesPerView: 3,
+        spaceBetween: 12,
         grabCursor: true,
         scrollbar: {
           el: '.houses-page .swiper-scrollbar',
@@ -240,7 +240,7 @@ var HousesGallerySlider = /*#__PURE__*/function () {
         },
         breakpoints: {
           600: {
-            slidesPerView: 7
+            slidesPerView: 5
           }
         }
       });
@@ -253,7 +253,8 @@ var HousesGallerySlider = /*#__PURE__*/function () {
         fadeEffect: {
           crossFade: true
         },
-        speed: 500,
+        speed: 700,
+        grabCursor: true,
         navigation: {
           nextEl: '.houses-page .swiper-button-next',
           prevEl: '.houses-page .swiper-button-prev'
