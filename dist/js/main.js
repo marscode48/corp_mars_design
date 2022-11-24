@@ -32,7 +32,7 @@ var Main = /*#__PURE__*/function () {
     // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
     this.hero = new HeroSlider('.swiper-hero');
-    this.houses = new HousesSlider('.swiper-houses');
+    this.houses = new HousesRoopSlider('.swiper-houses');
 
     this._init();
   }

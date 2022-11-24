@@ -101,38 +101,45 @@ class StepSliderSub extends HeroSlider {
   }
 }
 
-class HousesSlider extends HeroSlider {
+class HousesRoopSlider {
   constructor(el) {
-    super(el);
-    console.log(this.el);
+    this.el = el;
     this.slideLength = document.querySelectorAll('.houses .swiper-slide').length;
+    this.swiper = this._initSwiper();
+    console.log(this.el);
     console.log(this.slideLength);
   }
 
   _initSwiper() {
     return new Swiper(this.el, {
-      allowTouchMove: false,
       slidesPerView: 'auto',
       spaceBetween: 0,
       loop: true,
       loopedSlides: this.slideLength,
       speed: 6000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      freeMode: {
+        enabled: true,
+        momentum: false,
+      },
       grabCursor: true,
+      on: {
+        touchEnd: (swiper) => {
+          swiper.slideTo(swiper.activeIndex + 1);
+        }
+      }
     });
   }
 
-  start(options = {
-    delay: 0,
-    disableOnInteraction: false,
-  }) {
-    options = {
-      delay: 4000,
-      disableOnInteraction: false,
-      ...options,
-    };
-
-    this.swiper.params.autoplay = options;
+  start() {
     this.swiper.autoplay.start();
+  }
+
+  stop() {
+    this.swiper.autoplay.stop();
   }
 }
 

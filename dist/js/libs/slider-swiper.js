@@ -167,54 +167,56 @@ var StepSliderSub = /*#__PURE__*/function (_HeroSlider2) {
   return StepSliderSub;
 }(HeroSlider);
 
-var HousesSlider = /*#__PURE__*/function (_HeroSlider3) {
-  _inherits(HousesSlider, _HeroSlider3);
+var HousesRoopSlider = /*#__PURE__*/function () {
+  function HousesRoopSlider(el) {
+    _classCallCheck(this, HousesRoopSlider);
 
-  var _super3 = _createSuper(HousesSlider);
-
-  function HousesSlider(el) {
-    var _this3;
-
-    _classCallCheck(this, HousesSlider);
-
-    _this3 = _super3.call(this, el);
-    console.log(_this3.el);
-    _this3.slideLength = document.querySelectorAll('.houses .swiper-slide').length;
-    console.log(_this3.slideLength);
-    return _this3;
+    this.el = el;
+    this.slideLength = document.querySelectorAll('.houses .swiper-slide').length;
+    this.swiper = this._initSwiper();
+    console.log(this.el);
+    console.log(this.slideLength);
   }
 
-  _createClass(HousesSlider, [{
+  _createClass(HousesRoopSlider, [{
     key: "_initSwiper",
     value: function _initSwiper() {
       return new Swiper(this.el, {
-        allowTouchMove: false,
         slidesPerView: 'auto',
         spaceBetween: 0,
         loop: true,
         loopedSlides: this.slideLength,
         speed: 6000,
-        grabCursor: true
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false
+        },
+        freeMode: {
+          enabled: true,
+          momentum: false
+        },
+        grabCursor: true,
+        on: {
+          touchEnd: function touchEnd(swiper) {
+            swiper.slideTo(swiper.activeIndex + 1);
+          }
+        }
       });
     }
   }, {
     key: "start",
     value: function start() {
-      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
-        delay: 0,
-        disableOnInteraction: false
-      };
-      options = _objectSpread({
-        delay: 4000,
-        disableOnInteraction: false
-      }, options);
-      this.swiper.params.autoplay = options;
       this.swiper.autoplay.start();
+    }
+  }, {
+    key: "stop",
+    value: function stop() {
+      this.swiper.autoplay.stop();
     }
   }]);
 
-  return HousesSlider;
-}(HeroSlider);
+  return HousesRoopSlider;
+}();
 
 var HousesGallerySlider = /*#__PURE__*/function () {
   function HousesGallerySlider(el, el2) {
