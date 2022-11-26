@@ -2,14 +2,10 @@ class HeroSlider {
   constructor(el) {
     this.el = el;
     this.swiper = this._initSwiper();
-    console.log(this.el);
-    console.log(this._initSwiper);
   }
 
   _initSwiper() {
     return new Swiper(this.el, {
-      // Optional parameters
-      // direction: 'vertical',
       effect: 'fade',
       fadeEffect: {
         crossFade: true,
@@ -46,16 +42,28 @@ class HeroSlider {
   }
 }
 
-class StepSliderMain extends HeroSlider {
-  constructor(el) {
-    super(el);
-    console.log(this.el);
+class FlowNestedSlider {
+  constructor(el, el2) {
+    this.el = el;
+    this.el2 = el2;
+    this.swiperSub = this._initSwiperSub();
+    this.swiperMain = this._initSwiperMain();
   }
 
-  _initSwiper() {
+  _initSwiperSub() {
+    return new Swiper(this.el2, {
+      spaceBetween: 24,
+      grabCursor: true,
+      nested: true,
+      pagination: {
+        el: '.flow .swiper-pagination-sub',
+        clickable: true,
+      },
+    });
+  }
+
+  _initSwiperMain() {
     return new Swiper(this.el, {
-      // Optional parameters
-      // direction: 'vertical',
       spaceBetween: 24,
       centeredSlides: true,
       grabCursor: true,
@@ -80,34 +88,11 @@ class StepSliderMain extends HeroSlider {
   }
 }
 
-class StepSliderSub extends HeroSlider {
-  constructor(el) {
-    super(el);
-    console.log(this.el);
-  }
-
-  _initSwiper() {
-    return new Swiper(this.el, {
-      // Optional parameters
-      // direction: 'vertical',
-      spaceBetween: 24,
-      grabCursor: true,
-      nested: true,
-      pagination: {
-        el: '.flow .swiper-pagination-sub',
-        clickable: true,
-      },
-    });
-  }
-}
-
 class HousesRoopSlider {
   constructor(el) {
     this.el = el;
     this.slideLength = document.querySelectorAll('.houses .swiper-slide').length;
     this.swiper = this._initSwiper();
-    console.log(this.el);
-    console.log(this.slideLength);
   }
 
   _initSwiper() {
@@ -145,11 +130,10 @@ class HousesRoopSlider {
 
 class HousesGallerySlider {
   constructor(el, el2) {
-    this.el = el
-    this.el2 = el2
+    this.el = el;
+    this.el2 = el2;
     this.swiperSub = this._initSwiperSub();
-    this.swiper = this._initSwiperMain();
-    console.log(this.swiperSub);
+    this.swiperMain = this._initSwiperMain();
   }
 
   _initSwiperSub() {
