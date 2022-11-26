@@ -67,7 +67,6 @@ var ConceptParallaxAnimation = /*#__PURE__*/function () {
     this.DOM = {};
     console.log(els);
     this.DOM.els = document.querySelectorAll(els);
-    console.log(this.DOM.els);
     this.animate();
   }
 
@@ -100,7 +99,6 @@ var ReserveParallaxAnimation = /*#__PURE__*/function () {
 
     this.DOM = {};
     this.DOM.el = el;
-    console.log(el);
     this.animate();
   }
 

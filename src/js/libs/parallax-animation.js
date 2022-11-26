@@ -52,7 +52,6 @@ class ConceptParallaxAnimation {
     this.DOM = {};
     console.log(els);
     this.DOM.els = document.querySelectorAll(els);
-    console.log(this.DOM.els);
     this.animate();
   }
 
@@ -79,7 +78,6 @@ class ReserveParallaxAnimation {
   constructor(el) {
     this.DOM = {};
     this.DOM.el = el;
-    console.log(el);
     this.animate();
   }
 
