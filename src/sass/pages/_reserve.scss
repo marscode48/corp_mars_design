@@ -1,0 +1,14 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+#category {
+  
+  .reserve-page {
+    @extend .mb-lg;
+
+    & .reserve__inner {
+      margin-top: calc(20vh + 80px);
+      padding: 0 16px;
+    }
+  }
+}
