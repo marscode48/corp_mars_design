@@ -434,8 +434,12 @@ Reserve
       opacity: 1;
     }
   }
-  
+
   &__link {
+    display: block;
+  }
+
+  &__message {
     position: relative;
     z-index: 2;
     text-align: center;
