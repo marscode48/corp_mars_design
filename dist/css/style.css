@@ -285,14 +285,14 @@
 .flow .swiper-pagination-main .swiper-pagination-bullet:first-child::after {
   display: none;
 }
-.flow .swiper-pagination-main .swiper-pagination-bullet .step {
+.flow .swiper-pagination-main .swiper-pagination-bullet .flow-step {
   font-size: 0.7rem;
   display: block;
   margin-bottom: 0.5em;
   text-indent: 0.5em;
 }
 @media screen and (min-width: 960px) {
-  .flow .swiper-pagination-main .swiper-pagination-bullet .step {
+  .flow .swiper-pagination-main .swiper-pagination-bullet .flow-step {
     font-size: 0.8rem;
     display: inline-block;
     margin-bottom: 0;
@@ -323,6 +323,7 @@
   display: inline-block;
   width: 8px;
   height: 8px;
+  border-radius: 50%;
   cursor: pointer;
   transition: all 0.5s ease-out;
   vertical-align: top;
@@ -394,13 +395,13 @@
   padding: 3.2rem 0 2.4rem;
   text-align: center;
   border-radius: 4px;
-  box-shadow: 0.4rem 0.4rem 0.6rem rgb(140, 140, 140), -0.4rem -0.4rem 0.6rem rgb(220, 220, 220);
+  box-shadow: 0.4rem 0.4rem 0.6rem rgb(140, 140, 140), -0.1rem -0.1rem 0.4rem rgb(220, 220, 220);
+  background-color: #e2e2d6;
 }
 .flow .mainslide-title {
   font-size: 1.125rem;
   line-height: 1.6;
   display: inline-block;
-  border-bottom: 1px solid currentColor;
 }
 @media screen and (min-width: 960px) {
   .flow .mainslide-title {
