@@ -99,7 +99,7 @@ var FlowNestedSlider = /*#__PURE__*/function () {
           clickable: true,
           renderBullet: function renderBullet(index, className) {
             var num = "00".concat(index + 1).slice(-2);
-            return "<span class=\"".concat(className, "\"><span class=\"step\">STEP.</span>").concat(num, "</span>");
+            return "<span class=\"".concat(className, "\"><span class=\"flow-step\">FLOW.</span>").concat(num, "</span>");
           }
         },
         navigation: {

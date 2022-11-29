@@ -72,7 +72,7 @@ class FlowNestedSlider {
         clickable: true,
         renderBullet: (index, className) => {
           const num = (`00${index + 1}`).slice(-2);
-          return `<span class="${className}"><span class="step">STEP.</span>${num}</span>`;
+          return `<span class="${className}"><span class="flow-step">FLOW.</span>${num}</span>`;
         },
       },
       navigation: {
