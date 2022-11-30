@@ -888,7 +888,7 @@ li {
 }
 
 /* フォント */
-.font-sm, .concept__description, .news__date span, .arrow-anime, .section-title .ja {
+.font-sm, #category .concept__description, .news__date span, .arrow-anime, .section-title .ja {
   font-size: 0.75rem;
 }
 
@@ -896,7 +896,7 @@ li {
   font-size: 0.875rem;
 }
 
-.font-lr, #category .news__menu li a, .concept__title, .reserve__left, .reserve__right {
+.font-lr, #category .news__menu li a, #category .concept__title, .reserve__left, .reserve__right {
   font-size: 1.125rem;
 }
 
@@ -1548,7 +1548,7 @@ Footer
   text-align: center;
 }
 
-.concept__card {
+#category .concept__card {
   margin-top: calc(20vh + 80px);
   display: flex;
   flex-direction: column;
@@ -1557,48 +1557,48 @@ Footer
   position: relative;
 }
 @media screen and (min-width: 960px) {
-  .concept__card:nth-child(2n) {
+  #category .concept__card:nth-child(2n) {
     flex-direction: row-reverse;
   }
-  .concept__card:nth-child(2n) .concept__intro {
+  #category .concept__card:nth-child(2n) .concept__intro {
     padding: 0 0 0 16px;
   }
-  .concept__card:nth-child(2n) .concept__intro.appear.up .item {
+  #category .concept__card:nth-child(2n) .concept__intro.appear.up .item {
     transform: translateX(40px);
   }
-  .concept__card:nth-child(2n) .concept__intro.appear.up.inview .item {
+  #category .concept__card:nth-child(2n) .concept__intro.appear.up.inview .item {
     transform: none;
     opacity: 1;
   }
-  .concept__card:nth-child(2n) .concept__image.appear.up .item {
+  #category .concept__card:nth-child(2n) .concept__image.appear.up .item {
     transform: translateX(-40px);
   }
-  .concept__card:nth-child(2n) .concept__image.appear.up.inview .item {
+  #category .concept__card:nth-child(2n) .concept__image.appear.up.inview .item {
     transform: none;
     opacity: 1;
   }
-  .concept__card:nth-child(2n+1) {
+  #category .concept__card:nth-child(2n+1) {
     flex-direction: row;
   }
-  .concept__card:nth-child(2n+1) .concept__intro {
+  #category .concept__card:nth-child(2n+1) .concept__intro {
     padding: 0 16px 0 0;
   }
-  .concept__card:nth-child(2n+1) .concept__intro.appear.up .item {
+  #category .concept__card:nth-child(2n+1) .concept__intro.appear.up .item {
     transform: translateX(-40px);
   }
-  .concept__card:nth-child(2n+1) .concept__intro.appear.up.inview .item {
+  #category .concept__card:nth-child(2n+1) .concept__intro.appear.up.inview .item {
     transform: none;
     opacity: 1;
   }
-  .concept__card:nth-child(2n+1) .concept__image.appear.up .item {
+  #category .concept__card:nth-child(2n+1) .concept__image.appear.up .item {
     transform: translateX(40px);
   }
-  .concept__card:nth-child(2n+1) .concept__image.appear.up.inview .item {
+  #category .concept__card:nth-child(2n+1) .concept__image.appear.up.inview .item {
     transform: none;
     opacity: 1;
   }
 }
-.concept__card::before {
+#category .concept__card::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1608,44 +1608,44 @@ Footer
   background-color: #e2e2d6;
 }
 @media screen and (min-width: 960px) {
-  .concept__card::before {
+  #category .concept__card::before {
     bottom: -20%;
     height: 140%;
   }
 }
-.concept__card:last-child {
+#category .concept__card:last-child {
   margin-bottom: 80px;
 }
-.concept__intro {
+#category .concept__intro {
   padding: 0 16px 40px;
   position: relative;
   z-index: 2;
 }
 @media screen and (min-width: 960px) {
-  .concept__intro {
+  #category .concept__intro {
     flex-basis: 48%;
   }
 }
-.concept__title {
+#category .concept__title {
   font-weight: normal;
   text-align: center;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 960px) {
-  .concept__title {
+  #category .concept__title {
     font-size: 1.5rem;
   }
 }
-.concept__description {
+#category .concept__description {
   line-height: 2;
 }
 @media screen and (min-width: 960px) {
-  .concept__description {
+  #category .concept__description {
     line-height: 2.2;
     font-size: 0.875rem;
   }
 }
-.concept__image {
+#category .concept__image {
   width: 100%;
   height: 250px;
   overflow: hidden;
@@ -1653,11 +1653,11 @@ Footer
   z-index: 2;
 }
 @media screen and (min-width: 960px) {
-  .concept__image {
+  #category .concept__image {
     flex-basis: 48%;
   }
 }
-.concept__image img {
+#category .concept__image img {
   width: 100%;
   height: auto;
 }
