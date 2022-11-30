@@ -142,15 +142,12 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
     padding-right: 0;
   }
 
-  & > a {
-    display: block;
-  }
-
   .arrow-anime::before {
-    right: 24%;
+    right: 6.5em;
 
     @include mq(lg) {
-      right: 10%;
+      right: 8em;
+      // arrow-anime::beforeの修正から
     }
   }
 }
@@ -158,28 +155,19 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 .home-link {
   text-align: center;
   margin-top: 80px;
-  padding-left: 3rem;
+  padding-left: 4rem;
   
   @include mq(lg) {
     margin-top: 120px;
   }
 
-  & > a {
-    display: block;
-  }
-
   .arrow-anime::before {
-    right: 60%;
-
-    @include mq(lg) {
-      right: 55%;
-    }
+    right: 5em;
   }
 }
 
 .arrow-anime {
   position: relative;
-  display: block;
   letter-spacing: 0.25em;
   @extend .font-sm;
   
@@ -193,7 +181,7 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
     position: absolute;
     width: 2em;
     height: 1em;
-    top: 32%;
+    top: 0.25em;
     background-image: url(../../images/arrowright.svg);
     background-repeat: no-repeat;
     background-size: contain;

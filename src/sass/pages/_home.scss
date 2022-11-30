@@ -107,10 +107,10 @@ News
     }
 
     & .arrow-anime::before {
-      right: 17%;
+      right: 4.5em;
 
       @include mq(lg) {
-        right: 7%;
+        right: 6.5em;
       }
     }
   }
@@ -263,11 +263,10 @@ Concept
     }
 
     &-inner .section-link {
-      padding-right: 1rem;
-
-      & .arrow-anime::before {
-        top: 30%;
-        right: 60%;
+      padding-right: 1.4rem;
+      
+      @include mq(lg) {
+        padding-right: 1.7rem;
       }
     }
   }
@@ -501,11 +500,12 @@ Footer
       line-height: 40px;
 
       &::before {
-        top: 35%;
-        right: 10%;
+        top: 1.2em;
+        right: 0.5em;
 
         @include mq(lg) {
-          right: 0%;  
+          top: 1em;
+          right: -0.5em;
         }
       }
     }
