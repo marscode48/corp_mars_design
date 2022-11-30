@@ -27,7 +27,7 @@
       cursor: pointer;
       transition: all .5s ease-out;
       text-align: center;
-      color: #cbcbcb;
+      color: $cFlowPaginaiton;
 
       &::before, &::after {
         position: absolute;
@@ -86,7 +86,7 @@
 
         // active要素の後ろにある全てのswiper-pagination-bullet
         & ~ *::before, & ~ *::after {
-          background-color: #cbcbcb;
+          background-color: $cFlowPaginaiton;
         }
       }
     }
@@ -115,7 +115,7 @@
       cursor: pointer;
       transition: all .5s ease-out;
       vertical-align: top;
-      background-color: #cbcbcb;
+      background-color: $cFlowPaginaiton;
 
       &:not(:first-child) {
         margin-left: 8px;
@@ -198,11 +198,10 @@
       font-size: 1.125rem;
       line-height: 1.6;
       display: inline-block;
-      // border-bottom: 1px solid currentColor;
+      font-weight: bold;
       
       @include mq(lg) {
-        font-weight: bold;
-        border-bottom: 2px solid currentColor;
+        border-bottom: 1px solid currentColor;
       }
     }
   }

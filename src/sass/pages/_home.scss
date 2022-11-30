@@ -49,28 +49,6 @@ header
       margin-right: 0;
     }
   }
-
-  &__reserve {
-    display: none;
-    @extend .font-sm;
-
-    @include mq(lg) {
-      width: 200px;
-      height: 80px;
-      line-height: 80px;
-      background-color: $cBlack;
-      color: $cWhite;
-      display: inline-block;
-      text-align: center;
-    }
-
-    &:hover {
-
-      @include mq(lg) {
-        background-color: $cBtnHover;
-      }
-    }
-  }
 }
 
 

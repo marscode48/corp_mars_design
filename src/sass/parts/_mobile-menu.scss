@@ -5,7 +5,7 @@
   top: 0px;
   left: 0px;
   width: 200px;
-  color: #fff;
+  color: $cWhite;
   padding: 50px 0  0 50px;
   transition: all 0.5s;
   z-index: 30;
@@ -63,7 +63,7 @@
       display: block;
       position: absolute;
       height: 2px;
-      background-color: #333;
+      background-color: $cMobileBtn;
       border-radius: 4px;
       transition: all 0.5s;
       
@@ -89,7 +89,7 @@
     left: -250px;
     z-index: 20;
     cursor: pointer;
-    box-shadow: inset 20px 15px 20px 0px #e2e2d6;
+    box-shadow: inset 20px 15px 20px 0px $cBgGray;
     visibility: hidden;
   }
 

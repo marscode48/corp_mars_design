@@ -186,17 +186,17 @@
     height: 20px;
     padding: 8px 0;
     cursor: pointer;
-    background-color: #bababa;
+    background-color: $cHousesScroll;
     background-clip: content-box;
 
     &:hover {
       @include mq(lg) {
-        background-color: #737373;
+        background-color: $cHousesScrollHover;
       }
     }
 
     &:active {
-      background-color: #737373;
+      background-color: $cHousesScrollHover;
     }
   }
 

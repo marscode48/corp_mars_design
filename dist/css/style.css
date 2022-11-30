@@ -168,7 +168,6 @@
 }
 .hero__scrolltext {
   position: absolute;
-  color: rgba(255, 255, 255, 0.7);
   left: -15px;
   top: -15px;
   color: #FFFFFF;
@@ -402,11 +401,11 @@
   font-size: 1.125rem;
   line-height: 1.6;
   display: inline-block;
+  font-weight: bold;
 }
 @media screen and (min-width: 960px) {
   .flow .mainslide-title {
-    font-weight: bold;
-    border-bottom: 2px solid currentColor;
+    border-bottom: 1px solid currentColor;
   }
 }
 .flow .subslide {
@@ -698,7 +697,7 @@
   top: 0px;
   left: 0px;
   width: 200px;
-  color: #fff;
+  color: #FFFFFF;
   padding: 50px 0 0 50px;
   transition: all 0.5s;
   z-index: 30;
@@ -768,7 +767,7 @@
   left: -250px;
   z-index: 20;
   cursor: pointer;
-  box-shadow: inset 20px 15px 20px 0px #e2e2d6;
+  box-shadow: inset 20px 15px 20px 0px #F0F0F0;
   visibility: hidden;
 }
 .mobile-menu__mask {
@@ -885,7 +884,7 @@ li {
 }
 
 /* フォント */
-.font-sm, .concept__description, .header__reserve, .news__date span, .arrow-anime, .section-title .ja {
+.font-sm, .concept__description, .news__date span, .arrow-anime, .section-title .ja {
   font-size: 0.75rem;
 }
 
@@ -1100,25 +1099,6 @@ header
 }
 .header__li:last-child {
   margin-right: 0;
-}
-.header__reserve {
-  display: none;
-}
-@media screen and (min-width: 960px) {
-  .header__reserve {
-    width: 200px;
-    height: 80px;
-    line-height: 80px;
-    background-color: #000000;
-    color: #FFFFFF;
-    display: inline-block;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 960px) {
-  .header__reserve:hover {
-    background-color: #333;
-  }
 }
 
 /*-------------------------------------------
