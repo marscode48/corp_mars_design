@@ -2,133 +2,80 @@
 @use "../parts/common" as *;
 
 #category {
+  @extend .mb-lg;
+
   .concept {
-    &__card {
-      margin-top: calc(20vh + 80px);;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    margin: 25vh 0 0 0;
+    padding: 0;
+
+    @include mq(lg) {
+      margin: 30vh 0 0 0;
+    }
+
+    &__head {
+      @extend .wrapper;
+    }
+
+    &__body {
       position: relative;
-  
-      @include mq(lg) {
-        &:nth-child(2n) {
-          flex-direction: row-reverse;
-  
-          & .concept__intro {
-            padding: 0 0 0 16px;
-  
-            &.appear.up {
-              & .item {
-                transform: translateX(40px);
-              }
-            }
-  
-            &.appear.up.inview {
-              .item {
-                transform: none;     
-                opacity: 1;   
-              }
-            }
-          }
-  
-          & .concept__image {
-            &.appear.up {
-              & .item {
-                transform: translateX(-40px);
-              }
-            }
-  
-            &.appear.up.inview {
-              .item {
-                transform: none;
-                opacity: 1;
-              }
-            }
-          }
-        }
-  
-        &:nth-child(2n+1) {
-          flex-direction: row;
-  
-          & .concept__intro {
-            padding: 0 16px 0 0;
-  
-            &.appear.up {
-              & .item {
-                transform: translateX(-40px);
-              }
-            }
-  
-            &.appear.up.inview {
-              .item {
-                transform: none;
-                opacity: 1;
-              }
-            }
-          }
-  
-          & .concept__image {
-            &.appear.up {
-              & .item {
-                transform: translateX(40px);
-              }
-            }
-  
-            &.appear.up.inview {
-              .item {
-                transform: none;
-                opacity: 1;
-              }
-            }
-          }
-  
-        }
-      }
-  
+
       &::before {
         content: "";
         position: absolute;
-        left: 0;
-        bottom: -15%;
+        bottom: 0px;
+        left: 0px;
+        height: 80%;
         width: 100%;
-        height: 130%;
-        background-color: $cBgYellow;
-  
-        @include mq(lg) {
-          bottom: -20%;
-          height: 140%;
-        }
-      }
-  
-      &:last-child {
-        margin-bottom: 80px;
+        background: $cBgYellow;
       }
     }
-  
-    &__intro {
-      padding: 0 16px 40px;
+    
+    &__container {
+      position: relative;
+      @extend .wrapper
+    }
+
+    &__flex {
+      display: flex;
+      flex-wrap: wrap;
       position: relative;
       z-index: 2;
-  
+    }
+
+    &__card {
+      @include card();
+
       @include mq(lg) {
-        flex-basis: 48%;
+        @include card(30px, 4);
       }
+
+      &:nth-child(2n) {
+        margin-top: 100px;
+      }
+    }
+
+    &__item {
+      position: relative;
+      // padding: 10px;
+      background-color: $cWhite;
+      box-shadow: 5px 5px 26px 0 rgb(0 0 0 / 40%);
     }
   
     &__title {
-      @extend .font-lr;
+      @extend .font-md;
       font-weight: normal;
       text-align: center;
-      margin-bottom: 20px;
+      margin: 20px auto 0;
   
       @include mq(lg) {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     }
     
     &__description {
       line-height: 2;
+      margin-top: 20px;
+      padding: 0 10px 20px;
       @extend .font-sm;
   
       @include mq(lg) {
@@ -139,18 +86,39 @@
   
     &__image {
       width: 100%;
-      height: 250px;
+      height: 200px;
       overflow: hidden;
-      position: relative;
-      z-index: 2;
-  
+
       @include mq(lg) {
-        flex-basis: 48%;
+        height: 250px;
       }
   
       & img {
         width: 100%;
-        height: auto;
+        height: 100%;
+      }
+    }
+
+    &__circle {
+      width: 4em;
+      height: 4em;
+      margin: 20px auto 0;
+      border-radius: 50%;
+      background-color: rgb(213 206 174);
+      box-shadow: 6px -3px 2px 0 rgb(213 206 174 / 30%);
+      padding: 10px;
+
+      & img {
+        vertical-align: top;
+      }
+    }
+
+    &__foot {
+      @extend .wrapper;
+      margin-top: 80px;
+      
+      @include mq(lg) {
+        margin-top: 120px;
       }
     }
   }

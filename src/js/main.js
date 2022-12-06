@@ -52,7 +52,7 @@ class Main {
 
   _conceptParallaxAnimation(el, inview) {
     if (inview) {
-      new ConceptParallaxAnimation('.gsap-concept-image');
+      new ConceptParallaxAnimation('.gsap-concept-scale');
     }
   }
 

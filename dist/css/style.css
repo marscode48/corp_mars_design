@@ -869,11 +869,11 @@ li {
   }
 }
 
-.mb-lg, #category .reserve-page, #category .houses-page, .mainvisual, .news, .concept, .flow, .houses, .reserve {
+.mb-lg, #category .reserve-page, #category .houses-page, #category, .mainvisual, .news, .concept, .flow, .houses, .reserve, .category-title {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, #category .reserve-page, #category .houses-page, .mainvisual, .news, .concept, .flow, .houses, .reserve {
+  .mb-lg, #category .reserve-page, #category .houses-page, #category, .mainvisual, .news, .concept, .flow, .houses, .reserve, .category-title {
     margin-bottom: 120px !important;
   }
 }
@@ -892,11 +892,11 @@ li {
   font-size: 0.75rem;
 }
 
-.font-md, .concept__message, body, a {
+.font-md, #category .concept__title, .concept__message, .category-title, body, a {
   font-size: 0.875rem;
 }
 
-.font-lr, #category .news__menu li a, #category .concept__title, .reserve__left, .reserve__right {
+.font-lr, #category .news__menu li a, .reserve__left, .reserve__right {
   font-size: 1.125rem;
 }
 
@@ -905,7 +905,7 @@ li {
 }
 
 /* 共通クラス */
-.wrapper {
+.wrapper, #category .concept__head, #category .concept__container, #category .concept__foot {
   width: 100%;
   margin: 0 auto;
   max-width: 1032px;
@@ -972,6 +972,46 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
   }
 }
 
+.category-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+  text-align: center;
+  font-weight: normal;
+}
+@media screen and (min-width: 960px) {
+  .category-title {
+    font-size: 1.25rem;
+  }
+}
+.category-title::before, .category-title::after {
+  border-top: 1px solid #000000;
+  content: "";
+  width: 13%;
+}
+@media screen and (min-width: 960px) {
+  .category-title::before, .category-title::after {
+    width: 16%;
+  }
+}
+.category-title::before {
+  margin-left: 3em;
+}
+@media screen and (min-width: 960px) {
+  .category-title::before {
+    margin-left: 8em;
+  }
+}
+.category-title::after {
+  margin-right: 3em;
+}
+@media screen and (min-width: 960px) {
+  .category-title::after {
+    margin-right: 8em;
+  }
+}
+
 .section-link {
   text-align: right;
   padding-right: 2rem;
@@ -992,13 +1032,7 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 
 .home-link {
   text-align: center;
-  margin-top: 80px;
   padding-left: 4rem;
-}
-@media screen and (min-width: 960px) {
-  .home-link {
-    margin-top: 120px;
-  }
 }
 .home-link .arrow-anime::before {
   right: 5em;
@@ -1548,96 +1582,68 @@ Footer
   text-align: center;
 }
 
-#category .concept__card {
-  margin-top: calc(20vh + 80px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#category .concept {
+  margin: 25vh 0 0 0;
+  padding: 0;
+}
+@media screen and (min-width: 960px) {
+  #category .concept {
+    margin: 30vh 0 0 0;
+  }
+}
+#category .concept__body {
   position: relative;
 }
-@media screen and (min-width: 960px) {
-  #category .concept__card:nth-child(2n) {
-    flex-direction: row-reverse;
-  }
-  #category .concept__card:nth-child(2n) .concept__intro {
-    padding: 0 0 0 16px;
-  }
-  #category .concept__card:nth-child(2n) .concept__intro.appear.up .item {
-    transform: translateX(40px);
-  }
-  #category .concept__card:nth-child(2n) .concept__intro.appear.up.inview .item {
-    transform: none;
-    opacity: 1;
-  }
-  #category .concept__card:nth-child(2n) .concept__image.appear.up .item {
-    transform: translateX(-40px);
-  }
-  #category .concept__card:nth-child(2n) .concept__image.appear.up.inview .item {
-    transform: none;
-    opacity: 1;
-  }
-  #category .concept__card:nth-child(2n+1) {
-    flex-direction: row;
-  }
-  #category .concept__card:nth-child(2n+1) .concept__intro {
-    padding: 0 16px 0 0;
-  }
-  #category .concept__card:nth-child(2n+1) .concept__intro.appear.up .item {
-    transform: translateX(-40px);
-  }
-  #category .concept__card:nth-child(2n+1) .concept__intro.appear.up.inview .item {
-    transform: none;
-    opacity: 1;
-  }
-  #category .concept__card:nth-child(2n+1) .concept__image.appear.up .item {
-    transform: translateX(40px);
-  }
-  #category .concept__card:nth-child(2n+1) .concept__image.appear.up.inview .item {
-    transform: none;
-    opacity: 1;
-  }
-}
-#category .concept__card::before {
+#category .concept__body::before {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -15%;
+  bottom: 0px;
+  left: 0px;
+  height: 80%;
   width: 100%;
-  height: 130%;
-  background-color: #e2e2d6;
+  background: #e2e2d6;
 }
-@media screen and (min-width: 960px) {
-  #category .concept__card::before {
-    bottom: -20%;
-    height: 140%;
-  }
+#category .concept__container {
+  position: relative;
 }
-#category .concept__card:last-child {
-  margin-bottom: 80px;
-}
-#category .concept__intro {
-  padding: 0 16px 40px;
+#category .concept__flex {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   z-index: 2;
 }
+#category .concept__card {
+  width: calc(100% / 2 - 15px);
+  margin: 7.5px;
+}
 @media screen and (min-width: 960px) {
-  #category .concept__intro {
-    flex-basis: 48%;
+  #category .concept__card {
+    width: calc(100% / 4 - 30px);
+    margin: 15px;
   }
+}
+#category .concept__card:nth-child(2n) {
+  margin-top: 100px;
+}
+#category .concept__item {
+  position: relative;
+  background-color: #FFFFFF;
+  box-shadow: 5px 5px 26px 0 rgba(0, 0, 0, 0.4);
 }
 #category .concept__title {
   font-weight: normal;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px auto 0;
 }
 @media screen and (min-width: 960px) {
   #category .concept__title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 #category .concept__description {
   line-height: 2;
+  margin-top: 20px;
+  padding: 0 10px 20px;
 }
 @media screen and (min-width: 960px) {
   #category .concept__description {
@@ -1647,19 +1653,37 @@ Footer
 }
 #category .concept__image {
   width: 100%;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
-  position: relative;
-  z-index: 2;
 }
 @media screen and (min-width: 960px) {
   #category .concept__image {
-    flex-basis: 48%;
+    height: 250px;
   }
 }
 #category .concept__image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+#category .concept__circle {
+  width: 4em;
+  height: 4em;
+  margin: 20px auto 0;
+  border-radius: 50%;
+  background-color: rgb(213, 206, 174);
+  box-shadow: 6px -3px 2px 0 rgba(213, 206, 174, 0.3);
+  padding: 10px;
+}
+#category .concept__circle img {
+  vertical-align: top;
+}
+#category .concept__foot {
+  margin-top: 80px;
+}
+@media screen and (min-width: 960px) {
+  #category .concept__foot {
+    margin-top: 120px;
+  }
 }
 
 #category .news__inner::before {
