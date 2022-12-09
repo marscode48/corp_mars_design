@@ -50,7 +50,6 @@ class TopParallaxAnimation {
 class ConceptParallaxAnimation {
   constructor(els) {
     this.DOM = {};
-    console.log(els);
     this.DOM.els = document.querySelectorAll(els);
     this.animate();
   }

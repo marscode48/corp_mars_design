@@ -65,7 +65,6 @@ var ConceptParallaxAnimation = /*#__PURE__*/function () {
     _classCallCheck(this, ConceptParallaxAnimation);
 
     this.DOM = {};
-    console.log(els);
     this.DOM.els = document.querySelectorAll(els);
     this.animate();
   }
