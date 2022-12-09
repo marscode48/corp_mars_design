@@ -1612,17 +1612,17 @@ Footer
   position: relative;
   z-index: 2;
 }
-#category .concept__card {
+#category .concept .gsap-concept-card {
   width: calc(100% / 2 - 15px);
   margin: 7.5px;
 }
 @media screen and (min-width: 960px) {
-  #category .concept__card {
+  #category .concept .gsap-concept-card {
     width: calc(100% / 4 - 30px);
     margin: 15px;
   }
 }
-#category .concept__card:nth-child(2n) {
+#category .concept .gsap-concept-card:nth-child(2n) {
   margin-top: 100px;
 }
 #category .concept__item {

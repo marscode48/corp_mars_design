@@ -66,6 +66,7 @@ var ConceptParallaxAnimation = /*#__PURE__*/function () {
 
     this.DOM = {};
     this.DOM.els = document.querySelectorAll(els);
+    console.log(this.DOM.els);
     this.animate();
   }
 
@@ -73,18 +74,45 @@ var ConceptParallaxAnimation = /*#__PURE__*/function () {
     key: "animate",
     value: function animate() {
       this.DOM.els.forEach(function (el) {
-        gsap.to(el, {
-          scale: 1.5,
-          ease: 'none',
-          duration: 2,
+        var img = el.querySelector(".gsap-concept-image");
+        var circle = el.querySelector(".gsap-concept-circle");
+        var title = el.querySelector(".gsap-concept-title");
+        var desc = el.querySelector(".gsap-concept-description");
+        var tl = gsap.timeline({
           scrollTrigger: {
             trigger: el,
             start: 'top 75%',
-            end: 'bottom top',
+            end: 'bottom 25%',
             scrub: 1,
             markers: false
           }
         });
+        tl.to(img, {
+          scale: 1.5,
+          ease: 'none',
+          duration: 2
+        });
+        tl.fromTo(circle, {
+          scale: 0.5
+        }, {
+          scale: 1.5,
+          ease: 'none',
+          duration: 2
+        }, "<");
+        tl.fromTo(title, {
+          y: 25
+        }, {
+          y: 0,
+          ease: "none",
+          duration: 1
+        }, "<");
+        tl.fromTo(desc, {
+          y: 25
+        }, {
+          y: 0,
+          ease: "none",
+          duration: 1
+        }, "-=1.8");
       });
     }
   }]);

@@ -42,7 +42,7 @@
       z-index: 2;
     }
 
-    &__card {
+    & .gsap-concept-card {
       @include card();
 
       @include mq(lg) {

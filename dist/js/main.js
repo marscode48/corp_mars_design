@@ -82,7 +82,7 @@ var Main = /*#__PURE__*/function () {
     key: "_conceptParallaxAnimation",
     value: function _conceptParallaxAnimation(el, inview) {
       if (inview) {
-        new ConceptParallaxAnimation('.gsap-concept-scale');
+        new ConceptParallaxAnimation('.gsap-concept-card');
       }
     }
   }, {

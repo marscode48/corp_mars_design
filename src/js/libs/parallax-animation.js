@@ -51,24 +51,67 @@ class ConceptParallaxAnimation {
   constructor(els) {
     this.DOM = {};
     this.DOM.els = document.querySelectorAll(els);
+    console.log(this.DOM.els)
     this.animate();
   }
 
   animate() {
     this.DOM.els.forEach((el) => {
-      gsap.to(el, {
-        scale: 1.5,
-        ease: 'none',
-        duration: 2,
+      const img = el.querySelector(".gsap-concept-image");
+      const circle = el.querySelector(".gsap-concept-circle");
+      const title = el.querySelector(".gsap-concept-title");
+      const desc = el.querySelector(".gsap-concept-description");
 
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: el,
           start: 'top 75%',
-          end: 'bottom top',
+          end: 'bottom 25%',
           scrub: 1,
           markers: false,
         },
       });
+      
+      tl.to(
+        img, {
+        scale: 1.5,
+        ease: 'none',
+        duration: 2,
+        }
+      );
+
+      tl.fromTo(
+        circle,
+        { scale: 0.5 },
+        {
+          scale: 1.5,
+          ease: 'none',
+          duration: 2,
+        },
+        "<"
+      );
+
+      tl.fromTo(
+        title,
+        { y: 25 },
+        {
+          y: 0,
+          ease: "none",
+          duration: 1,
+        },
+        "<"
+      );
+
+      tl.fromTo(
+        desc,
+        { y: 25 },
+        {
+          y: 0,
+          ease: "none",
+          duration: 1,
+        },
+        "-=1.8"
+      );
     });
   }
 }
