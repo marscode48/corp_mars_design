@@ -1256,22 +1256,26 @@ Concept
 .concept__feature {
   width: 45%;
   margin-bottom: 30px;
+  overflow: hidden;
+  height: 300px;
 }
 @media screen and (min-width: 960px) {
   .concept__feature {
     width: 65%;
     margin-bottom: 0;
+    height: 500px;
   }
 }
 .concept__feature img {
+  height: 360px;
   width: 100%;
-  height: 300px;
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (min-width: 960px) {
   .concept__feature img {
-    height: 500px;
+    height: 600px;
   }
 }
 .concept__heading {

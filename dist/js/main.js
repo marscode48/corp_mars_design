@@ -79,6 +79,13 @@ var Main = /*#__PURE__*/function () {
       }
     }
   }, {
+    key: "_featureParallaxAnimation",
+    value: function _featureParallaxAnimation(el, inview) {
+      if (inview) {
+        new FeatureParallaxAnimation(el);
+      }
+    }
+  }, {
     key: "_conceptParallaxAnimation",
     value: function _conceptParallaxAnimation(el, inview) {
       if (inview) {
@@ -122,6 +129,7 @@ var Main = /*#__PURE__*/function () {
       // new ScrollObserver('.cover-slide', this._inviewAnimation);
 
       new ScrollObserver('.appear', this._inviewAnimation);
+      new ScrollObserver('.feature-parallax', this._featureParallaxAnimation);
       new ScrollObserver('.top-parallax', this._topParallaxAnimation);
       new ScrollObserver('.concept-parallax', this._conceptParallaxAnimation);
       new ScrollObserver('.reserve-parallax', this._reserveParallaxAnimaion); // new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });

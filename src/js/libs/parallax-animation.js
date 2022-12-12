@@ -47,6 +47,53 @@ class TopParallaxAnimation {
   }
 }
 
+class FeatureParallaxAnimation {
+  constructor(el) {
+    this.DOM = {};
+    this.DOM.el = el;
+    this.animate();
+  }
+
+  animate() {
+    const el = this.DOM.el;
+    const img = this.DOM.el.querySelector(".gsap-feature-image");
+
+    ScrollTrigger.matchMedia({
+      "(max-width: 959px)": function() {
+        gsap.fromTo(img,
+          {y: 0},
+          {
+            y: -60,
+            ease: "none",
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 90%',
+              end: 'bottom 10%',
+              scrub: 1,
+              markers: false,
+            }
+          }
+        )
+      },
+      "(min-width: 960px)": function() {
+        gsap.fromTo(img,
+          {y: 0},
+          {
+            y: -100,
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 80%',
+              end: 'bottom top',
+              scrub: 1,
+              markers: false,
+            }
+          }
+        )
+      },
+    });
+  }
+}
+
 class ConceptParallaxAnimation {
   constructor(els) {
     this.DOM = {};
