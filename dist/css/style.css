@@ -1031,8 +1031,14 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 }
 
 .home-link {
+  margin-top: 80px;
   text-align: center;
   padding-left: 4rem;
+}
+@media screen and (min-width: 960px) {
+  .home-link {
+    margin-top: 120px;
+  }
 }
 .home-link .arrow-anime::before {
   right: 5em;
@@ -1681,15 +1687,6 @@ Footer
 #category .concept__circle img {
   vertical-align: top;
 }
-#category .concept__foot {
-  margin-top: 80px;
-}
-@media screen and (min-width: 960px) {
-  #category .concept__foot {
-    margin-top: 120px;
-  }
-}
-
 #category .news__inner::before {
   display: none;
 }
