@@ -229,7 +229,11 @@
   }
 
   & .slide-title {
-    padding: 2rem 0;
+    padding: 2rem 0 1rem;
+  }
+
+  & .slide-text {
+    padding-bottom: 2rem;
   }
 
   & .thumb-image {
