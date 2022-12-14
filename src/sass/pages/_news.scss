@@ -1,85 +1,94 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-#category {
-  .news {
+.news-page {
+  @extend .wrapper;
 
-    &__inner {
-      &::before {
-        display: none;
+  &__head {
+    @extend .mb-lg;
+  }
+
+  &__body {
+    @extend .mb-lg;
+  }
+  
+  &__menu {
+    display: flex;
+    border-bottom: solid 1px $cBlack;
+
+    & li {
+      width: 50%;
+      padding: 20px 0;
+      text-align: center;
+      
+      @include mq(lg) {
+        width: 240px;
+      } 
+
+      & a {
+        @extend .font-lr;
       }
     }
 
-    &__container {
-      padding: 0 16px;
+    & .active {
+      border-bottom: solid 3px $cBlack;
     }
-    
-    &__menu {
-      margin-top: calc(20vh + 80px);
-      display: flex;
-      border-bottom: solid 1px $cBlack;
+  }
 
-      & li {
-        width: 50%;
-        padding: 20px 0;
+  &__list {
+    @extend .mb-lg;
+
+    & dt {
+      margin: 40px 0 10px 0;
+      @include mq(lg) {
+        margin: 50px 0 10px 0;
+      }
+
+      & span {
+        width: 50px;
+        height: 20px;
+        line-height: 20px;
+        background-color: #000;
+        color: #fff;
+        display: inline-block;
+        font-size: 0.75rem;
+        margin-left: 10px;
         text-align: center;
-        
-        @include mq(lg) {
-          width: 240px;
-        } 
-
-        & a {
-          @extend .font-lr;
-        }
-      }
-
-      & .active {
-        border-bottom: solid 3px $cBlack;
       }
     }
 
-    &__list {
-      & dt {
-        margin-top: 40px;
-        @include mq(lg) {
-          margin-top: 50px;
-        }
-      }
-
-      & dd {
-        padding-bottom: 40px;
-        border-bottom: solid 1px #ccc;
-
-        @include mq(lg) {
-          padding-bottom: 50px;
-        }
-      }
-    }
-
-    .page-nation {
-      margin-top: 80px;
+    & dd {
+      padding-bottom: 40px;
+      border-bottom: solid 1px #ccc;
 
       @include mq(lg) {
-        margin-top: 120px;
-      }
-
-      & ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      & li {
-        padding: 0 10px;
-      }
-
-      & .active {
-        text-decoration: underline;
-      }
-
-      & a:hover {
-        opacity: 0.7;
+        padding-bottom: 50px;
       }
     }
+  }
+
+  .page-nation {
+
+    & ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    & li {
+      padding: 0 10px;
+    }
+
+    & .active {
+      text-decoration: underline;
+    }
+
+    & a:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__foot {
+    @extend .mb-lg;
   }
 }
