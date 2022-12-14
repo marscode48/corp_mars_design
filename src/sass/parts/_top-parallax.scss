@@ -8,6 +8,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-bottom: 25vh;
+
+  @include mq(lg) {
+    margin-bottom: 30vh;
+  }
+
 
   & .gsap-top-image {
     position: absolute;

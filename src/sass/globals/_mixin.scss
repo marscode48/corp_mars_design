@@ -42,5 +42,5 @@
 
 @mixin card($interval: 15px, $number: 2) {
   width: calc(100% / #{$number} - #{$interval});
-  margin: $interval / 2;
+  margin: calc($interval / 2);
 }

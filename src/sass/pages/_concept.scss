@@ -1,120 +1,113 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-#category {
-  @extend .mb-lg;
+.concept-page {
+  position: relative;
 
-  .concept {
-    margin: 25vh 0 0 0;
-    padding: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 60px;
+    left: 0px;
+    height: 75%;
+    width: 100%;
+    background: $cBgYellow;
+    z-index: -1;
 
     @include mq(lg) {
-      margin: 30vh 0 0 0;
+      height: 60%;
+      bottom: 80px;
     }
-
-    &__head {
-      @extend .wrapper;
-    }
-
-    &__body {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        height: 80%;
-        width: 100%;
-        background: $cBgYellow;
-      }
-    }
+  }
     
-    &__container {
-      position: relative;
-      @extend .wrapper
+  &__container {
+    z-index: 1;
+    @extend .wrapper;
+  }
+
+  &__head {
+    @extend .mb-lg;
+  }
+
+  &__body {
+    @extend .mb-lg;
+  }
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    @include card();
+
+    @include mq(lg) {
+      @include card(30px, 4);
     }
 
-    &__flex {
-      display: flex;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
+    &:nth-child(2n) {
+      margin-top: 100px;
     }
+  }
 
-    & .gsap-concept-card {
-      @include card();
+  &__item {
+    background-color: $cWhite;
+    box-shadow: 5px 5px 26px 0 rgb(0 0 0 / 40%);
+  }
 
-      @include mq(lg) {
-        @include card(30px, 4);
-      }
+  &__title {
+    @extend .font-md;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px auto 0;
 
-      &:nth-child(2n) {
-        margin-top: 100px;
-      }
+    @include mq(lg) {
+      font-size: 1.25rem;
     }
-
-    &__item {
-      position: relative;
-      // padding: 10px;
-      background-color: $cWhite;
-      box-shadow: 5px 5px 26px 0 rgb(0 0 0 / 40%);
-    }
+  }
   
-    &__title {
-      @extend .font-md;
-      font-weight: normal;
-      text-align: center;
-      margin: 20px auto 0;
-  
-      @include mq(lg) {
-        font-size: 1.25rem;
-      }
+  &__description {
+    line-height: 2;
+    margin-top: 20px;
+    padding: 0 10px 20px;
+    @extend .font-sm;
+
+    @include mq(lg) {
+      line-height: 2.2;
+      font-size: 0.875rem;
     }
-    
-    &__description {
-      line-height: 2;
-      margin-top: 20px;
-      padding: 0 10px 20px;
-      @extend .font-sm;
-  
-      @include mq(lg) {
-        line-height: 2.2;
-        font-size: 0.875rem;
-      }
+  }
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+
+    @include mq(lg) {
+      height: 250px;
     }
-  
-    &__image {
+
+    & img {
       width: 100%;
-      height: 200px;
-      overflow: hidden;
-
-      @include mq(lg) {
-        height: 250px;
-      }
-  
-      & img {
-        width: 100%;
-        height: 100%;
-      }
+      height: 100%;
     }
+  }
 
-    &__circle {
-      width: 4em;
-      height: 4em;
-      margin: 20px auto 0;
-      border-radius: 50%;
-      background-color: rgb(213 206 174);
-      box-shadow: 6px -3px 2px 0 rgb(213 206 174 / 30%);
-      padding: 10px;
+  &__circle {
+    width: 4em;
+    height: 4em;
+    margin: 20px auto 0;
+    border-radius: 50%;
+    background-color: rgb(213 206 174);
+    box-shadow: 6px -3px 2px 0 rgb(213 206 174 / 30%);
+    padding: 10px;
 
-      & img {
-        vertical-align: top;
-      }
+    & img {
+      vertical-align: top;
     }
+  }
 
-    &__foot {
-      @extend .wrapper;
-    }
+  &__foot {
+    @extend .mb-lg;
   }
 }

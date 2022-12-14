@@ -58,7 +58,7 @@ class Main {
 
   _conceptParallaxAnimation(el, inview) {
     if (inview) {
-      new ConceptParallaxAnimation('.gsap-concept-card');
+      new ConceptParallaxAnimation('.gsap-card');
     }
   }
 

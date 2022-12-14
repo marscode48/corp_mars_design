@@ -135,14 +135,13 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 }
 
 
-.category-title {
+.page-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   line-height: 1;
   text-align: center;
   font-weight: normal;
-  @extend .mb-lg;
   @extend .font-md;
 
   @include mq(lg) {
@@ -194,14 +193,8 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 }
 
 .home-link {
-  margin-top:  80px;
-  // マージンから
   text-align: center;
   padding-left: 4rem;
-
-  @include mq(lg) {
-    margin-top: 120px;
-  }
 
   .arrow-anime::before {
     right: 5em;
