@@ -878,11 +878,11 @@ li {
   }
 }
 
-.mb-lg, #category .reserve-page, .houses-page__head, .houses-page__body, .houses-page__foot, .news-page__head, .news-page__body, .news-page__list, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .houses, .reserve {
+.mb-lg, .reserve-page__head, .reserve-page__body, .reserve-page__foot, .houses-page__head, .houses-page__body, .houses-page__foot, .news-page__head, .news-page__body, .news-page__list, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .houses, .reserve {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, #category .reserve-page, .houses-page__head, .houses-page__body, .houses-page__foot, .news-page__head, .news-page__body, .news-page__list, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .houses, .reserve {
+  .mb-lg, .reserve-page__head, .reserve-page__body, .reserve-page__foot, .houses-page__head, .houses-page__body, .houses-page__foot, .news-page__head, .news-page__body, .news-page__list, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .houses, .reserve {
     margin-bottom: 120px !important;
   }
 }
@@ -914,7 +914,7 @@ li {
 }
 
 /* 共通クラス */
-.wrapper, .houses-page, .news-page, .concept-page__container {
+.wrapper, .reserve-page, .houses-page, .news-page, .concept-page__container {
   width: 100%;
   margin: 0 auto;
   max-width: 1032px;
@@ -1743,9 +1743,5 @@ Footer
 }
 .news-page .page-nation a:hover {
   opacity: 0.7;
-}
-#category .reserve-page .reserve__inner {
-  margin-top: calc(20vh + 80px);
-  padding: 0 16px;
 }
 /*# sourceMappingURL=style.css.map */
