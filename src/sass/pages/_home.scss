@@ -167,30 +167,6 @@ Concept
     }
   }
 
-  &__image {
-    width: 45%;
-    margin-bottom: 30px;
-    overflow: hidden;
-    height: 300px;
-    
-    @include mq(lg) {
-      width: 65%;
-      margin-bottom: 0;
-      height: 500px;
-    }
-    
-    img {
-      height: 360px;
-      width: 100%;
-      display: block;
-      object-fit: cover;
-
-      @include mq(lg) {     
-        height: 600px;
-      }
-    }
-  }
-
   &__heading {
     display: flex;
     align-items: center;
@@ -346,45 +322,6 @@ Reserve
 
     @include mq(lg) {
       width: 90%;
-    }
-  }
-
-  & .reserve-parallax {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 350px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    background-image: url(../../images/reserve.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-
-    @include mq(lg) {
-      height: 400px;
-    }
-
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      pointer-events: none;
-      z-index: 1;
-    }
-    
-    &.active {
-      opacity: 1;
     }
   }
 

@@ -2,8 +2,11 @@
 // @use 'parts/button'; // buttonアニメーション
 @use 'parts/hero-slider'; // 画面トップスライダー
 @use 'parts/flow-slider'; // ステップスライダー
-@use 'parts/houses-slider'; // ハウススライダー
-@use 'parts/top-parallax'; // ハウススライダー
+@use 'parts/houses-loop-slider'; // ハウスループスライダー
+@use 'parts/houses-thumb-slider'; // ハウスサムネイルスライダー
+@use 'parts/reserve-parallax'; // 予約セクションパララックス
+@use 'parts/concept-parallax'; // コンセプトセクションパララックス
+@use 'parts/top-parallax'; // ページトップスライダー
 // @use 'parts/text-animation'; // テキストアニメーション
 // @use 'parts/image-slide'; // 画像スライドアニメーション
 @use 'parts/mobile-menu'; // モバイルメニュー

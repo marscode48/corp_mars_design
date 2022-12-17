@@ -665,6 +665,69 @@
   transform: translateY(0);
 }
 
+.reserve-parallax {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-image: url(../../images/reserve.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+@media screen and (min-width: 960px) {
+  .reserve-parallax {
+    height: 400px;
+  }
+}
+.reserve-parallax::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  z-index: 1;
+}
+.reserve-parallax.active {
+  opacity: 1;
+}
+
+.concept-parallax {
+  width: 45%;
+  margin-bottom: 30px;
+  overflow: hidden;
+  height: 300px;
+}
+@media screen and (min-width: 960px) {
+  .concept-parallax {
+    width: 65%;
+    margin-bottom: 0;
+    height: 500px;
+  }
+}
+.concept-parallax img {
+  height: 360px;
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 960px) {
+  .concept-parallax img {
+    height: 600px;
+  }
+}
+
 .top-parallax {
   height: 80vh;
   width: 100%;
@@ -1242,31 +1305,6 @@ Concept
     padding: 50px;
   }
 }
-.concept__image {
-  width: 45%;
-  margin-bottom: 30px;
-  overflow: hidden;
-  height: 300px;
-}
-@media screen and (min-width: 960px) {
-  .concept__image {
-    width: 65%;
-    margin-bottom: 0;
-    height: 500px;
-  }
-}
-.concept__image img {
-  height: 360px;
-  width: 100%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media screen and (min-width: 960px) {
-  .concept__image img {
-    height: 600px;
-  }
-}
 .concept__heading {
   display: flex;
   align-items: center;
@@ -1417,42 +1455,6 @@ Reserve
   .reserve__inner {
     width: 90%;
   }
-}
-.reserve .reserve-parallax {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 350px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  background-image: url(../../images/reserve.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 1s ease-out;
-}
-@media screen and (min-width: 960px) {
-  .reserve .reserve-parallax {
-    height: 400px;
-  }
-}
-.reserve .reserve-parallax::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-  z-index: 1;
-}
-.reserve .reserve-parallax.active {
-  opacity: 1;
 }
 .reserve__link {
   display: block;

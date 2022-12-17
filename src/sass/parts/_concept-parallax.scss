@@ -1,0 +1,25 @@
+@use "../globals" as *;
+
+.concept-parallax {
+  width: 45%;
+  margin-bottom: 30px;
+  overflow: hidden;
+  height: 300px;
+  
+  @include mq(lg) {
+    width: 65%;
+    margin-bottom: 0;
+    height: 500px;
+  }
+  
+  img {
+    height: 360px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+
+    @include mq(lg) {     
+      height: 600px;
+    }
+  }
+}
