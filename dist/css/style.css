@@ -452,11 +452,11 @@
 }
 .houses .slide {
   overflow: hidden;
-  width: 14rem;
+  width: 35rem;
 }
 @media screen and (min-width: 960px) {
   .houses .slide {
-    width: 20rem;
+    width: 40rem;
     transition: all 0.25s ease-out;
   }
   .houses .slide:hover {
@@ -869,11 +869,11 @@ li {
 }
 
 /* マージン */
-.mb-sm, .concept__message {
+.mb-sm, .concept__lead {
   margin-bottom: 34px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-sm, .concept__message {
+  .mb-sm, .concept__lead {
     margin-bottom: 50px !important;
   }
 }
@@ -901,7 +901,7 @@ li {
   font-size: 0.75rem;
 }
 
-.font-md, .concept-page__title, .concept__message, .page-title, body, a {
+.font-md, .concept-page__title, .concept__lead, .page-title, body, a {
   font-size: 0.875rem;
 }
 
@@ -914,11 +914,10 @@ li {
 }
 
 /* 共通クラス */
-.wrapper, .reserve-page, .houses-page, .news-page, .concept-page__container {
-  width: 100%;
+.wrapper, .reserve-page, .houses-page, .news-page, .concept-page__container, .header__inner, .news__container, .concept, .flow, .houses__header, .houses__footer, .houses__inner, .reserve__header, .reserve__footer, .reserve__inner {
+  width: 90%;
   margin: 0 auto;
   max-width: 1032px;
-  padding: 0 16px;
 }
 
 .flex {
@@ -1050,6 +1049,8 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 .arrow-anime {
   position: relative;
   letter-spacing: 0.25em;
+  display: block;
+  line-height: 1;
 }
 @media screen and (min-width: 960px) {
   .arrow-anime {
@@ -1154,48 +1155,27 @@ Mainvisual
 /*-------------------------------------------
 News
 -------------------------------------------*/
-.news__inner {
+.news {
   position: relative;
 }
-.news__inner::before {
+.news::before {
   content: "";
   position: absolute;
   bottom: -40px;
   left: 0;
-  height: 40rem;
+  height: calc(100% + 120px);
   width: 100%;
   background: #e5e5e5;
-  z-index: -5;
+  z-index: -1;
 }
 @media screen and (min-width: 960px) {
-  .news__inner::before {
+  .news::before {
+    height: 100vh;
     bottom: -60px;
   }
 }
-.news__inner .arrow-anime::before {
-  right: 4.5em;
-}
-@media screen and (min-width: 960px) {
-  .news__inner .arrow-anime::before {
-    right: 6.5em;
-  }
-}
 .news__container {
-  position: relative;
-  padding: 0;
-}
-@media screen and (min-width: 960px) {
-  .news__container {
-    padding: 0 16px;
-  }
-}
-.news__ul {
-  padding: 0 16px;
-}
-@media screen and (min-width: 960px) {
-  .news__ul {
-    padding: 0;
-  }
+  z-index: 1;
 }
 @media screen and (min-width: 960px) {
   .news__ul {
@@ -1232,24 +1212,24 @@ News
   width: 50px;
   height: 20px;
   line-height: 20px;
-  background-color: #000000;
+  background: #000000;
   color: #FFFFFF;
   display: inline-block;
   margin-left: 10px;
   text-align: center;
 }
+.news .arrow-anime::before {
+  right: 4.5em;
+}
+@media screen and (min-width: 960px) {
+  .news .arrow-anime::before {
+    right: 6.5em;
+  }
+}
 
 /*-------------------------------------------
 Concept
 -------------------------------------------*/
-.concept {
-  padding: 0;
-}
-@media screen and (min-width: 960px) {
-  .concept {
-    padding: 0 16px;
-  }
-}
 .concept__inner {
   display: flex;
   justify-content: space-between;
@@ -1262,20 +1242,20 @@ Concept
     padding: 50px;
   }
 }
-.concept__feature {
+.concept__image {
   width: 45%;
   margin-bottom: 30px;
   overflow: hidden;
   height: 300px;
 }
 @media screen and (min-width: 960px) {
-  .concept__feature {
+  .concept__image {
     width: 65%;
     margin-bottom: 0;
     height: 500px;
   }
 }
-.concept__feature img {
+.concept__image img {
   height: 360px;
   width: 100%;
   display: block;
@@ -1283,7 +1263,7 @@ Concept
      object-fit: cover;
 }
 @media screen and (min-width: 960px) {
-  .concept__feature img {
+  .concept__image img {
     height: 600px;
   }
 }
@@ -1342,7 +1322,7 @@ Concept
     padding-right: 1.7rem;
   }
 }
-.concept__message {
+.concept__lead {
   margin: 0 auto;
   writing-mode: vertical-rl;
   vertical-align: top;
@@ -1350,11 +1330,14 @@ Concept
   line-height: 3;
 }
 @media screen and (min-width: 960px) {
-  .concept__message {
+  .concept__lead {
     font-size: 1rem;
     letter-spacing: 0.5em;
     line-height: 3.5;
   }
+}
+.concept__lead span {
+  display: block;
 }
 
 @-webkit-keyframes scaleX {
@@ -1377,23 +1360,12 @@ Concept
 /*-------------------------------------------
 Flow
 -------------------------------------------*/
-.flow {
-  padding: 0;
-}
-@media screen and (min-width: 960px) {
-  .flow {
-    padding: 0 16px;
-  }
-}
-.flow .section-title {
-  text-align: center;
-}
 .flow__inner {
   overflow: hidden;
   position: relative;
   margin: 0 auto;
   padding: 2rem 2rem;
-  background-color: #FFFFFF;
+  background: #FFFFFF;
 }
 @media screen and (min-width: 960px) {
   .flow__inner {
@@ -1410,65 +1382,40 @@ Houses
 .houses::before {
   content: "";
   position: absolute;
-  top: -40px;
-  left: 0;
   bottom: -40px;
+  left: 0;
+  height: calc(100% + 80px);
   width: 100%;
   background: #e5e5e5;
-  z-index: -5;
+  z-index: -1;
 }
 @media screen and (min-width: 960px) {
   .houses::before {
-    top: -60px;
+    height: calc(100% + 120px);
     bottom: -60px;
   }
 }
-.houses .section-title {
-  margin-bottom: 38px;
-}
-@media screen and (min-width: 960px) {
-  .houses .section-title {
-    margin-bottom: 50px;
-  }
+.houses__container {
+  z-index: 1;
 }
 .houses__inner {
-  position: relative;
-  padding: 0;
+  width: 100%;
 }
 @media screen and (min-width: 960px) {
   .houses__inner {
-    padding: 0 16px;
-  }
-}
-.houses .section-link__arrow {
-  right: 6rem;
-}
-@media screen and (min-width: 960px) {
-  .houses .section-link__arrow {
-    right: 7.5rem;
+    width: 90%;
   }
 }
 
 /*-------------------------------------------
 Reserve
 -------------------------------------------*/
-.reserve {
-  position: relative;
-}
-.reserve .section-title {
-  margin-bottom: 38px;
-}
-@media screen and (min-width: 960px) {
-  .reserve .section-title {
-    margin-bottom: 50px;
-  }
-}
 .reserve__inner {
-  padding: 0;
+  width: 100%;
 }
 @media screen and (min-width: 960px) {
   .reserve__inner {
-    padding: 0 16px;
+    width: 90%;
   }
 }
 .reserve .reserve-parallax {
@@ -1478,7 +1425,7 @@ Reserve
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50vh;
+  height: 350px;
   margin-bottom: 20px;
   overflow: hidden;
   background-image: url(../../images/reserve.jpg);
@@ -1488,6 +1435,11 @@ Reserve
   opacity: 0;
   transition: opacity 1s ease-out;
 }
+@media screen and (min-width: 960px) {
+  .reserve .reserve-parallax {
+    height: 400px;
+  }
+}
 .reserve .reserve-parallax::after {
   content: "";
   position: absolute;
@@ -1495,7 +1447,7 @@ Reserve
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4);
   pointer-events: none;
   z-index: 1;
 }
@@ -1518,14 +1470,6 @@ Reserve
     font-size: 2rem;
   }
 }
-.reserve .section-link__arrow {
-  right: 6.5rem;
-}
-@media screen and (min-width: 960px) {
-  .reserve .section-link__arrow {
-    right: 8rem;
-  }
-}
 
 /*-------------------------------------------
 Footer
@@ -1534,7 +1478,7 @@ Footer
   background-color: #FFFFFF;
   padding-bottom: 20px;
 }
-.footer .wrapper {
+.footer .wrapper, .footer .header__inner, .footer .news__container, .footer .concept, .footer .flow, .footer .houses__header, .footer .houses__footer, .footer .houses__inner, .footer .reserve__header, .footer .reserve__footer, .footer .reserve__inner {
   position: relative;
 }
 .footer .top-link {

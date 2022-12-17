@@ -68,10 +68,9 @@ font-size: 0.875rem;
 
 /* 共通クラス */
 .wrapper {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   max-width: $contentMaxWidth;
-  padding: 0 16px;
 }
 
 .flex {
@@ -204,6 +203,9 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 .arrow-anime {
   position: relative;
   letter-spacing: 0.25em;
+  display: block;
+  line-height: 1;
+
   @extend .font-sm;
   
   @include mq(lg) {

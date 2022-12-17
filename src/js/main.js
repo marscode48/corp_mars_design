@@ -50,7 +50,7 @@ class Main {
     }
   }
 
-  _featureParallaxAnimation(el, inview) {
+  _conceptParallaxAnimation(el, inview) {
     if (inview) {
       new FeatureParallaxAnimation(el);
     }
@@ -93,7 +93,7 @@ class Main {
     // new ScrollObserver('.site-title', this._inviewAnimation);
     // new ScrollObserver('.cover-slide', this._inviewAnimation);
     new ScrollObserver('.appear', this._inviewAnimation);
-    new ScrollObserver('.feature-parallax', this._featureParallaxAnimation);
+    new ScrollObserver('.concept-parallax', this._conceptParallaxAnimation);
     new ScrollObserver('.top-parallax', this._topParallaxAnimation);
     new ScrollObserver('.card-parallax', this._cardParallaxAnimation);
     new ScrollObserver('.reserve-parallax', this._reserveParallaxAnimaion);

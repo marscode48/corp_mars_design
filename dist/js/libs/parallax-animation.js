@@ -73,7 +73,7 @@ var FeatureParallaxAnimation = /*#__PURE__*/function () {
     key: "animate",
     value: function animate() {
       var el = this.DOM.el;
-      var img = this.DOM.el.querySelector(".gsap-feature-image");
+      var img = this.DOM.el.querySelector(".gsap-image");
       ScrollTrigger.matchMedia({
         "(max-width: 959px)": function maxWidth959px() {
           gsap.fromTo(img, {

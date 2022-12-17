@@ -25,10 +25,10 @@
 
   & .slide {
     overflow: hidden;
-    width: 14rem;
+    width: 35rem;
 
     @include mq(lg) {
-      width: 20rem;
+      width: 40rem;
 
       transition: all .25s ease-out;
 

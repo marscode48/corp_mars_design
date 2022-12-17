@@ -21,6 +21,7 @@ header
   }
   
   &__inner {
+    @extend .wrapper;
     display: flex;
     justify-content: space-between;
     
@@ -65,51 +66,30 @@ News
 -------------------------------------------*/
 .news {
   @extend .mb-lg;
+  position: relative;
 
-  &__inner {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -40px;
-      left: 0;
-      height: 40rem;
-      width: 100%;
-      background: #e5e5e5;
-      z-index: -5;
-      
-      @include mq(lg) {
-        bottom: -60px;
-      }
-    }
-
-    & .arrow-anime::before {
-      right: 4.5em;
-
-      @include mq(lg) {
-        right: 6.5em;
-      }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    height: calc(100% + 120px);
+    width: 100%;
+    background: $cBgDark;
+    z-index: -1;
+    
+    @include mq(lg) {
+      height: 100vh;
+      bottom: -60px;
     }
   }
 
   &__container {
-    position: relative;
-
-    padding: 0;
-
-    @include mq(lg) {
-      padding: 0 16px;
-    }
+    @extend .wrapper;
+    z-index: 1;
   }
 
   &__ul {
-
-    padding: 0 16px;
-
-    @include mq(lg) {
-      padding: 0;
-    }
     
     @include mq(lg) {
       display: flex;
@@ -150,12 +130,20 @@ News
       width: 50px;
       height: 20px;
       line-height: 20px;
-      background-color: $cBlack;
+      background: $cBlack;
       color: $cWhite;
       display: inline-block;
       @extend .font-sm;
       margin-left: 10px;
       text-align: center;
+    }
+  }
+
+  & .arrow-anime::before {
+    right: 4.5em;
+
+    @include mq(lg) {
+      right: 6.5em;
     }
   }
 }
@@ -164,12 +152,8 @@ News
 Concept
 -------------------------------------------*/
 .concept {
+  @extend .wrapper;
   @extend .mb-lg;
-  padding: 0;
-    
-  @include mq(lg) {
-    padding: 0 16px;
-  }
 
   &__inner {
     display: flex;
@@ -183,7 +167,7 @@ Concept
     }
   }
 
-  &__feature {
+  &__image {
     width: 45%;
     margin-bottom: 30px;
     overflow: hidden;
@@ -253,7 +237,7 @@ Concept
     }
   }
 
-  &__message {
+  &__lead {
     margin: 0 auto;
     writing-mode: vertical-rl;
     vertical-align: top;
@@ -266,6 +250,10 @@ Concept
       font-size: 1rem;
       letter-spacing: 0.5em;
       line-height: 3.5;
+    }
+
+    span {
+      display: block;
     }
   }
 }
@@ -284,23 +272,15 @@ Concept
 Flow
 -------------------------------------------*/
 .flow {
+  @extend .wrapper;
   @extend .mb-lg;
-  padding: 0;
-
-  @include mq(lg) {
-    padding: 0 16px;
-  }
-  
-  & .section-title {
-    text-align: center;
-  }
   
   &__inner {
     overflow: hidden;
     position: relative;
     margin: 0 auto;
     padding: 2rem 2rem;
-    background-color: $cWhite;
+    background: $cWhite;
     
     @include mq(lg) {
       padding: 8rem 8rem;
@@ -319,41 +299,33 @@ Houses
   &::before {
     content: "";
     position: absolute;
-    top: -40px;
-    left: 0;
     bottom: -40px;
+    left: 0;
+    height: calc(100% + 80px);
     width: 100%;
-    background: #e5e5e5;
-    z-index: -5;
+    background: $cBgDark;
+    z-index: -1;
     
     @include mq(lg) {
-      top: -60px;
+      height: calc(100% + 120px);
       bottom: -60px;
     }
   }
 
-  & .section-title {
-    margin-bottom: 38px;
-
-    @include mq(lg) {
-      margin-bottom: 50px;
-    }
+  &__container {
+    z-index: 1;
+  }
+  
+  &__header, &__footer {
+    @extend .wrapper;
   }
   
   &__inner {
-    position: relative;
-    padding: 0;
-    
-    @include mq(lg) {
-      padding: 0 16px;
-    }
-  }
-
-  & .section-link__arrow {
-    right: 6rem;
+    @extend .wrapper;
+    width: 100%;
 
     @include mq(lg) {
-      right: 7.5rem;
+      width: 90%;
     }
   }
 }
@@ -363,21 +335,17 @@ Reserve
 -------------------------------------------*/
 .reserve {
   @extend .mb-lg;
-  position: relative;
 
-  & .section-title {
-    margin-bottom: 38px;
-
-    @include mq(lg) {
-      margin-bottom: 50px;
-    }
+  &__header, &__footer {
+    @extend .wrapper;
   }
-
+  
   &__inner {
-    padding: 0;
-    
+    @extend .wrapper;
+    width: 100%;
+
     @include mq(lg) {
-      padding: 0 16px;
+      width: 90%;
     }
   }
 
@@ -388,7 +356,7 @@ Reserve
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50vh;
+    height: 350px;
     margin-bottom: 20px;
     overflow: hidden;
     background-image: url(../../images/reserve.jpg);
@@ -398,6 +366,10 @@ Reserve
     opacity: 0;
     transition: opacity 1s ease-out;
 
+    @include mq(lg) {
+      height: 400px;
+    }
+
 
     &::after {
       content: "";
@@ -406,7 +378,7 @@ Reserve
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.4);
       pointer-events: none;
       z-index: 1;
     }
@@ -432,14 +404,6 @@ Reserve
 
     @include mq(lg) {
       font-size: 2rem;
-    }
-  }
-
-  & .section-link__arrow {
-    right: 6.5rem;
-
-    @include mq(lg) {
-      right: 8rem;
     }
   }
 }

@@ -21,7 +21,7 @@
         
         <!-- header -->
         <header id="header" class="header">
-          <div class="header__inner wrapper">
+          <div class="header__inner">
             <h1 class="logo">
               <a href="index.html">
                 <img src="images/logo.svg" alt="Mars House" />
@@ -74,8 +74,6 @@
               <div class="swiper-pagination"></div>
               
               <div class="hero__footer">
-                <!-- <img class="hero__downarrow" src="images/arrow.svg" />
-                <span class="hero__scrolltext">scroll</span> -->
                 <span class="hero__scrolltext">scroll</span>
               </div>
             </div>
@@ -83,31 +81,29 @@
 
 
           <!-- Concept -->
-          <section id="concept" class="concept wrapper">
+          <section id="concept" class="concept">
             <div class="concept__inner">
 
-              <div class="concept__feature feature-parallax appear right">
+              <div class="concept__image concept-parallax appear right">
                 <div class="item">
-                  <img class="gsap-feature-image" src="images/concept.jpeg" alt="">
+                  <img class="gsap-image" src="images/concept.jpeg" alt="">
                 </div>
               </div>
       
               <div class="concept__heading appear left">
                 <div class="concept__heading-inner">
-                  <h2 class="section-title item">
-                    <span class="en">Concept</span>
-                    <span class="ja">私たちの考える家とは</span>
+                  <h2 class="section-title">
+                    <span class="en item">Concept</span>
+                    <span class="ja item">私たちの考える家とは</span>
                   </h2>
-                  <p class="concept__message item">
-                    <span>価値と創造</span>
-                    <br>
-                    <span>伝統と技術</span>
-                    <br>
-                    <span>進化と永続</span>
+                  <p class="concept__lead">
+                    <span class="item">価値と創造</span>
+                    <span class="item">伝統と技術</span>
+                    <span class="item">進化と永続</span>
                   </p>
                   
-                  <div class="section-link item">
-                    <a href="concept.html" class="arrow-anime">
+                  <div class="section-link">
+                    <a href="concept.html" class="arrow-anime item">
                       Concept
                     </a>
                   </div>
@@ -120,15 +116,15 @@
 
           <!-- News -->
           <section id="news" class="news">
-            <div class="news__header wrapper appear up">
-              <h2 class="section-title">
-                <span class="en item">NEWS</span>
-                <span class="ja item">お知らせ</span>
-              </h2>
-            </div>
-            
-            <div class="news__inner">
-              <div class="news__container wrapper">
+            <div class="news__container">
+              <div class="news__header appear up">
+                <h2 class="section-title">
+                  <span class="en item">NEWS</span>
+                  <span class="ja item">お知らせ</span>
+                </h2>
+              </div>
+              
+              <div class="news__inner">
                 <ul class="news__ul appear up">
                   <li class="news__li item">
                     <div class="news__date">
@@ -152,6 +148,9 @@
                     <p>タイトルタイトルタイトルタイトル</p>
                   </li>
                 </ul>
+              </div>
+
+              <div class="news__footer">
                 <div class="section-link appear up">
                   <a href="news.html" class="arrow-anime item">
                     News
@@ -163,17 +162,19 @@
     
 
           <!-- Flow -->
-          <section id="flow" class="flow wrapper appear up">
-            <h2 class="section-title item">
-              <span class="en">FLOW</span>
-              <span class="ja">家が出来上がるまで</span>
-            </h2>
-
+          <section id="flow" class="flow">
+            <div class="flow__header appear up">
+              <h2 class="section-title">
+                <span class="en item">FLOW</span>
+                <span class="ja item">家が出来上がるまで</span>
+              </h2>
+            </div>
             <div class="flow__inner">
-            
+
+              <!-- Flow Pagination Slider -->
               <div class="swiper-pagination-main"></div>
 
-              <!-- FlowNestedSliderMain -->
+              <!-- Flow NestedSlider Main -->
               <div class="swiper swiper-main">
                 <div class="swiper-wrapper">
           
@@ -181,7 +182,7 @@
                   <div class="swiper-slide">
                     <div class="mainslide">
                       <div class="mainslide-title">ヒアリング・プラン提案</div>
-                      <!-- FlowNestedSliderSub -->
+                      <!-- Flow NestedSlider Sub -->
                       <div class="swiper swiper-sub">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
@@ -212,7 +213,7 @@
                   <div class="swiper-slide">
                     <div class="mainslide">
                       <div class="mainslide-title">土地探し・間取り選び</div>
-                      <!-- FlowNestedSliderSub -->
+                      <!-- Flow NestedSlider Sub -->
                       <div class="swiper swiper-sub">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
@@ -237,7 +238,7 @@
                   <div class="swiper-slide">
                     <div class="mainslide">
                       <div class="mainslide-title">着工・完成</div>
-                      <!-- FlowNestedSliderSub -->
+                      <!-- Flow NestedSlider Sub -->
                       <div class="swiper swiper-sub">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
@@ -274,98 +275,106 @@
     
           <!-- Houses -->
           <section id="houses" class="houses">
-            <div class="houses__header wrapper appear up">
-              <h2 class="section-title">
-                <span class="en item">HOUSES</span>
-                <span class="ja item">建築事例</span>
-              </h2>
-            </div>
 
-            <div class="houses__inner wrapper">
-              <div class="swiper swiper-houses">
-                <div class="swiper-wrapper">
-                  
-                  <a href="houses.html" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/139/800/500" alt=""></div>
-                    </article>
-                  </a>
-  
-                  <a href="houses.html" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/1060/800/500" alt=""></div>
-                    </article>
-                  </a>
-  
-                  <a href="houses.html" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/1023/800/500" alt=""></div>
-                    </article>
-                  </a>
-  
-                  <a href="houses.html" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/1047/800/500" alt=""></div>
-                    </article>
-                  </a>
-  
-                  <a href="houses.html" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/248/800/500" alt=""></div>
-                    </article>
-                  </a>
-  
-                  <a href="houses.html" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/109/800/500" alt=""></div>
-                    </article>
-                  </a>
-  
-                  <a href="houses.html" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/120/800/500" alt=""></div>
-                    </article>
-                  </a>
-  
-                  <a href="houses.html" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/225/800/500" alt=""></div>
-                    </article>
-                  </a>
-  
-                  <a href="houses.html" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/1003/800/500" alt=""></div>
-                    </article>
-                  </a>
-  
-                  <a href="houses.html" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/127/800/500" alt=""></div>
-                    </article>
-                  </a>
-  
-                </div>
-                
+            <div class="houses__container">
+              <div class="houses__header appear up">
+                <h2 class="section-title">
+                  <span class="en item">HOUSES</span>
+                  <span class="ja item">建築事例</span>
+                </h2>
               </div>
-              <div class="section-link appear up">
-                <a href="houses.html" class="arrow-anime item">
-                  Houses
-                </a>
+  
+              <div class="houses__inner">
+
+                <!-- Houses Loop Slider -->
+                <div class="swiper swiper-houses">
+                  <div class="swiper-wrapper">
+                    
+                    <a href="houses.html" class="swiper-slide">
+                      <article class="slide">
+                        <div class="slide-media img-cover"><img src="https://picsum.photos/id/139/800/500" alt=""></div>
+                      </article>
+                    </a>
+    
+                    <a href="houses.html" class="swiper-slide">
+                      <article class="slide">
+                        <div class="slide-media img-cover"><img src="https://picsum.photos/id/1060/800/500" alt=""></div>
+                      </article>
+                    </a>
+    
+                    <a href="houses.html" class="swiper-slide">
+                      <article class="slide">
+                        <div class="slide-media img-cover"><img src="https://picsum.photos/id/1023/800/500" alt=""></div>
+                      </article>
+                    </a>
+    
+                    <a href="houses.html" class="swiper-slide">
+                      <article class="slide">
+                        <div class="slide-media img-cover"><img src="https://picsum.photos/id/1047/800/500" alt=""></div>
+                      </article>
+                    </a>
+    
+                    <a href="houses.html" class="swiper-slide">
+                      <article class="slide">
+                        <div class="slide-media img-cover"><img src="https://picsum.photos/id/248/800/500" alt=""></div>
+                      </article>
+                    </a>
+    
+                    <a href="houses.html" class="swiper-slide">
+                      <article class="slide">
+                        <div class="slide-media img-cover"><img src="https://picsum.photos/id/109/800/500" alt=""></div>
+                      </article>
+                    </a>
+    
+                    <a href="houses.html" class="swiper-slide">
+                      <article class="slide">
+                        <div class="slide-media img-cover"><img src="https://picsum.photos/id/120/800/500" alt=""></div>
+                      </article>
+                    </a>
+    
+                    <a href="houses.html" class="swiper-slide">
+                      <article class="slide">
+                        <div class="slide-media img-cover"><img src="https://picsum.photos/id/225/800/500" alt=""></div>
+                      </article>
+                    </a>
+    
+                    <a href="houses.html" class="swiper-slide">
+                      <article class="slide">
+                        <div class="slide-media img-cover"><img src="https://picsum.photos/id/1003/800/500" alt=""></div>
+                      </article>
+                    </a>
+    
+                    <a href="houses.html" class="swiper-slide">
+                      <article class="slide">
+                        <div class="slide-media img-cover"><img src="https://picsum.photos/id/127/800/500" alt=""></div>
+                      </article>
+                    </a>
+    
+                  </div>
+                  
+                </div>
+              </div>
+
+              <div class="houses__footer">
+                <div class="section-link appear up">
+                  <a href="houses.html" class="arrow-anime item">
+                    Houses
+                  </a>
+                </div>
               </div>
             </div>
           </section>
 
           <!-- Reserve -->
           <section id="reserve" class="reserve">
-            <div class="reserve__header wrapper appear up">
+            <div class="reserve__header appear up">
               <h2 class="section-title">
                 <span class="en item">RESERVE</span>
                 <span class="ja item">商談会予約</span>
               </h2>
             </div>
 
-            <div class="reserve__inner wrapper">
+            <div class="reserve__inner">
               <a class="reserve__link" href="reserve.html">
                 <div class="reserve-parallax">
                   <div class="reserve__message">
@@ -374,6 +383,9 @@
                   </div>
                 </div>
               </a>
+            </div>
+
+            <div class="reserve__footer">
               <div class="section-link appear up">
                 <a href="reserve.html" class="arrow-anime item">
                   Reserve

@@ -56,7 +56,7 @@ class FeatureParallaxAnimation {
 
   animate() {
     const el = this.DOM.el;
-    const img = this.DOM.el.querySelector(".gsap-feature-image");
+    const img = this.DOM.el.querySelector(".gsap-image");
 
     ScrollTrigger.matchMedia({
       "(max-width: 959px)": function() {
