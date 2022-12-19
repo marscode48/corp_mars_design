@@ -128,13 +128,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #FFFFFF;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   z-index: 2;
   opacity: 0;
 }
 @media screen and (min-width: 960px) {
   .hero__title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 .hero__footer {
