@@ -73,14 +73,14 @@ var FeatureParallaxAnimation = /*#__PURE__*/function () {
     key: "animate",
     value: function animate() {
       var el = this.DOM.el;
-      var img = this.DOM.el.querySelector(".gsap-image");
+      var img = this.DOM.el.querySelector('.gsap-image');
       ScrollTrigger.matchMedia({
-        "(max-width: 959px)": function maxWidth959px() {
+        '(max-width: 959px)': function maxWidth959px() {
           gsap.fromTo(img, {
             y: 0
           }, {
             y: -60,
-            ease: "none",
+            ease: 'none',
             scrollTrigger: {
               trigger: el,
               start: 'top 90%',
@@ -90,7 +90,7 @@ var FeatureParallaxAnimation = /*#__PURE__*/function () {
             }
           });
         },
-        "(min-width: 960px)": function minWidth960px() {
+        '(min-width: 960px)': function minWidth960px() {
           gsap.fromTo(img, {
             y: 0
           }, {
@@ -125,10 +125,10 @@ var ConceptParallaxAnimation = /*#__PURE__*/function () {
     key: "animate",
     value: function animate() {
       this.DOM.els.forEach(function (el) {
-        var img = el.querySelector(".gsap-concept-image");
-        var circle = el.querySelector(".gsap-concept-circle");
-        var title = el.querySelector(".gsap-concept-title");
-        var desc = el.querySelector(".gsap-concept-description");
+        var img = el.querySelector('.gsap-concept-image');
+        var circle = el.querySelector('.gsap-concept-circle');
+        var title = el.querySelector('.gsap-concept-title');
+        var desc = el.querySelector('.gsap-concept-description');
         var tl = gsap.timeline({
           scrollTrigger: {
             trigger: el,
@@ -149,21 +149,21 @@ var ConceptParallaxAnimation = /*#__PURE__*/function () {
           scale: 1.5,
           ease: 'none',
           duration: 2
-        }, "<");
+        }, '<');
         tl.fromTo(title, {
           y: 25
         }, {
           y: 0,
-          ease: "none",
+          ease: 'none',
           duration: 1
-        }, "<");
+        }, '<');
         tl.fromTo(desc, {
           y: 25
         }, {
           y: 0,
-          ease: "none",
+          ease: 'none',
           duration: 1
-        }, "-=1.8");
+        }, '-=1.8');
       });
     }
   }]);

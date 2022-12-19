@@ -55,29 +55,28 @@ class FeatureParallaxAnimation {
   }
 
   animate() {
-    const el = this.DOM.el;
-    const img = this.DOM.el.querySelector(".gsap-image");
+    const { el } = this.DOM;
+    const img = this.DOM.el.querySelector('.gsap-image');
 
     ScrollTrigger.matchMedia({
-      "(max-width: 959px)": function() {
+      '(max-width: 959px)': function () {
         gsap.fromTo(img,
-          {y: 0},
+          { y: 0 },
           {
             y: -60,
-            ease: "none",
+            ease: 'none',
             scrollTrigger: {
               trigger: el,
               start: 'top 90%',
               end: 'bottom 10%',
               scrub: 1,
               markers: false,
-            }
-          }
-        )
+            },
+          });
       },
-      "(min-width: 960px)": function() {
+      '(min-width: 960px)': function () {
         gsap.fromTo(img,
-          {y: 0},
+          { y: 0 },
           {
             y: -100,
             scrollTrigger: {
@@ -86,9 +85,8 @@ class FeatureParallaxAnimation {
               end: 'bottom top',
               scrub: 1,
               markers: false,
-            }
-          }
-        )
+            },
+          });
       },
     });
   }
@@ -98,16 +96,16 @@ class ConceptParallaxAnimation {
   constructor(els) {
     this.DOM = {};
     this.DOM.els = document.querySelectorAll(els);
-    console.log(this.DOM.els)
+    console.log(this.DOM.els);
     this.animate();
   }
 
   animate() {
     this.DOM.els.forEach((el) => {
-      const img = el.querySelector(".gsap-concept-image");
-      const circle = el.querySelector(".gsap-concept-circle");
-      const title = el.querySelector(".gsap-concept-title");
-      const desc = el.querySelector(".gsap-concept-description");
+      const img = el.querySelector('.gsap-concept-image');
+      const circle = el.querySelector('.gsap-concept-circle');
+      const title = el.querySelector('.gsap-concept-title');
+      const desc = el.querySelector('.gsap-concept-description');
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -118,13 +116,13 @@ class ConceptParallaxAnimation {
           markers: false,
         },
       });
-      
+
       tl.to(
         img, {
-        scale: 1.5,
-        ease: 'none',
-        duration: 2,
-        }
+          scale: 1.5,
+          ease: 'none',
+          duration: 2,
+        },
       );
 
       tl.fromTo(
@@ -135,7 +133,7 @@ class ConceptParallaxAnimation {
           ease: 'none',
           duration: 2,
         },
-        "<"
+        '<',
       );
 
       tl.fromTo(
@@ -143,10 +141,10 @@ class ConceptParallaxAnimation {
         { y: 25 },
         {
           y: 0,
-          ease: "none",
+          ease: 'none',
           duration: 1,
         },
-        "<"
+        '<',
       );
 
       tl.fromTo(
@@ -154,10 +152,10 @@ class ConceptParallaxAnimation {
         { y: 25 },
         {
           y: 0,
-          ease: "none",
+          ease: 'none',
           duration: 1,
         },
-        "-=1.8"
+        '-=1.8',
       );
     });
   }

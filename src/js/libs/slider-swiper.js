@@ -114,8 +114,8 @@ class HousesRoopSlider {
       on: {
         touchEnd: (swiper) => {
           swiper.slideTo(swiper.activeIndex + 1);
-        }
-      }
+        },
+      },
     });
   }
 
