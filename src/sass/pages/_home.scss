@@ -138,14 +138,6 @@ News
       text-align: center;
     }
   }
-
-  & .arrow-anime::before {
-    right: 4.5em;
-
-    @include mq(lg) {
-      right: 6.5em;
-    }
-  }
 }
 
 /*-------------------------------------------
@@ -205,11 +197,7 @@ Concept
     }
 
     &-inner .section-link {
-      padding-right: 1.4rem;
-      
-      @include mq(lg) {
-        padding-right: 1.7rem;
-      }
+      text-align: center;
     }
   }
 
@@ -360,8 +348,6 @@ Footer
   & .top-link {
     position: absolute;
     transform: rotate(-90deg);
-    width: 80px;
-    height: 40px;
     right: 5%;
     top: 30%;
     z-index: 2;
@@ -369,28 +355,6 @@ Footer
     @include mq(lg) {
       right: 0%;
       top: -15%;
-    }
-
-    & > a {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    & .arrow-anime {
-      width: 100%;
-      height: 100%;
-      line-height: 40px;
-
-      &::before {
-        top: 1.2em;
-        right: 0.5em;
-
-        @include mq(lg) {
-          top: 1em;
-          right: -0.5em;
-        }
-      }
     }
   }
 
