@@ -126,6 +126,12 @@ News
   &__date {
     margin-bottom: 16px;
 
+    & > a {
+      display: inline-block;
+      line-height: 1;
+      margin-left: 10px;
+    }
+
     span {
       width: 50px;
       height: 20px;
@@ -134,7 +140,6 @@ News
       color: $cWhite;
       display: inline-block;
       @extend .font-sm;
-      margin-left: 10px;
       text-align: center;
     }
   }

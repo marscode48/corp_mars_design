@@ -715,6 +715,9 @@
     height: 500px;
   }
 }
+.concept-parallax > a {
+  display: block;
+}
 .concept-parallax img {
   height: 360px;
   width: 100%;
@@ -1258,6 +1261,11 @@ News
 .news__date {
   margin-bottom: 16px;
 }
+.news__date > a {
+  display: inline-block;
+  line-height: 1;
+  margin-left: 10px;
+}
 .news__date span {
   width: 50px;
   height: 20px;
@@ -1265,7 +1273,6 @@ News
   background: #000000;
   color: #FFFFFF;
   display: inline-block;
-  margin-left: 10px;
   text-align: center;
 }
 

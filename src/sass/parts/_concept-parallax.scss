@@ -11,6 +11,10 @@
     margin-bottom: 0;
     height: 500px;
   }
+
+  & > a {
+    display: block;
+  }
   
   img {
     height: 360px;
