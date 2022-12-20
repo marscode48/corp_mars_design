@@ -1104,6 +1104,9 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
     padding-left: 50px;
   }
 }
+.arrow-anime:hover {
+  opacity: 0.5;
+}
 .arrow-anime::before {
   content: "";
   position: absolute;
