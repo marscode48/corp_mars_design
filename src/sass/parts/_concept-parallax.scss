@@ -12,8 +12,18 @@
     height: 500px;
   }
 
-  & > a {
+  & a {
     display: block;
+
+    @include mq(lg) {
+      transition: transform 0.7s;
+    }
+  }
+
+  & a:hover {
+    @include mq(lg) {
+      transform: scale(1.2);
+    }
   }
   
   img {

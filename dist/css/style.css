@@ -715,8 +715,18 @@
     height: 500px;
   }
 }
-.concept-parallax > a {
+.concept-parallax a {
   display: block;
+}
+@media screen and (min-width: 960px) {
+  .concept-parallax a {
+    transition: transform 0.7s;
+  }
+}
+@media screen and (min-width: 960px) {
+  .concept-parallax a:hover {
+    transform: scale(1.2);
+  }
 }
 .concept-parallax img {
   height: 360px;
