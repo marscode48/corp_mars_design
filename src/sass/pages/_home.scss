@@ -130,6 +130,14 @@ News
       display: inline-block;
       line-height: 1;
       margin-left: 10px;
+
+      @include mq(lg) {
+        transition: opacity .3s;
+
+        &:hover {
+          opacity: 0.5;
+        }  
+      }
     }
 
     span {
@@ -141,6 +149,16 @@ News
       display: inline-block;
       @extend .font-sm;
       text-align: center;
+    }
+  }
+
+  p > a {
+    @include mq(lg) {
+     transition: opacity .3s;
+
+     &:hover {
+       opacity: 0.5;
+     }  
     }
   }
 }

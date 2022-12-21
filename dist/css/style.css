@@ -1115,10 +1115,11 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
     font-size: 0.875rem;
     letter-spacing: 0.35em;
     padding-left: 50px;
+    transition: opacity 0.3s;
   }
-}
-.arrow-anime:hover {
-  opacity: 0.5;
+  .arrow-anime:hover {
+    opacity: 0.5;
+  }
 }
 .arrow-anime::before {
   content: "";
@@ -1276,6 +1277,14 @@ News
   line-height: 1;
   margin-left: 10px;
 }
+@media screen and (min-width: 960px) {
+  .news__date > a {
+    transition: opacity 0.3s;
+  }
+  .news__date > a:hover {
+    opacity: 0.5;
+  }
+}
 .news__date span {
   width: 50px;
   height: 20px;
@@ -1284,6 +1293,14 @@ News
   color: #FFFFFF;
   display: inline-block;
   text-align: center;
+}
+@media screen and (min-width: 960px) {
+  .news p > a {
+    transition: opacity 0.3s;
+  }
+  .news p > a:hover {
+    opacity: 0.5;
+  }
 }
 
 /*-------------------------------------------
