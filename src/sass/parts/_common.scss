@@ -89,7 +89,6 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 */
 .logo {
   width: 80px;
-  margin: 8px 0;
   line-height: 1px;
 
   & a {
@@ -98,7 +97,6 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 
   @include mq(lg) {
     width: 100px;
-    margin-right: 60px;
   }
 }
 
