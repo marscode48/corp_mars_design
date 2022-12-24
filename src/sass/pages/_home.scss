@@ -24,10 +24,7 @@ header
     @extend .wrapper;
     display: flex;
     justify-content: space-between;
-    
-    @include mq(lg) {
-      align-items: center;
-    }
+    align-items: center;
   }
 
   &__nav {
@@ -44,11 +41,11 @@ header
   }
 
   &__li {
-    margin-right: 30px;
-    
-    &:last-child {
-      margin-right: 0;
-    }
+    line-height: 1;
+  }
+
+  &__li + &__li {
+    margin-left: 30px;
   }
 }
 
