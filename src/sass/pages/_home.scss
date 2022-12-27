@@ -42,6 +42,10 @@ header
 
   &__li {
     line-height: 1;
+
+    @include mq(lg) {
+      @include link-hovers();
+    }
   }
 
   &__li + &__li {
@@ -123,18 +127,14 @@ News
   &__date {
     margin-bottom: 16px;
 
+    @include mq(lg) {
+      @include link-hovers();
+    }
+
     & > a {
       display: inline-block;
       line-height: 1;
       margin-left: 10px;
-
-      @include mq(lg) {
-        transition: opacity .3s;
-
-        &:hover {
-          opacity: 0.5;
-        }  
-      }
     }
 
     span {
@@ -149,13 +149,9 @@ News
     }
   }
 
-  p > a {
+  p {
     @include mq(lg) {
-     transition: opacity .3s;
-
-     &:hover {
-       opacity: 0.5;
-     }  
+      @include link-hovers();
     }
   }
 }
@@ -375,6 +371,7 @@ Footer
 
     @include mq(lg) {
       top: -10%;
+      @include link-hovers();
     }
   }
 
@@ -416,6 +413,10 @@ Footer
 
   &__li {
     line-height: 1;
+
+    @include mq(lg) {
+      @include link-hovers();
+    }
   }
 
   &__li + &__li {

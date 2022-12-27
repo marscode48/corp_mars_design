@@ -1089,9 +1089,27 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 .section-link {
   text-align: right;
 }
+@media screen and (min-width: 960px) {
+  .section-link a {
+    transition: all 0.3s;
+  }
+  .section-link a:hover {
+    color: #333;
+    opacity: 0.5;
+  }
+}
 
 .home-link {
   text-align: center;
+}
+@media screen and (min-width: 960px) {
+  .home-link a {
+    transition: all 0.3s;
+  }
+  .home-link a:hover {
+    color: #333;
+    opacity: 0.5;
+  }
 }
 
 .arrow-anime {
@@ -1105,10 +1123,6 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
     font-size: 0.875rem;
     letter-spacing: 0.35em;
     padding-left: 50px;
-    transition: opacity 0.3s;
-  }
-  .arrow-anime:hover {
-    opacity: 0.5;
   }
 }
 .arrow-anime::before {
@@ -1195,6 +1209,15 @@ header
 .header__li {
   line-height: 1;
 }
+@media screen and (min-width: 960px) {
+  .header__li a {
+    transition: all 0.3s;
+  }
+  .header__li a:hover {
+    color: #333;
+    opacity: 0.5;
+  }
+}
 .header__li + .header__li {
   margin-left: 30px;
 }
@@ -1258,18 +1281,19 @@ News
 .news__date {
   margin-bottom: 16px;
 }
+@media screen and (min-width: 960px) {
+  .news__date a {
+    transition: all 0.3s;
+  }
+  .news__date a:hover {
+    color: #333;
+    opacity: 0.5;
+  }
+}
 .news__date > a {
   display: inline-block;
   line-height: 1;
   margin-left: 10px;
-}
-@media screen and (min-width: 960px) {
-  .news__date > a {
-    transition: opacity 0.3s;
-  }
-  .news__date > a:hover {
-    opacity: 0.5;
-  }
 }
 .news__date span {
   width: 50px;
@@ -1281,10 +1305,11 @@ News
   text-align: center;
 }
 @media screen and (min-width: 960px) {
-  .news p > a {
-    transition: opacity 0.3s;
+  .news p a {
+    transition: all 0.3s;
   }
-  .news p > a:hover {
+  .news p a:hover {
+    color: #333;
     opacity: 0.5;
   }
 }
@@ -1488,6 +1513,13 @@ Footer
   .footer .top-link {
     top: -10%;
   }
+  .footer .top-link a {
+    transition: all 0.3s;
+  }
+  .footer .top-link a:hover {
+    color: #333;
+    opacity: 0.5;
+  }
 }
 .footer__flex {
   display: flex;
@@ -1524,6 +1556,15 @@ Footer
 }
 .footer__li {
   line-height: 1;
+}
+@media screen and (min-width: 960px) {
+  .footer__li a {
+    transition: all 0.3s;
+  }
+  .footer__li a:hover {
+    color: #333;
+    opacity: 0.5;
+  }
 }
 .footer__li + .footer__li {
   margin-top: 20px;
@@ -1642,6 +1683,13 @@ Footer
   .news-page__menu li {
     width: 240px;
   }
+  .news-page__menu li a {
+    transition: all 0.3s;
+  }
+  .news-page__menu li a:hover {
+    color: #333;
+    opacity: 0.5;
+  }
 }
 .news-page__menu .active {
   border-bottom: solid 3px #000000;
@@ -1652,6 +1700,13 @@ Footer
 @media screen and (min-width: 960px) {
   .news-page__list dt {
     margin: 50px 0 10px 0;
+  }
+  .news-page__list dt a {
+    transition: all 0.3s;
+  }
+  .news-page__list dt a:hover {
+    color: #333;
+    opacity: 0.5;
   }
 }
 .news-page__list dt span {
@@ -1673,6 +1728,13 @@ Footer
   .news-page__list dd {
     padding-bottom: 50px;
   }
+  .news-page__list dd a {
+    transition: all 0.3s;
+  }
+  .news-page__list dd a:hover {
+    color: #333;
+    opacity: 0.5;
+  }
 }
 .news-page .page-nation ul {
   display: flex;
@@ -1682,10 +1744,16 @@ Footer
 .news-page .page-nation li {
   padding: 0 10px;
 }
+@media screen and (min-width: 960px) {
+  .news-page .page-nation li a {
+    transition: all 0.3s;
+  }
+  .news-page .page-nation li a:hover {
+    color: #333;
+    opacity: 0.5;
+  }
+}
 .news-page .page-nation .active {
   text-decoration: underline;
-}
-.news-page .page-nation a:hover {
-  opacity: 0.7;
 }
 /*# sourceMappingURL=style.css.map */

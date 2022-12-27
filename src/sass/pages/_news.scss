@@ -23,7 +23,8 @@
       
       @include mq(lg) {
         width: 240px;
-      } 
+        @include link-hovers();
+      }
 
       & a {
         @extend .font-lr;
@@ -42,6 +43,7 @@
       margin: 40px 0 10px 0;
       @include mq(lg) {
         margin: 50px 0 10px 0;
+        @include link-hovers();
       }
 
       & span {
@@ -63,6 +65,7 @@
 
       @include mq(lg) {
         padding-bottom: 50px;
+        @include link-hovers();
       }
     }
   }
@@ -77,14 +80,14 @@
 
     & li {
       padding: 0 10px;
+
+      @include mq(lg) {
+        @include link-hovers();
+      }
     }
 
     & .active {
       text-decoration: underline;
-    }
-
-    & a:hover {
-      opacity: 0.7;
     }
   }
 

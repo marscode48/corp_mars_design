@@ -174,10 +174,18 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 
 .section-link {
   text-align: right;
+
+  @include mq(lg) {
+    @include link-hovers();
+  }
 }
 
 .home-link {
   text-align: center;
+
+  @include mq(lg) {
+    @include link-hovers();
+  }
 }
 
 .arrow-anime {
@@ -190,12 +198,7 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
   @include mq(lg) {
     font-size: 0.875rem;
     letter-spacing: 0.35em;
-    padding-left: 50px;
-    transition: opacity .3s;
-
-    &:hover {
-      opacity: 0.5;
-    }    
+    padding-left: 50px; 
   }
 
   &::before {
