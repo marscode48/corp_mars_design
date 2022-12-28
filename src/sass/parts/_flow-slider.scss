@@ -18,16 +18,20 @@
     margin-bottom: 3.2rem;
 
     & .swiper-pagination-bullet {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       font-weight: bold;
       line-height: 1;
       position: relative;
       flex-grow: 1;
-      padding-bottom: 1.2rem;
+      padding-top: 2.2rem;
       cursor: pointer;
       transition: all .5s ease-out;
       text-align: center;
       color: $cFlowPaginaiton;
+
+      @include mq(lg) {
+        font-size: 1.8rem;
+      }
 
       &::before, &::after {
         position: absolute;
@@ -39,50 +43,38 @@
       &::before {
         z-index: 1;
         right: 0;
-        bottom: -5px;
+        top: 7px;
         left: 0;
         width: 0.8rem;
         height: 0.8rem;
         margin: auto;
-        border-radius: 100px;
+        border-radius: 50%;
         box-shadow: 0 0 0 5px $cWhite;
 
         @include mq(lg) {
-          bottom: -6px;
+          top: 8px;
+          width: 1rem;
+          height: 1rem;
         }
       }
 
       &::after {
         right: 50%;
-        bottom: 0;
+        top: 12px;
         width: 100%;
         height: 3px;
+
+        @include mq(lg) {
+          top: 15px;
+        }
       }
 
       &:first-child::after {
         display: none;
       }
 
-      & .flow-step {
-        font-size: 0.7rem;
-        display: block;
-        margin-bottom: 0.5em;
-        text-indent: 0.5em;
-
-        @include mq(lg) {
-          font-size: 0.8rem;
-          display: inline-block;
-          margin-bottom: 0;
-          text-indent: 0;
-        }
-      }
-
       &-active {
         color: $cBlack;
-
-        &::before {
-          box-shadow: 0 0 0 4px $cWhite, 0 0 0 7px $cBlack;
-        }
 
         // active要素の後ろにある全てのswiper-pagination-bullet
         & ~ *::before, & ~ *::after {
@@ -94,6 +86,7 @@
 
 
   // swiper-main
+  
   & .swiper-main {
     overflow: visible;
   }
