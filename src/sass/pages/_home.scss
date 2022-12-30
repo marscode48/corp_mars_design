@@ -90,37 +90,20 @@ News
     z-index: 1;
   }
 
-  &__ul {
-    
-    @include mq(lg) {
-      display: flex;
-      justify-content: space-between;
-    }
+  &__inner {
+    margin-bottom: 20px;
   }
 
   &__li {
-    padding: 10px 0;
-    margin-bottom: 20px;
-
+    padding: 25px 35px;
+    border-bottom: 1px dotted $cNewsBorder;
+    
     @include mq(lg) {
-      width: calc(100%/3);
-      border-right: 1px solid $cBlack;
-      padding: 10px 20px;
+      padding: 35px 60px;
     }
     
     &:first-child {
-      
-      @include mq(lg) {
-        padding-left: 0;
-      }
-    }
-    
-    &:last-child {
-      
-      @include mq(lg) {
-        border-right: none;
-        padding-right: 0;
-      }
+      border-top: 1px dotted $cNewsBorder;
     }
   }
 

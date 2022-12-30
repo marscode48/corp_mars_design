@@ -1245,33 +1245,20 @@ News
 .news__container {
   z-index: 1;
 }
-@media screen and (min-width: 960px) {
-  .news__ul {
-    display: flex;
-    justify-content: space-between;
-  }
+.news__inner {
+  margin-bottom: 20px;
 }
 .news__li {
-  padding: 10px 0;
-  margin-bottom: 20px;
+  padding: 25px 35px;
+  border-bottom: 1px dotted #9f9f9f;
 }
 @media screen and (min-width: 960px) {
   .news__li {
-    width: 33.3333333333%;
-    border-right: 1px solid #000000;
-    padding: 10px 20px;
+    padding: 35px 60px;
   }
 }
-@media screen and (min-width: 960px) {
-  .news__li:first-child {
-    padding-left: 0;
-  }
-}
-@media screen and (min-width: 960px) {
-  .news__li:last-child {
-    border-right: none;
-    padding-right: 0;
-  }
+.news__li:first-child {
+  border-top: 1px dotted #9f9f9f;
 }
 .news__date {
   margin-bottom: 16px;
