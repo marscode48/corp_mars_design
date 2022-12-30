@@ -150,7 +150,7 @@ Concept
     display: flex;
     justify-content: space-between;
     background: $cBgYellow;
-    padding: 15px;
+    padding: 40px 20px;
     overflow: hidden;
 
     @include mq(lg) {

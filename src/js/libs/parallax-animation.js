@@ -63,7 +63,7 @@ class FeatureParallaxAnimation {
         gsap.fromTo(img,
           { y: 0 },
           {
-            y: -60,
+            y: -80,
             ease: 'none',
             scrollTrigger: {
               trigger: el,
