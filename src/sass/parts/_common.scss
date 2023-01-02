@@ -222,6 +222,40 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
   }
 }
 
+.news-list {
+  padding: 20px 35px;
+  border-bottom: 1px dotted $cNewsBorder;
+  
+  @include mq(lg) {
+    padding: 30px 45px;
+    @include link-hovers();
+  }
+  
+  &:first-child {
+    border-top: 1px dotted $cNewsBorder;
+  }
+}
+
+.news-date {
+  margin-bottom: 16px;
+
+  @include mq(lg) {
+    @include link-hovers();
+  }
+
+  & > a {
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 18px;
+    line-height: 18px;
+    background: $cBlack;
+    color: $cWhite;
+    @extend .font-sm;
+    text-align: center;
+  }
+}
+
 /* フェードモード時 共通調整 */
 .swiper-fade {
   .swiper-slide {
