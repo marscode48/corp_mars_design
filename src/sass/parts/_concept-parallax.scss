@@ -14,13 +14,13 @@
     display: block;
 
     @include mq(lg) {
-      transition: transform 0.7s;
+      transition: transform 1s;
     }
   }
 
   & a:hover {
     @include mq(lg) {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
   
