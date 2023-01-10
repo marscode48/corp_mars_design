@@ -255,7 +255,7 @@
   cursor: pointer;
   transition: all 0.5s ease-out;
   text-align: center;
-  color: #cbcbcb;
+  color: #a8a8a8;
 }
 @media screen and (min-width: 960px) {
   .flow .swiper-pagination-main .swiper-pagination-bullet {
@@ -304,7 +304,7 @@
   color: #000000;
 }
 .flow .swiper-pagination-main .swiper-pagination-bullet-active ~ *::before, .flow .swiper-pagination-main .swiper-pagination-bullet-active ~ *::after {
-  background-color: #cbcbcb;
+  background-color: #a8a8a8;
 }
 .flow .swiper-main {
   overflow: visible;
@@ -325,7 +325,7 @@
   cursor: pointer;
   transition: all 0.5s ease-out;
   vertical-align: top;
-  background-color: #cbcbcb;
+  background-color: #a8a8a8;
 }
 .flow .swiper-pagination-sub .swiper-pagination-bullet:not(:first-child) {
   margin-left: 8px;
@@ -394,7 +394,7 @@
   text-align: center;
   border-radius: 4px;
   box-shadow: 0.4rem 0.4rem 0.6rem rgb(140, 140, 140), -0.1rem -0.1rem 0.4rem rgb(220, 220, 220);
-  background-color: #e2e2d6;
+  background-color: #e1dab5;
 }
 .flow .mainslide-title {
   font-size: 1.125rem;
@@ -1296,7 +1296,7 @@ Concept
 .concept__inner {
   display: flex;
   justify-content: space-between;
-  background: #e2e2d6;
+  background: #e1dab5;
   padding: 40px 20px;
   overflow: hidden;
 }
@@ -1399,11 +1399,6 @@ Flow
   margin: 0 auto;
   padding: 2rem 2rem;
   background: #FFFFFF;
-}
-@media screen and (min-width: 960px) {
-  .flow__inner {
-    padding: 8rem 8rem;
-  }
 }
 
 /*-------------------------------------------
@@ -1566,7 +1561,7 @@ Footer
   left: 0px;
   height: 75%;
   width: 100%;
-  background: #e2e2d6;
+  background: #e1dab5;
   z-index: -1;
 }
 @media screen and (min-width: 960px) {

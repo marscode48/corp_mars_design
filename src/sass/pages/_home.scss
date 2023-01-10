@@ -200,10 +200,6 @@ Flow
     margin: 0 auto;
     padding: 2rem 2rem;
     background: $cWhite;
-    
-    @include mq(lg) {
-      padding: 8rem 8rem;
-    }
   }
 }
 
