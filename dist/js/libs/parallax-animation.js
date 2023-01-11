@@ -171,16 +171,16 @@ var ConceptParallaxAnimation = /*#__PURE__*/function () {
   return ConceptParallaxAnimation;
 }();
 
-var ReserveParallaxAnimation = /*#__PURE__*/function () {
-  function ReserveParallaxAnimation(el) {
-    _classCallCheck(this, ReserveParallaxAnimation);
+var ContactParallaxAnimation = /*#__PURE__*/function () {
+  function ContactParallaxAnimation(el) {
+    _classCallCheck(this, ContactParallaxAnimation);
 
     this.DOM = {};
     this.DOM.el = el;
     this.animate();
   }
 
-  _createClass(ReserveParallaxAnimation, [{
+  _createClass(ContactParallaxAnimation, [{
     key: "animate",
     value: function animate() {
       ScrollTrigger.create({
@@ -188,7 +188,7 @@ var ReserveParallaxAnimation = /*#__PURE__*/function () {
         start: 'top 75%',
         toggleClass: 'active'
       });
-      var reserveTl = gsap.timeline({
+      var contactTl = gsap.timeline({
         scrollTrigger: {
           trigger: this.DOM.el,
           start: 'top bottom',
@@ -197,11 +197,11 @@ var ReserveParallaxAnimation = /*#__PURE__*/function () {
           markers: false
         }
       });
-      reserveTl.fromTo('.reserve-parallax .reserve__left', {
+      contactTl.fromTo('.contact-parallax .contact__left', {
         xPercent: -100
       }, {
         xPercent: 0
-      }).fromTo('.reserve-parallax .reserve__right', {
+      }).fromTo('.contact-parallax .contact__right', {
         xPercent: 100
       }, {
         xPercent: 0
@@ -209,6 +209,6 @@ var ReserveParallaxAnimation = /*#__PURE__*/function () {
     }
   }]);
 
-  return ReserveParallaxAnimation;
+  return ContactParallaxAnimation;
 }();
 //# sourceMappingURL=parallax-animation.js.map

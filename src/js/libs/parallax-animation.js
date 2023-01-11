@@ -161,7 +161,7 @@ class ConceptParallaxAnimation {
   }
 }
 
-class ReserveParallaxAnimation {
+class ContactParallaxAnimation {
   constructor(el) {
     this.DOM = {};
     this.DOM.el = el;
@@ -175,7 +175,7 @@ class ReserveParallaxAnimation {
       toggleClass: 'active',
     });
 
-    const reserveTl = gsap.timeline({
+    const contactTl = gsap.timeline({
       scrollTrigger: {
         trigger: this.DOM.el,
         start: 'top bottom',
@@ -185,13 +185,13 @@ class ReserveParallaxAnimation {
       },
     });
 
-    reserveTl.fromTo('.reserve-parallax .reserve__left', {
+    contactTl.fromTo('.contact-parallax .contact__left', {
       xPercent: -100,
     },
     {
       xPercent: 0,
     })
-      .fromTo('.reserve-parallax .reserve__right', {
+      .fromTo('.contact-parallax .contact__right', {
         xPercent: 100,
       },
       {

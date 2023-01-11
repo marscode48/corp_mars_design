@@ -660,7 +660,7 @@
   transform: translateY(0);
 }
 
-.reserve-parallax {
+.contact-parallax {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -670,7 +670,7 @@
   height: 350px;
   margin-bottom: 20px;
   overflow: hidden;
-  background-image: url(../../images/reserve.jpg);
+  background-image: url(../../images/contact.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -678,11 +678,11 @@
   transition: opacity 1s ease-out;
 }
 @media screen and (min-width: 960px) {
-  .reserve-parallax {
+  .contact-parallax {
     height: 400px;
   }
 }
-.reserve-parallax::after {
+.contact-parallax::after {
   content: "";
   position: absolute;
   top: 0;
@@ -693,7 +693,7 @@
   pointer-events: none;
   z-index: 1;
 }
-.reserve-parallax.active {
+.contact-parallax.active {
   opacity: 1;
 }
 
@@ -939,11 +939,11 @@ li {
   }
 }
 
-.mb-lg, .reserve-page__head, .reserve-page__body, .reserve-page__foot, .works-page__head, .works-page__body, .works-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .works, .reserve {
+.mb-lg, .contact-page__head, .contact-page__body, .contact-page__foot, .works-page__head, .works-page__body, .works-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .works, .contact {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .reserve-page__head, .reserve-page__body, .reserve-page__foot, .works-page__head, .works-page__body, .works-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .works, .reserve {
+  .mb-lg, .contact-page__head, .contact-page__body, .contact-page__foot, .works-page__head, .works-page__body, .works-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .works, .contact {
     margin-bottom: 120px !important;
   }
 }
@@ -966,7 +966,7 @@ li {
   font-size: 0.875rem;
 }
 
-.font-lr, .reserve__left, .reserve__right {
+.font-lr, .contact__left, .contact__right {
   font-size: 1.125rem;
 }
 
@@ -975,7 +975,7 @@ li {
 }
 
 /* 共通クラス */
-.wrapper, .reserve-page, .works-page, .news-page, .concept-page__container, .header__inner, .news__container, .concept, .flow, .works__header, .works__footer, .works__inner, .reserve__header, .reserve__footer, .reserve__inner, .footer__inner {
+.wrapper, .contact-page, .works-page, .news-page, .concept-page__container, .header__inner, .news__container, .concept, .flow, .works__header, .works__footer, .works__inner, .contact__header, .contact__footer, .contact__inner, .footer__inner {
   width: 90%;
   margin: 0 auto;
   max-width: 1032px;
@@ -1436,29 +1436,29 @@ Works
 }
 
 /*-------------------------------------------
-Reserve
+Contact
 -------------------------------------------*/
-.reserve__inner {
+.contact__inner {
   width: 100%;
 }
 @media screen and (min-width: 960px) {
-  .reserve__inner {
+  .contact__inner {
     width: 90%;
   }
 }
-.reserve__link {
+.contact__link {
   display: block;
 }
-.reserve__message {
+.contact__message {
   position: relative;
   z-index: 2;
   text-align: center;
 }
-.reserve__left, .reserve__right {
+.contact__left, .contact__right {
   color: #FFFFFF;
 }
 @media screen and (min-width: 960px) {
-  .reserve__left, .reserve__right {
+  .contact__left, .contact__right {
     font-size: 2rem;
   }
 }
