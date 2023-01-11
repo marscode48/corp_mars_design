@@ -8,7 +8,7 @@ class Main {
     // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
     this.hero = new HeroSlider('.swiper-hero');
-    this.houses = new HousesRoopSlider('.swiper-houses');
+    this.works = new WorksRoopSlider('.swiper-works');
     this._init();
   }
 
@@ -18,7 +18,7 @@ class Main {
     new MenuOpen();
     new SmoothScroll(0);
     new FlowNestedSlider('.flow .swiper-main', '.flow .swiper-sub');
-    new HousesGallerySlider('.houses-page .swiper-thumb', '.houses-page .swiper-main');
+    new WorksGallerySlider('.works-page .swiper-thumb', '.works-page .swiper-main');
     // new TopParallaxAnimation('.gsap-top-title', '.gsap-top-image');
     // new SideParallaxAnimation('.gsap-side-image');
     // new MenuFadeIn(520);
@@ -88,7 +88,7 @@ class Main {
   _scrollInit() {
     new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
     new ScrollObserver('.swiper-hero', this.#toggleHeroAnimation.bind(this), { once: false });
-    new ScrollObserver('.swiper-houses', this.#toggleHousesAnimation.bind(this), { once: false });
+    new ScrollObserver('.swiper-works', this.#toggleWorksAnimation.bind(this), { once: false });
     // new ScrollObserver('.menu__item', this._inviewAnimation);
     // new ScrollObserver('.site-title', this._inviewAnimation);
     // new ScrollObserver('.cover-slide', this._inviewAnimation);
@@ -111,13 +111,13 @@ class Main {
     }
   }
 
-  #toggleHousesAnimation(el, inview) {
+  #toggleWorksAnimation(el, inview) {
     if (inview) {
-      this.houses.start();
-      console.log('houses start is called');
+      this.works.start();
+      console.log('works start is called');
     } else {
-      this.houses.stop();
-      console.log('houses stop is called');
+      this.works.stop();
+      console.log('works stop is called');
     }
   }
 }

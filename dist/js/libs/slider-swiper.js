@@ -118,16 +118,16 @@ var FlowNestedSlider = /*#__PURE__*/function () {
   return FlowNestedSlider;
 }();
 
-var HousesRoopSlider = /*#__PURE__*/function () {
-  function HousesRoopSlider(el) {
-    _classCallCheck(this, HousesRoopSlider);
+var WorksRoopSlider = /*#__PURE__*/function () {
+  function WorksRoopSlider(el) {
+    _classCallCheck(this, WorksRoopSlider);
 
     this.el = el;
-    this.slideLength = document.querySelectorAll('.houses .swiper-slide').length;
+    this.slideLength = document.querySelectorAll('.works .swiper-slide').length;
     this.swiper = this._initSwiper();
   }
 
-  _createClass(HousesRoopSlider, [{
+  _createClass(WorksRoopSlider, [{
     key: "_initSwiper",
     value: function _initSwiper() {
       return new Swiper(this.el, {
@@ -164,12 +164,12 @@ var HousesRoopSlider = /*#__PURE__*/function () {
     }
   }]);
 
-  return HousesRoopSlider;
+  return WorksRoopSlider;
 }();
 
-var HousesGallerySlider = /*#__PURE__*/function () {
-  function HousesGallerySlider(el, el2) {
-    _classCallCheck(this, HousesGallerySlider);
+var WorksGallerySlider = /*#__PURE__*/function () {
+  function WorksGallerySlider(el, el2) {
+    _classCallCheck(this, WorksGallerySlider);
 
     this.el = el;
     this.el2 = el2;
@@ -177,7 +177,7 @@ var HousesGallerySlider = /*#__PURE__*/function () {
     this.swiperMain = this._initSwiperMain();
   }
 
-  _createClass(HousesGallerySlider, [{
+  _createClass(WorksGallerySlider, [{
     key: "_initSwiperSub",
     value: function _initSwiperSub() {
       return new Swiper(this.el, {
@@ -185,7 +185,7 @@ var HousesGallerySlider = /*#__PURE__*/function () {
         spaceBetween: 12,
         grabCursor: true,
         scrollbar: {
-          el: '.houses-page .swiper-scrollbar',
+          el: '.works-page .swiper-scrollbar',
           draggable: true
         },
         breakpoints: {
@@ -206,8 +206,8 @@ var HousesGallerySlider = /*#__PURE__*/function () {
         speed: 700,
         grabCursor: true,
         navigation: {
-          nextEl: '.houses-page .swiper-button-next',
-          prevEl: '.houses-page .swiper-button-prev'
+          nextEl: '.works-page .swiper-button-next',
+          prevEl: '.works-page .swiper-button-prev'
         },
         thumbs: {
           swiper: this.swiperSub
@@ -216,6 +216,6 @@ var HousesGallerySlider = /*#__PURE__*/function () {
     }
   }]);
 
-  return HousesGallerySlider;
+  return WorksGallerySlider;
 }();
 //# sourceMappingURL=slider-swiper.js.map

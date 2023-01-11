@@ -1,6 +1,6 @@
 @use "../globals" as *;
 
-.houses-page {
+.works-page {
   overflow: hidden;
 
   & .swiper {
@@ -126,17 +126,17 @@
     height: 20px;
     padding: 8px 0;
     cursor: pointer;
-    background-color: $cHousesScroll;
+    background-color: $cWorksScroll;
     background-clip: content-box;
 
     &:hover {
       @include mq(lg) {
-        background-color: $cHousesScrollHover;
+        background-color: $cWorksScrollHover;
       }
     }
 
     &:active {
-      background-color: $cHousesScrollHover;
+      background-color: $cWorksScrollHover;
     }
   }
 

@@ -88,10 +88,10 @@ class FlowNestedSlider {
   }
 }
 
-class HousesRoopSlider {
+class WorksRoopSlider {
   constructor(el) {
     this.el = el;
-    this.slideLength = document.querySelectorAll('.houses .swiper-slide').length;
+    this.slideLength = document.querySelectorAll('.works .swiper-slide').length;
     this.swiper = this._initSwiper();
   }
 
@@ -128,7 +128,7 @@ class HousesRoopSlider {
   }
 }
 
-class HousesGallerySlider {
+class WorksGallerySlider {
   constructor(el, el2) {
     this.el = el;
     this.el2 = el2;
@@ -142,7 +142,7 @@ class HousesGallerySlider {
       spaceBetween: 12,
       grabCursor: true,
       scrollbar: {
-        el: '.houses-page .swiper-scrollbar',
+        el: '.works-page .swiper-scrollbar',
         draggable: true,
       },
       breakpoints: {
@@ -162,8 +162,8 @@ class HousesGallerySlider {
       speed: 700,
       grabCursor: true,
       navigation: {
-        nextEl: '.houses-page .swiper-button-next',
-        prevEl: '.houses-page .swiper-button-prev',
+        nextEl: '.works-page .swiper-button-next',
+        prevEl: '.works-page .swiper-button-prev',
       },
       thumbs: {
         swiper: this.swiperSub,

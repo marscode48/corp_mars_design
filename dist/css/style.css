@@ -426,47 +426,47 @@
   }
 }
 
-.houses .swiper {
+.works .swiper {
   margin-bottom: 20px;
   overflow-y: visible;
   overflow-x: hidden;
   padding-top: 20px;
 }
 @media screen and (min-width: 960px) {
-  .houses .swiper:hover .slide:not(:hover) {
+  .works .swiper:hover .slide:not(:hover) {
     opacity: 0.3;
   }
 }
-.houses .swiper-wrapper {
+.works .swiper-wrapper {
   transition-timing-function: linear !important;
 }
-.houses .swiper-slide {
+.works .swiper-slide {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
-.houses .slide {
+.works .slide {
   overflow: hidden;
   width: 35rem;
 }
 @media screen and (min-width: 960px) {
-  .houses .slide {
+  .works .slide {
     width: 40rem;
     transition: all 0.25s ease-out;
   }
-  .houses .slide:hover {
+  .works .slide:hover {
     transform: translateY(-16px);
   }
-  .houses .slide:hover img {
+  .works .slide:hover img {
     transform: translateY(0);
   }
 }
-.houses .slide-image {
+.works .slide-image {
   position: relative;
   overflow: hidden;
   padding-top: 100%;
 }
-.houses .slide-image img {
+.works .slide-image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -478,30 +478,30 @@
   transition: all 0.25s ease-out;
 }
 
-.houses-page {
+.works-page {
   overflow: hidden;
 }
-.houses-page .swiper {
+.works-page .swiper {
   max-width: 1032px;
   margin: auto;
 }
-.houses-page .swiper-main {
+.works-page .swiper-main {
   overflow: visible;
 }
-.houses-page .swiper-thumb {
+.works-page .swiper-thumb {
   padding-top: 10px;
 }
-.houses-page .swiper-fade .swiper-slide-active {
+.works-page .swiper-fade .swiper-slide-active {
   pointer-events: auto;
 }
-.houses-page .swiper-controller {
+.works-page .swiper-controller {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding-top: 62.5%;
 }
-.houses-page .swiper-button-prev, .houses-page .swiper-button-next {
+.works-page .swiper-button-prev, .works-page .swiper-button-next {
   display: grid;
   place-content: center;
   width: 3.2rem;
@@ -514,7 +514,7 @@
   bottom: 0;
   margin: auto;
 }
-.houses-page .swiper-button-prev::before, .houses-page .swiper-button-next::before {
+.works-page .swiper-button-prev::before, .works-page .swiper-button-next::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -525,55 +525,55 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 @media screen and (min-width: 960px) {
-  .houses-page .swiper-button-prev::before, .houses-page .swiper-button-next::before {
+  .works-page .swiper-button-prev::before, .works-page .swiper-button-next::before {
     transition: all 0.25s ease-out;
   }
 }
 @media screen and (min-width: 960px) {
-  .houses-page .swiper-button-prev:hover::before, .houses-page .swiper-button-next:hover::before {
+  .works-page .swiper-button-prev:hover::before, .works-page .swiper-button-next:hover::before {
     transform: scale(1.2);
   }
 }
-.houses-page .swiper-button-prev::after, .houses-page .swiper-button-next::after {
+.works-page .swiper-button-prev::after, .works-page .swiper-button-next::after {
   width: 0.6rem;
   height: 0.6rem;
   content: "";
   border: solid #ddd;
   border-width: 3px 3px 0 0;
 }
-.houses-page .swiper-button-prev {
+.works-page .swiper-button-prev {
   right: calc(100% - 3.2rem);
 }
 @media screen and (min-width: 960px) {
-  .houses-page .swiper-button-prev {
+  .works-page .swiper-button-prev {
     right: calc(100% - 4.2rem);
   }
 }
-.houses-page .swiper-button-prev::after {
+.works-page .swiper-button-prev::after {
   margin-left: 0.2rem;
   transform: rotate(-135deg);
 }
-.houses-page .swiper-button-next {
+.works-page .swiper-button-next {
   left: calc(100% - 3.2rem);
 }
 @media screen and (min-width: 960px) {
-  .houses-page .swiper-button-next {
+  .works-page .swiper-button-next {
     left: calc(100% - 4.2rem);
   }
 }
-.houses-page .swiper-button-next::after {
+.works-page .swiper-button-next::after {
   margin-right: 0.2rem;
   transform: rotate(45deg);
 }
-.houses-page .swiper-button-disabled {
+.works-page .swiper-button-disabled {
   pointer-events: none;
   opacity: 0;
 }
-.houses-page .swiper-scrollbar {
+.works-page .swiper-scrollbar {
   position: relative;
   margin-top: 0.8rem;
 }
-.houses-page .swiper-scrollbar::after {
+.works-page .swiper-scrollbar::after {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -585,7 +585,7 @@
   content: "";
   background-color: #FFFFFF;
 }
-.houses-page .swiper-scrollbar-drag {
+.works-page .swiper-scrollbar-drag {
   height: 20px;
   padding: 8px 0;
   cursor: pointer;
@@ -593,22 +593,22 @@
   background-clip: content-box;
 }
 @media screen and (min-width: 960px) {
-  .houses-page .swiper-scrollbar-drag:hover {
+  .works-page .swiper-scrollbar-drag:hover {
     background-color: #737373;
   }
 }
-.houses-page .swiper-scrollbar-drag:active {
+.works-page .swiper-scrollbar-drag:active {
   background-color: #737373;
 }
-.houses-page .slide {
+.works-page .slide {
   display: block;
   overflow: hidden;
 }
-.houses-page .slide-image, .houses-page .thumb-image {
+.works-page .slide-image, .works-page .thumb-image {
   position: relative;
   overflow: hidden;
 }
-.houses-page .slide-image img, .houses-page .thumb-image img {
+.works-page .slide-image img, .works-page .thumb-image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -617,46 +617,46 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.houses-page .slide-image {
+.works-page .slide-image {
   padding-top: 62.5%;
   border-radius: 4px;
 }
-.houses-page .slide-image img {
+.works-page .slide-image img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.houses-page .slide-title {
+.works-page .slide-title {
   padding: 2rem 0 1rem;
 }
-.houses-page .slide-text {
+.works-page .slide-text {
   padding-bottom: 2rem;
 }
-.houses-page .thumb-image {
+.works-page .thumb-image {
   padding-top: 100%;
   transition: all 0.25s ease-out;
   border-radius: 4px;
 }
 @media screen and (min-width: 960px) {
-  .houses-page .thumb-image:hover {
+  .works-page .thumb-image:hover {
     transform: translateY(-10px);
   }
 }
-.houses-page .thumb-image:hover img {
+.works-page .thumb-image:hover img {
   transform: translateY(0);
 }
-.houses-page .thumb-image img {
+.works-page .thumb-image img {
   height: calc(100% + 10px);
   transition: all 0.25s ease-out;
   transform: translateY(-10px);
 }
-.houses-page .swiper-slide-thumb-active {
+.works-page .swiper-slide-thumb-active {
   transition: 0.8s cubic-bezier(0.2, 1, 0.2, 1);
   opacity: 0.3;
 }
-.houses-page .swiper-slide-thumb-active .thumb-image {
+.works-page .swiper-slide-thumb-active .thumb-image {
   transform: translateY(-10px);
 }
-.houses-page .swiper-slide-thumb-active .thumb-image img {
+.works-page .swiper-slide-thumb-active .thumb-image img {
   transform: translateY(0);
 }
 
@@ -939,11 +939,11 @@ li {
   }
 }
 
-.mb-lg, .reserve-page__head, .reserve-page__body, .reserve-page__foot, .houses-page__head, .houses-page__body, .houses-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .houses, .reserve {
+.mb-lg, .reserve-page__head, .reserve-page__body, .reserve-page__foot, .works-page__head, .works-page__body, .works-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .works, .reserve {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .reserve-page__head, .reserve-page__body, .reserve-page__foot, .houses-page__head, .houses-page__body, .houses-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .houses, .reserve {
+  .mb-lg, .reserve-page__head, .reserve-page__body, .reserve-page__foot, .works-page__head, .works-page__body, .works-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .works, .reserve {
     margin-bottom: 120px !important;
   }
 }
@@ -975,7 +975,7 @@ li {
 }
 
 /* 共通クラス */
-.wrapper, .reserve-page, .houses-page, .news-page, .concept-page__container, .header__inner, .news__container, .concept, .flow, .houses__header, .houses__footer, .houses__inner, .reserve__header, .reserve__footer, .reserve__inner, .footer__inner {
+.wrapper, .reserve-page, .works-page, .news-page, .concept-page__container, .header__inner, .news__container, .concept, .flow, .works__header, .works__footer, .works__inner, .reserve__header, .reserve__footer, .reserve__inner, .footer__inner {
   width: 90%;
   margin: 0 auto;
   max-width: 1032px;
@@ -1402,12 +1402,12 @@ Flow
 }
 
 /*-------------------------------------------
-Houses
+Works
 -------------------------------------------*/
-.houses {
+.works {
   position: relative;
 }
-.houses::before {
+.works::before {
   content: "";
   position: absolute;
   bottom: -40px;
@@ -1418,19 +1418,19 @@ Houses
   z-index: -1;
 }
 @media screen and (min-width: 960px) {
-  .houses::before {
+  .works::before {
     height: calc(100% + 120px);
     bottom: -60px;
   }
 }
-.houses__container {
+.works__container {
   z-index: 1;
 }
-.houses__inner {
+.works__inner {
   width: 100%;
 }
 @media screen and (min-width: 960px) {
-  .houses__inner {
+  .works__inner {
     width: 90%;
   }
 }

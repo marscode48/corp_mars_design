@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var _toggleHeroAnimation = /*#__PURE__*/new WeakSet();
 
-var _toggleHousesAnimation = /*#__PURE__*/new WeakSet();
+var _toggleWorksAnimation = /*#__PURE__*/new WeakSet();
 
 var Main = /*#__PURE__*/function () {
   function Main() {
     _classCallCheck(this, Main);
 
-    _classPrivateMethodInitSpec(this, _toggleHousesAnimation);
+    _classPrivateMethodInitSpec(this, _toggleWorksAnimation);
 
     _classPrivateMethodInitSpec(this, _toggleHeroAnimation);
 
@@ -32,7 +32,7 @@ var Main = /*#__PURE__*/function () {
     // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
     this.hero = new HeroSlider('.swiper-hero');
-    this.houses = new HousesRoopSlider('.swiper-houses');
+    this.works = new WorksRoopSlider('.swiper-works');
 
     this._init();
   }
@@ -45,7 +45,7 @@ var Main = /*#__PURE__*/function () {
       new MenuOpen();
       new SmoothScroll(0);
       new FlowNestedSlider('.flow .swiper-main', '.flow .swiper-sub');
-      new HousesGallerySlider('.houses-page .swiper-thumb', '.houses-page .swiper-main'); // new TopParallaxAnimation('.gsap-top-title', '.gsap-top-image');
+      new WorksGallerySlider('.works-page .swiper-thumb', '.works-page .swiper-main'); // new TopParallaxAnimation('.gsap-top-title', '.gsap-top-image');
       // new SideParallaxAnimation('.gsap-side-image');
       // new MenuFadeIn(520);
       // Pace.on('done', this._paceDone.bind(this));
@@ -122,7 +122,7 @@ var Main = /*#__PURE__*/function () {
       new ScrollObserver('.swiper-hero', _classPrivateMethodGet(this, _toggleHeroAnimation, _toggleHeroAnimation2).bind(this), {
         once: false
       });
-      new ScrollObserver('.swiper-houses', _classPrivateMethodGet(this, _toggleHousesAnimation, _toggleHousesAnimation2).bind(this), {
+      new ScrollObserver('.swiper-works', _classPrivateMethodGet(this, _toggleWorksAnimation, _toggleWorksAnimation2).bind(this), {
         once: false
       }); // new ScrollObserver('.menu__item', this._inviewAnimation);
       // new ScrollObserver('.site-title', this._inviewAnimation);
@@ -150,13 +150,13 @@ function _toggleHeroAnimation2(el, inview) {
   }
 }
 
-function _toggleHousesAnimation2(el, inview) {
+function _toggleWorksAnimation2(el, inview) {
   if (inview) {
-    this.houses.start();
-    console.log('houses start is called');
+    this.works.start();
+    console.log('works start is called');
   } else {
-    this.houses.stop();
-    console.log('houses stop is called');
+    this.works.stop();
+    console.log('works stop is called');
   }
 }
 //# sourceMappingURL=main.js.map
