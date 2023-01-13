@@ -40,11 +40,6 @@
   }
 }
 
-@mixin card($interval: 15px, $number: 2) {
-  width: calc(100% / #{$number} - #{$interval});
-  margin: calc($interval / 2);
-}
-
 @mixin link-hovers($opacity: 0.5, $afterTextColor: #333) {
   a {
     transition: all 0.3s;

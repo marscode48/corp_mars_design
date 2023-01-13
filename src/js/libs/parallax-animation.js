@@ -119,7 +119,7 @@ class ConceptParallaxAnimation {
 
       tl.to(
         img, {
-          scale: 1.5,
+          scale: 1.25,
           ease: 'none',
           duration: 2,
         },
@@ -127,9 +127,9 @@ class ConceptParallaxAnimation {
 
       tl.fromTo(
         circle,
-        { scale: 0.5 },
+        { scale: 0.75 },
         {
-          scale: 1.5,
+          scale: 1.25,
           ease: 'none',
           duration: 2,
         },
