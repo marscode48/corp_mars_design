@@ -55,10 +55,7 @@ var TopParallaxAnimation = /*#__PURE__*/function () {
       }, {
         backgroundPositionY: 70,
         duration: 1
-      }, 'topLabel'); // topTl.to(this.DOM.el2, {
-      //   backgroundPositionY: 75,
-      //   duration: 1,
-      // }, 'topLabel');
+      }, 'topLabel');
     }
   }]);
 
