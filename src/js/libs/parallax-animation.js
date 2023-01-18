@@ -21,7 +21,7 @@ class TopParallaxAnimation {
       scrollTrigger: {
         trigger: '.top-parallax',
         start: 'top top',
-        end: '+=500',
+        end: 'bottom top',
         scrub: 1,
         markers: false,
         pin: true,
@@ -40,8 +40,11 @@ class TopParallaxAnimation {
         duration: 0.1,
       }, `topLabel+=${i / 20}`);
     });
-    topTl.to(this.DOM.el2, {
-      backgroundPositionY: 100,
+    topTl.fromTo(this.DOM.el2, {
+      backgroundPositionY: 20,
+    },
+    {
+      backgroundPositionY: 70,
       duration: 1,
     }, 'topLabel');
   }

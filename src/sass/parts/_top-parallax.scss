@@ -21,8 +21,38 @@
     left: 0;
     height: calc(80vh - 80px);
     width: 100%;
-    background-image: url("https://picsum.photos/id/10/1920/1200");
-    background-repeat: no-repeat;
+    
+    &.bg-concept {
+      background: url("../../images/sp-parallax-1.jpg") no-repeat top / cover;
+      
+      @include mq(lg) {
+        background: url("../../images/parallax-1.jpg") no-repeat top / cover;
+      }
+    }
+
+    &.bg-news {
+      background: url("../../images/sp-parallax-2.jpg") no-repeat top / cover;
+      
+      @include mq(lg) {
+        background: url("../../images/parallax-2.jpg") no-repeat top / cover;
+      }
+    }
+
+    &.bg-works {
+      background: url("../../images/sp-parallax-3.jpg") no-repeat top / cover;
+      
+      @include mq(lg) {
+        background: url("../../images/parallax-3.jpg") no-repeat top / cover;
+      }
+    }
+
+    &.bg-contact {
+      background: url("../../images/sp-parallax-4.jpg") no-repeat top / cover;
+      
+      @include mq(lg) {
+        background: url("../../images/parallax-4.jpg") no-repeat top / cover;
+      }
+    }
   }
 
   & .gsap-top-title {

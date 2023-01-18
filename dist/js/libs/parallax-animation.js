@@ -34,7 +34,7 @@ var TopParallaxAnimation = /*#__PURE__*/function () {
         scrollTrigger: {
           trigger: '.top-parallax',
           start: 'top top',
-          end: '+=500',
+          end: 'bottom top',
           scrub: 1,
           markers: false,
           pin: true
@@ -50,10 +50,15 @@ var TopParallaxAnimation = /*#__PURE__*/function () {
           duration: 0.1
         }, "topLabel+=".concat(i / 20));
       });
-      topTl.to(this.DOM.el2, {
-        backgroundPositionY: 100,
+      topTl.fromTo(this.DOM.el2, {
+        backgroundPositionY: 20
+      }, {
+        backgroundPositionY: 70,
         duration: 1
-      }, 'topLabel');
+      }, 'topLabel'); // topTl.to(this.DOM.el2, {
+      //   backgroundPositionY: 75,
+      //   duration: 1,
+      // }, 'topLabel');
     }
   }]);
 

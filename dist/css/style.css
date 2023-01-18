@@ -755,8 +755,38 @@
   left: 0;
   height: calc(80vh - 80px);
   width: 100%;
-  background-image: url("https://picsum.photos/id/10/1920/1200");
-  background-repeat: no-repeat;
+}
+.top-parallax .gsap-top-image.bg-concept {
+  background: url("../../images/sp-parallax-1.jpg") no-repeat top/cover;
+}
+@media screen and (min-width: 960px) {
+  .top-parallax .gsap-top-image.bg-concept {
+    background: url("../../images/parallax-1.jpg") no-repeat top/cover;
+  }
+}
+.top-parallax .gsap-top-image.bg-news {
+  background: url("../../images/sp-parallax-2.jpg") no-repeat top/cover;
+}
+@media screen and (min-width: 960px) {
+  .top-parallax .gsap-top-image.bg-news {
+    background: url("../../images/parallax-2.jpg") no-repeat top/cover;
+  }
+}
+.top-parallax .gsap-top-image.bg-works {
+  background: url("../../images/sp-parallax-3.jpg") no-repeat top/cover;
+}
+@media screen and (min-width: 960px) {
+  .top-parallax .gsap-top-image.bg-works {
+    background: url("../../images/parallax-3.jpg") no-repeat top/cover;
+  }
+}
+.top-parallax .gsap-top-image.bg-contact {
+  background: url("../../images/sp-parallax-4.jpg") no-repeat top/cover;
+}
+@media screen and (min-width: 960px) {
+  .top-parallax .gsap-top-image.bg-contact {
+    background: url("../../images/parallax-4.jpg") no-repeat top/cover;
+  }
 }
 .top-parallax .gsap-top-title {
   color: #FFFFFF;
