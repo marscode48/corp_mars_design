@@ -1154,7 +1154,7 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
   position: absolute;
   width: 2em;
   height: 1em;
-  top: 0.35em;
+  top: 0.3em;
   left: 0px;
   background-image: url(../../images/arrowright.svg);
   background-repeat: no-repeat;
@@ -1310,7 +1310,7 @@ News
 }
 @media screen and (min-width: 960px) {
   .news::before {
-    height: 100vh;
+    height: 900px;
     bottom: -60px;
   }
 }
@@ -1713,6 +1713,7 @@ Footer
 }
 .news-page__main .page-nation li {
   padding: 0 10px;
+  line-height: 1;
 }
 @media screen and (min-width: 960px) {
   .news-page__main .page-nation li a {
@@ -1722,6 +1723,9 @@ Footer
     color: #333;
     opacity: 0.5;
   }
+}
+.news-page__main .page-nation li > a {
+  display: inline-block;
 }
 .news-page__main .page-nation .active {
   text-decoration: underline;
