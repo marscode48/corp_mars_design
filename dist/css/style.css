@@ -394,7 +394,7 @@
   text-align: center;
   border-radius: 4px;
   box-shadow: 0.4rem 0.4rem 0.6rem rgb(140, 140, 140), -0.1rem -0.1rem 0.4rem rgb(220, 220, 220);
-  background-color: #f1e6aa;
+  background-color: #dfd9b8;
 }
 .flow .mainslide-title {
   font-size: 1.125rem;
@@ -1327,7 +1327,7 @@ Concept
 .concept__inner {
   display: flex;
   justify-content: space-between;
-  background: #f1e6aa;
+  background: #dfd9b8;
   padding: 40px 20px;
   overflow: hidden;
 }
@@ -1592,7 +1592,7 @@ Footer
   left: 0px;
   height: 75%;
   width: 100%;
-  background: #f1e6aa;
+  background: #dfd9b8;
   z-index: -1;
 }
 @media screen and (min-width: 960px) {

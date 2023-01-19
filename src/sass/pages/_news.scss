@@ -42,9 +42,14 @@
 
       & li {
         padding: 0 10px;
+        line-height: 1;
 
         @include mq(lg) {
           @include link-hovers();
+        }
+        
+        & > a {
+          display: inline-block;
         }
       }
 
