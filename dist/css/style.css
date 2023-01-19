@@ -394,7 +394,7 @@
   text-align: center;
   border-radius: 4px;
   box-shadow: 0.4rem 0.4rem 0.6rem rgb(140, 140, 140), -0.1rem -0.1rem 0.4rem rgb(220, 220, 220);
-  background-color: #e1dab5;
+  background-color: #f1e6aa;
 }
 .flow .mainslide-title {
   font-size: 1.125rem;
@@ -943,6 +943,7 @@ html {
 body {
   background-color: #F0F0F0;
   color: #000000;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 
 img {
@@ -1052,7 +1053,7 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 }
 .section-title .en {
   display: block;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   margin-bottom: 10px;
 }
 @media screen and (min-width: 960px) {
@@ -1153,7 +1154,7 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
   position: absolute;
   width: 2em;
   height: 1em;
-  top: 0.5em;
+  top: 0.35em;
   left: 0px;
   background-image: url(../../images/arrowright.svg);
   background-repeat: no-repeat;
@@ -1326,7 +1327,7 @@ Concept
 .concept__inner {
   display: flex;
   justify-content: space-between;
-  background: #e1dab5;
+  background: #f1e6aa;
   padding: 40px 20px;
   overflow: hidden;
 }
@@ -1591,7 +1592,7 @@ Footer
   left: 0px;
   height: 75%;
   width: 100%;
-  background: #e1dab5;
+  background: #f1e6aa;
   z-index: -1;
 }
 @media screen and (min-width: 960px) {
