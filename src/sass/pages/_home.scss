@@ -331,6 +331,7 @@ Footer
   &__info {
     & .info {
       margin-top: 20px;
+      @extend .font-sm;
     }
   }
 
