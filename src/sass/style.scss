@@ -4,7 +4,7 @@
 @use 'parts/flow-slider'; // ステップスライダー
 @use 'parts/works-loop-slider'; // ワークスループスライダー
 @use 'parts/works-thumb-slider'; // ワークスサムネイルスライダー
-@use 'parts/contact-parallax'; // お問い合わせセクションパララックス
+@use 'parts/inquiry-parallax'; // お問い合わせセクションパララックス
 @use 'parts/concept-parallax'; // コンセプトセクションパララックス
 @use 'parts/top-parallax'; // ページトップスライダー
 // @use 'parts/text-animation'; // テキストアニメーション
@@ -15,4 +15,4 @@
 @use "pages/concept"; // コンセプト画面スタイル（ページ毎に作成）
 @use "pages/news"; // ニュース画面スタイル（ページ毎に作成）
 @use "pages/works"; // ワークス画面スタイル（ページ毎に作成）
-@use "pages/contact"; // お問い合わせ画面スタイル（ページ毎に作成）
+@use "pages/inquiry"; // お問い合わせ画面スタイル（ページ毎に作成）

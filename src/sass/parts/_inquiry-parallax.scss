@@ -1,6 +1,6 @@
 @use "../globals" as *;
 
-.contact-parallax {
+.inquiry-parallax {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   height: 350px;
   margin-bottom: 20px;
   overflow: hidden;
-  background-image: url(../../images/contact.jpg);
+  background-image: url(../../images/inquiry.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

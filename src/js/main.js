@@ -62,9 +62,9 @@ class Main {
     }
   }
 
-  _contactParallaxAnimaion(el, inview) {
+  _inquiryParallaxAnimaion(el, inview) {
     if (inview) {
-      new ContactParallaxAnimation(el);
+      new InquiryParallaxAnimation(el);
     }
   }
 
@@ -96,7 +96,7 @@ class Main {
     new ScrollObserver('.concept-parallax', this._conceptParallaxAnimation);
     new ScrollObserver('.top-parallax', this._topParallaxAnimation);
     new ScrollObserver('.card-parallax', this._cardParallaxAnimation);
-    new ScrollObserver('.contact-parallax', this._contactParallaxAnimaion);
+    new ScrollObserver('.inquiry-parallax', this._inquiryParallaxAnimaion);
     // new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
     // new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
   }

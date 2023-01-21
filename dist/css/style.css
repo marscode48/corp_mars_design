@@ -662,7 +662,7 @@
   transform: translateY(0);
 }
 
-.contact-parallax {
+.inquiry-parallax {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -672,7 +672,7 @@
   height: 350px;
   margin-bottom: 20px;
   overflow: hidden;
-  background-image: url(../../images/contact.jpg);
+  background-image: url(../../images/inquiry.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -680,11 +680,11 @@
   transition: opacity 1s ease-out;
 }
 @media screen and (min-width: 960px) {
-  .contact-parallax {
+  .inquiry-parallax {
     height: 400px;
   }
 }
-.contact-parallax::after {
+.inquiry-parallax::after {
   content: "";
   position: absolute;
   top: 0;
@@ -695,7 +695,7 @@
   pointer-events: none;
   z-index: 1;
 }
-.contact-parallax.active {
+.inquiry-parallax.active {
   opacity: 1;
 }
 
@@ -782,11 +782,11 @@
     background: url("../../images/parallax-3.jpg") no-repeat top/cover;
   }
 }
-.top-parallax .gsap-top-image.bg-contact {
+.top-parallax .gsap-top-image.bg-inquiry {
   background: url("../../images/sp-parallax-4.jpg") no-repeat top/cover;
 }
 @media screen and (min-width: 960px) {
-  .top-parallax .gsap-top-image.bg-contact {
+  .top-parallax .gsap-top-image.bg-inquiry {
     background: url("../../images/parallax-4.jpg") no-repeat top/cover;
   }
 }
@@ -972,11 +972,11 @@ li {
   }
 }
 
-.mb-lg, .contact-page__head, .contact-page__body, .contact-page__foot, .works-page__head, .works-page__body, .works-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .works, .contact {
+.mb-lg, .inquiry-page__head, .inquiry-page__body, .inquiry-page__foot, .works-page__head, .works-page__body, .works-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .works, .inquiry {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .contact-page__head, .contact-page__body, .contact-page__foot, .works-page__head, .works-page__body, .works-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .works, .contact {
+  .mb-lg, .inquiry-page__head, .inquiry-page__body, .inquiry-page__foot, .works-page__head, .works-page__body, .works-page__foot, .news-page__head, .news-page__body, .news-page__foot, .concept-page__head, .concept-page__body, .concept-page__foot, .mainvisual, .news, .concept, .flow, .works, .inquiry {
     margin-bottom: 120px !important;
   }
 }
@@ -999,7 +999,7 @@ li {
   font-size: 0.875rem;
 }
 
-.font-lr, .contact__left, .contact__right {
+.font-lr, .inquiry__left, .inquiry__right {
   font-size: 1.125rem;
 }
 
@@ -1008,7 +1008,7 @@ li {
 }
 
 /* 共通クラス */
-.wrapper, .contact-page, .works-page, .news-page, .concept-page__container, .header__inner, .news__container, .concept, .flow, .works__header, .works__footer, .works__inner, .contact__header, .contact__footer, .contact__inner, .footer__inner {
+.wrapper, .inquiry-page, .works-page, .news-page, .concept-page__container, .header__inner, .news__container, .concept, .flow, .works__header, .works__footer, .works__inner, .inquiry__header, .inquiry__footer, .inquiry__inner, .footer__inner {
   width: 90%;
   margin: 0 auto;
   max-width: 1032px;
@@ -1473,29 +1473,29 @@ Works
 }
 
 /*-------------------------------------------
-Contact
+Inquiry
 -------------------------------------------*/
-.contact__inner {
+.inquiry__inner {
   width: 100%;
 }
 @media screen and (min-width: 960px) {
-  .contact__inner {
+  .inquiry__inner {
     width: 90%;
   }
 }
-.contact__link {
+.inquiry__link {
   display: block;
 }
-.contact__message {
+.inquiry__message {
   position: relative;
   z-index: 2;
   text-align: center;
 }
-.contact__left, .contact__right {
+.inquiry__left, .inquiry__right {
   color: #FFFFFF;
 }
 @media screen and (min-width: 960px) {
-  .contact__left, .contact__right {
+  .inquiry__left, .inquiry__right {
     font-size: 2rem;
   }
 }

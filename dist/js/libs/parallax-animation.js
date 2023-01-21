@@ -173,16 +173,16 @@ var ConceptParallaxAnimation = /*#__PURE__*/function () {
   return ConceptParallaxAnimation;
 }();
 
-var ContactParallaxAnimation = /*#__PURE__*/function () {
-  function ContactParallaxAnimation(el) {
-    _classCallCheck(this, ContactParallaxAnimation);
+var InquiryParallaxAnimation = /*#__PURE__*/function () {
+  function InquiryParallaxAnimation(el) {
+    _classCallCheck(this, InquiryParallaxAnimation);
 
     this.DOM = {};
     this.DOM.el = el;
     this.animate();
   }
 
-  _createClass(ContactParallaxAnimation, [{
+  _createClass(InquiryParallaxAnimation, [{
     key: "animate",
     value: function animate() {
       ScrollTrigger.create({
@@ -190,7 +190,7 @@ var ContactParallaxAnimation = /*#__PURE__*/function () {
         start: 'top 75%',
         toggleClass: 'active'
       });
-      var contactTl = gsap.timeline({
+      var inquiryTl = gsap.timeline({
         scrollTrigger: {
           trigger: this.DOM.el,
           start: 'top bottom',
@@ -199,11 +199,11 @@ var ContactParallaxAnimation = /*#__PURE__*/function () {
           markers: false
         }
       });
-      contactTl.fromTo('.contact-parallax .contact__left', {
+      inquiryTl.fromTo('.inquiry-parallax .inquiry__left', {
         xPercent: -100
       }, {
         xPercent: 0
-      }).fromTo('.contact-parallax .contact__right', {
+      }).fromTo('.inquiry-parallax .inquiry__right', {
         xPercent: 100
       }, {
         xPercent: 0
@@ -211,6 +211,6 @@ var ContactParallaxAnimation = /*#__PURE__*/function () {
     }
   }]);
 
-  return ContactParallaxAnimation;
+  return InquiryParallaxAnimation;
 }();
 //# sourceMappingURL=parallax-animation.js.map
