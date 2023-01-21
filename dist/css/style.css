@@ -255,7 +255,7 @@
   cursor: pointer;
   transition: all 0.5s ease-out;
   text-align: center;
-  color: #a8a8a8;
+  color: #d8d8d8;
 }
 @media screen and (min-width: 960px) {
   .flow .swiper-pagination-main .swiper-pagination-bullet {
@@ -304,7 +304,7 @@
   color: #000000;
 }
 .flow .swiper-pagination-main .swiper-pagination-bullet-active ~ *::before, .flow .swiper-pagination-main .swiper-pagination-bullet-active ~ *::after {
-  background-color: #a8a8a8;
+  background-color: #d8d8d8;
 }
 .flow .swiper-main {
   overflow: visible;
@@ -325,7 +325,7 @@
   cursor: pointer;
   transition: all 0.5s ease-out;
   vertical-align: top;
-  background-color: #a8a8a8;
+  background-color: #d8d8d8;
 }
 .flow .swiper-pagination-sub .swiper-pagination-bullet:not(:first-child) {
   margin-left: 8px;
@@ -394,7 +394,7 @@
   text-align: center;
   border-radius: 4px;
   box-shadow: 0.4rem 0.4rem 0.6rem rgb(140, 140, 140), -0.1rem -0.1rem 0.4rem rgb(220, 220, 220);
-  background-color: #dfd9b8;
+  background-color: #f7f2d5;
 }
 .flow .mainslide-title {
   font-size: 1.125rem;
@@ -522,7 +522,7 @@
   left: 0;
   content: "";
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #bababa;
 }
 @media screen and (min-width: 960px) {
   .works-page .swiper-button-prev::before, .works-page .swiper-button-next::before {
@@ -538,7 +538,7 @@
   width: 0.6rem;
   height: 0.6rem;
   content: "";
-  border: solid #ddd;
+  border: solid #FFFFFF;
   border-width: 3px 3px 0 0;
 }
 .works-page .swiper-button-prev {
@@ -626,10 +626,12 @@
      object-fit: contain;
 }
 .works-page .slide-title {
-  padding: 2rem 0 1rem;
+  padding: 2rem 6rem 1rem;
+  font-weight: bold;
+  font-size: 1.125rem;
 }
 .works-page .slide-text {
-  padding-bottom: 2rem;
+  padding: 0rem 6rem 2rem;
 }
 .works-page .thumb-image {
   padding-top: 100%;
@@ -817,7 +819,7 @@
   visibility: hidden;
 }
 .mobile-menu .logo {
-  width: 100px;
+  width: 150px;
 }
 .mobile-menu__ul {
   perspective: 2000px;
@@ -941,7 +943,7 @@ html {
 }
 
 body {
-  background-color: #F0F0F0;
+  background-color: #FFFFFF;
   color: #000000;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
@@ -989,7 +991,7 @@ li {
 }
 
 /* フォント */
-.font-sm, .news-page__side li > a, .concept-page__description, .news-date > a, .arrow-anime, .section-title .ja {
+.font-sm, .news-page__side li > a, .concept-page__description, .footer__info .info, .news-date > a, .arrow-anime, .section-title .ja {
   font-size: 0.75rem;
 }
 
@@ -1028,7 +1030,7 @@ line-height にh1タグの高さよりも小さい値「1px」を指定するこ
 h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 */
 .logo {
-  width: 80px;
+  width: 130px;
   line-height: 1px;
 }
 .logo a {
@@ -1036,7 +1038,7 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
 }
 @media screen and (min-width: 960px) {
   .logo {
-    width: 100px;
+    width: 180px;
   }
 }
 
@@ -1305,7 +1307,7 @@ News
   left: 0;
   height: calc(100% + 120px);
   width: 100%;
-  background: #e5e5e5;
+  background: #F0F0F0;
   z-index: -1;
 }
 @media screen and (min-width: 960px) {
@@ -1327,7 +1329,7 @@ Concept
 .concept__inner {
   display: flex;
   justify-content: space-between;
-  background: #dfd9b8;
+  background: #f7f2d5;
   padding: 40px 20px;
   overflow: hidden;
 }
@@ -1428,8 +1430,7 @@ Flow
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  padding: 2rem 2rem;
-  background: #FFFFFF;
+  padding: 0 2rem 2rem;
 }
 
 /*-------------------------------------------
@@ -1441,12 +1442,12 @@ Works
 .works::before {
   content: "";
   position: absolute;
+  z-index: -1;
   bottom: -40px;
   left: 0;
   height: calc(100% + 80px);
   width: 100%;
-  background: #e5e5e5;
-  z-index: -1;
+  background: #F0F0F0;
 }
 @media screen and (min-width: 960px) {
   .works::before {
@@ -1455,7 +1456,12 @@ Works
   }
 }
 .works__container {
+  position: relative;
   z-index: 1;
+}
+.works .section-title {
+  /* swiperによるpadding-topの差分 */
+  margin-bottom: 38px;
 }
 .works__inner {
   width: 100%;
@@ -1498,7 +1504,7 @@ Contact
 Footer
 -------------------------------------------*/
 .footer {
-  background-color: #FFFFFF;
+  background-color: #F0F0F0;
 }
 .footer__inner {
   padding: 40px 0;
@@ -1588,17 +1594,17 @@ Footer
 .concept-page::before {
   content: "";
   position: absolute;
-  bottom: 60px;
+  bottom: 80px;
   left: 0px;
   height: 75%;
   width: 100%;
-  background: #dfd9b8;
+  background: #f7f2d5;
   z-index: -1;
 }
 @media screen and (min-width: 960px) {
   .concept-page::before {
     height: 60%;
-    bottom: 80px;
+    bottom: 120px;
   }
 }
 .concept-page__container {
@@ -1679,8 +1685,8 @@ Footer
   height: 4em;
   margin: 20px auto 0;
   border-radius: 50%;
-  background-color: rgb(213, 206, 174);
-  box-shadow: 6px -3px 2px 0 rgba(213, 206, 174, 0.3);
+  background-color: rgb(247, 227, 244);
+  box-shadow: 6px -3px 2px 0 rgba(234, 213, 228, 0.3);
   padding: 10px;
 }
 .concept-page__circle img {

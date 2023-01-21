@@ -50,7 +50,7 @@
     left: 0;
     content: "";
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: $cWorksBtn;
     
     @include mq(lg) {
       transition: all .25s ease-out;
@@ -68,7 +68,7 @@
     width: .6rem;
     height: .6rem;
     content: "";
-    border: solid #ddd;
+    border: solid $cWhite;
     border-width: 3px 3px 0 0;
   }
 
@@ -126,17 +126,17 @@
     height: 20px;
     padding: 8px 0;
     cursor: pointer;
-    background-color: $cWorksScroll;
+    background-color: $cWorksBar;
     background-clip: content-box;
 
     &:hover {
       @include mq(lg) {
-        background-color: $cWorksScrollHover;
+        background-color: $cWorksBarHover;
       }
     }
 
     &:active {
-      background-color: $cWorksScrollHover;
+      background-color: $cWorksBarHover;
     }
   }
 
@@ -169,11 +169,13 @@
   }
 
   & .slide-title {
-    padding: 2rem 0 1rem;
+    padding: 2rem 6rem 1rem;
+    font-weight: bold;
+    font-size: 1.125rem;
   }
 
   & .slide-text {
-    padding-bottom: 2rem;
+    padding: 0rem 6rem 2rem;
   }
 
   & .thumb-image {

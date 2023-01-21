@@ -76,7 +76,7 @@ News
     left: 0;
     height: calc(100% + 120px);
     width: 100%;
-    background: $cBgDark;
+    background: $cBgGray;
     z-index: -1;
     
     @include mq(lg) {
@@ -199,7 +199,6 @@ Flow
     position: relative;
     margin: 0 auto;
     padding: 0 2rem 2rem;
-    background: $cWhite;
   }
 }
 
@@ -219,7 +218,7 @@ Works
     left: 0;
     height: calc(100% + 80px);
     width: 100%;
-    background: $cBgDark;
+    background: $cBgGray;
     
     @include mq(lg) {
       height: calc(100% + 120px);
@@ -295,7 +294,7 @@ Contact
 Footer
 -------------------------------------------*/
 .footer {
-  background-color: $cWhite;
+  background-color: $cBgGray;
   
   &__inner {
     @extend .wrapper;
