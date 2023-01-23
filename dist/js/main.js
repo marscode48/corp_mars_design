@@ -45,10 +45,7 @@ var Main = /*#__PURE__*/function () {
       new WorksGallerySlider('.works-page .swiper-thumb', '.works-page .swiper-main');
 
       this._scrollInit();
-    } // _paceDone() {
-    //   this._scrollInit();
-    // }
-
+    }
   }, {
     key: "_navAnimation",
     value: function _navAnimation(el, inview) {
@@ -92,21 +89,7 @@ var Main = /*#__PURE__*/function () {
       if (inview) {
         new InquiryParallaxAnimation(el);
       }
-    } // _sideAnimation(el, inview) {
-    //   if (inview) {
-    //     this.side.classList.add('inview');
-    //   } else {
-    //     this.side.classList.remove('inview');
-    //   }
-    // }
-    // _fadeInAnimation(el, inview) {
-    //   if (inview) {
-    //     this.bg.classList.add('inview');
-    //   } else {
-    //     this.bg.classList.remove('inview');
-    //   }
-    // }
-
+    }
   }, {
     key: "_scrollInit",
     value: function _scrollInit() {
@@ -118,16 +101,12 @@ var Main = /*#__PURE__*/function () {
       });
       new ScrollObserver('.swiper-works', _classPrivateMethodGet(this, _toggleWorksAnimation, _toggleWorksAnimation2).bind(this), {
         once: false
-      }); // new ScrollObserver('.menu__item', this._inviewAnimation);
-      // new ScrollObserver('.site-title', this._inviewAnimation);
-      // new ScrollObserver('.cover-slide', this._inviewAnimation);
-
+      });
       new ScrollObserver('.appear', this._inviewAnimation);
       new ScrollObserver('.concept-parallax', this._conceptParallaxAnimation);
       new ScrollObserver('.top-parallax', this._topParallaxAnimation);
       new ScrollObserver('.card-parallax', this._cardParallaxAnimation);
-      new ScrollObserver('.inquiry-parallax', this._inquiryParallaxAnimaion); // new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
-      // new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
+      new ScrollObserver('.inquiry-parallax', this._inquiryParallaxAnimaion);
     }
   }]);
 
