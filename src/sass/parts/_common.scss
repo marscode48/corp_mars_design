@@ -1,5 +1,5 @@
 @use "../globals" as *;
-
+/* 共通クラス */
 html {
   font-size: 100%;
 }
@@ -67,29 +67,15 @@ font-size: 0.875rem;
   font-size: 1.5rem;
 }
 
-/* 共通クラス */
 .wrapper {
   width: 90%;
   margin: 0 auto;
   max-width: $contentMaxWidth;
 }
 
-.flex {
-  display: flex;
-  flex-direction: column;
-  
-  @include mq(lg) {
-    flex-direction: row;
-  }
-}
-
-/*
-h1タグ用
-line-height にh1タグの高さよりも小さい値「1px」を指定することで、
-h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
-*/
 .logo {
   width: 130px;
+  /* 余白消し */
   line-height: 1px;
 
   & a {
@@ -131,7 +117,6 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
     }
   }
 }
-
 
 .page-title {
   display: flex;

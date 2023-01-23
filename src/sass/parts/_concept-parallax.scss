@@ -1,5 +1,5 @@
 @use "../globals" as *;
-
+/* コンセプトパララックス */
 .concept-parallax {
   width: 45%;
   overflow: hidden;
@@ -25,14 +25,14 @@
   }
   
   img {
-    // gsapの垂直移動分を追加
+    /* gsapの垂直移動分を追加 */
     height: calc(350px + 80px);
     width: 100%;
     display: block;
     object-fit: cover;
 
     @include mq(lg) {     
-      // gsapの垂直移動分を追加
+      /* gsapの垂直移動分を追加 */
       height: calc(500px + 100px);
     }
   }

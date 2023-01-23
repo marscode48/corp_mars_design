@@ -1,5 +1,5 @@
 @use "../globals" as *;
-
+/* 画面トップスライダー */
 .hero {
   overflow: hidden;
   padding-top: $navHeight;
@@ -95,24 +95,6 @@
     width: 50px;
     height: 50px;
     z-index: 2;
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   left: 50%;
-    //   top: 0;
-    //   transform: translateX(-50%);
-    //   width: 1px;
-    //   height: 30px;
-    //   background-color: $cWhite;
-
-    //   @include animation(
-    //     $name: down-arrow-anime,
-    //     $iteration-count: infinite,
-    //     $duration: 1.5s,
-    //     $timing-function: ease-in-out
-    //   );
-    // }
   }
 
   &__scrolltext {
