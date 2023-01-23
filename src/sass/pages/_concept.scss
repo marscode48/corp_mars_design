@@ -21,6 +21,7 @@
   }
     
   &__container {
+    position: relative;
     z-index: 1;
     @extend .wrapper;
   }
@@ -31,6 +32,11 @@
 
   &__body {
     @extend .mb-lg;
+    padding: 0 20px;
+
+    @include mq(md) {
+      padding: 0;
+    }
   }
 
   &__flex {

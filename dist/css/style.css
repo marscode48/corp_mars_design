@@ -1606,7 +1606,16 @@ Footer
   }
 }
 .concept-page__container {
+  position: relative;
   z-index: 1;
+}
+.concept-page__body {
+  padding: 0 20px;
+}
+@media screen and (min-width: 600px) {
+  .concept-page__body {
+    padding: 0;
+  }
 }
 .concept-page__flex {
   display: flex;
