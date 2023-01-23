@@ -28,8 +28,6 @@ var Main = /*#__PURE__*/function () {
 
     _classPrivateMethodInitSpec(this, _toggleHeroAnimation);
 
-    // this.side = document.querySelector('#side-btn');
-    // this.bg = document.querySelector('.bg');
     this.header = document.querySelector('.header');
     this.hero = new HeroSlider('.swiper-hero');
     this.works = new WorksRoopSlider('.swiper-works');
@@ -40,15 +38,11 @@ var Main = /*#__PURE__*/function () {
   _createClass(Main, [{
     key: "_init",
     value: function _init() {
-      gsap.registerPlugin(ScrollTrigger); // new MvScaleChange();
-
+      gsap.registerPlugin(ScrollTrigger);
       new MenuOpen();
       new SmoothScroll(0);
       new FlowNestedSlider('.flow .swiper-main', '.flow .swiper-sub');
-      new WorksGallerySlider('.works-page .swiper-thumb', '.works-page .swiper-main'); // new TopParallaxAnimation('.gsap-top-title', '.gsap-top-image');
-      // new SideParallaxAnimation('.gsap-side-image');
-      // new MenuFadeIn(520);
-      // Pace.on('done', this._paceDone.bind(this));
+      new WorksGallerySlider('.works-page .swiper-thumb', '.works-page .swiper-main');
 
       this._scrollInit();
     } // _paceDone() {
