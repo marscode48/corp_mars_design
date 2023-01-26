@@ -1,3 +1,6 @@
+//----------------------------------------------------------------------
+//  モジュール読み込み
+//----------------------------------------------------------------------
 const { src, dest, watch, series, parallel, lastRun } = require('gulp');
 const loadPlugins = require('gulp-load-plugins');
 const $ = loadPlugins();
@@ -10,6 +13,9 @@ const imageminPngquant = require('imagemin-pngquant');
 const browserSync = require('browser-sync').create();
 const isProd = process.env.NODE_ENV === "production";
 
+//----------------------------------------------------------------------
+//  関数定義
+//----------------------------------------------------------------------
 function icon(done) {
   for (let size of sizes){
     let width = size[0];
@@ -37,7 +43,7 @@ function resize() {
       crop: true,
       upscale: false,
     }))
-    .pipe(dest("./src/images/"));
+    .pipe(dest("./src/images"));
 }
 
 function imagemin() {
@@ -56,7 +62,7 @@ function imagemin() {
       ]
     })
   ]))
-  .pipe(dest("./dist/images/"));
+  .pipe(dest("./dist/images"));
 }
 
 function styles() {
@@ -71,7 +77,7 @@ function styles() {
     .pipe($.autoprefixer({
       cascade: true
     }))
-    .pipe($.if(!isProd, $.sourcemaps.write('.')))
+    .pipe($.if(!isProd, $.sourcemaps.write('./')))
     .pipe($.if(isProd, $.postcss([cssnano({ autoprefixer: false })])))
     .pipe(dest('./dist/css'))
     .pipe($.debug({title: 'scss dest:'}));
@@ -81,7 +87,7 @@ function scripts() {
   return src('./src/js/**/*.js')
     .pipe($.if(!isProd, $.sourcemaps.init()))
     .pipe($.babel())
-    .pipe($.if(!isProd, $.sourcemaps.write('.')))
+    .pipe($.if(!isProd, $.sourcemaps.write('./')))
     .pipe($.if(isProd, $.uglify()))
     .pipe(dest('./dist/js'));
 }
@@ -110,7 +116,9 @@ function clean() {
 
 function startAppServer() {
   browserSync.init({
-    server: './dist'
+    server: {
+      baseDir: "dist",
+    },
   });
 
   watch('./src/sass/**/*.scss', styles);
@@ -126,6 +134,9 @@ function startAppServer() {
   ]).on('change', browserSync.reload);
 }
 
+//----------------------------------------------------------------------
+//  タスク定義
+//----------------------------------------------------------------------
 const build = series(clean, parallel(imagemin, extras, styles, series(lint, scripts)));
 const serve = series(build, startAppServer);
 
