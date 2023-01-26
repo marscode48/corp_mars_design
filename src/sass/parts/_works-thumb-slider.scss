@@ -169,13 +169,21 @@
   }
 
   & .slide-title {
-    padding: 2rem 6rem 1rem;
+    padding: 2rem 2rem 1rem;
     font-weight: bold;
     font-size: 1.125rem;
+
+    @include mq(lg) {
+      padding: 2rem 6rem 1rem;
+    }
   }
 
   & .slide-text {
-    padding: 0rem 6rem 2rem;
+    padding: 0rem 2rem 2rem;
+
+    @include mq(lg) {
+      padding: 2rem 6rem 1rem;
+    }
   }
 
   & .thumb-image {

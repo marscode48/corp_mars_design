@@ -631,12 +631,22 @@
      object-fit: contain;
 }
 .works-page .slide-title {
-  padding: 2rem 6rem 1rem;
+  padding: 2rem 2rem 1rem;
   font-weight: bold;
   font-size: 1.125rem;
 }
+@media screen and (min-width: 960px) {
+  .works-page .slide-title {
+    padding: 2rem 6rem 1rem;
+  }
+}
 .works-page .slide-text {
-  padding: 0rem 6rem 2rem;
+  padding: 0rem 2rem 2rem;
+}
+@media screen and (min-width: 960px) {
+  .works-page .slide-text {
+    padding: 2rem 6rem 1rem;
+  }
 }
 .works-page .thumb-image {
   padding-top: 100%;
