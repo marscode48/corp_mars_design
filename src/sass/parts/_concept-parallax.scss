@@ -1,0 +1,39 @@
+@use "../globals" as *;
+/* コンセプトパララックス */
+.concept-parallax {
+  width: 45%;
+  overflow: hidden;
+  height: 350px;
+  
+  @include mq(lg) {
+    width: 65%;
+    height: 500px;
+  }
+
+  & a {
+    display: block;
+
+    @include mq(lg) {
+      transition: transform 1s;
+    }
+  }
+
+  & a:hover {
+    @include mq(lg) {
+      transform: scale(1.1);
+    }
+  }
+  
+  img {
+    /* gsapの垂直移動分を追加 */
+    height: calc(350px + 80px);
+    width: 100%;
+    display: block;
+    object-fit: cover;
+
+    @include mq(lg) {     
+      /* gsapの垂直移動分を追加 */
+      height: calc(500px + 100px);
+    }
+  }
+}

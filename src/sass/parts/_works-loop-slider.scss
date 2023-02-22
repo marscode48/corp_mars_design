@@ -1,0 +1,61 @@
+@use "../globals" as *;
+/* ワークスループスライダー */
+.works {
+
+  & .swiper {
+    margin-bottom: 20px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    padding-top: 20px;
+    
+    @include mq(lg) {
+      &:hover .slide:not(:hover) {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  & .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  & .swiper-slide {
+    width: max-content;
+  }
+
+  & .slide {
+    overflow: hidden;
+    width: 35rem;
+
+    @include mq(lg) {
+      width: 40rem;
+
+      transition: all .25s ease-out;
+
+      &:hover {
+        transform: translateY(-16px);
+
+      }
+      &:hover img {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  & .slide-image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% + 16px);
+      transform: translateY(-16px);
+      object-fit: cover;
+      transition: all .25s ease-out;
+    }
+  }
+}

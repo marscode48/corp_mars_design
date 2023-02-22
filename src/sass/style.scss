@@ -1,8 +1,15 @@
-// @use 'parts/appear'; // appearアニメーション
-// @use 'parts/button'; // buttonアニメーション
-// @use 'parts/hero-slider'; // 画面トップスライダー
-// @use 'parts/text-animation'; // テキストアニメーション
-// @use 'parts/image-slide'; // 画像スライドアニメーション
+@use 'parts/appear'; // appearアニメーション
+@use 'parts/hero-slider'; // 画面トップスライダー
+@use 'parts/flow-slider'; // ステップスライダー
+@use 'parts/works-loop-slider'; // ワークスループスライダー
+@use 'parts/works-thumb-slider'; // ワークスサムネイルスライダー
+@use 'parts/inquiry-parallax'; // お問い合わせパララックス
+@use 'parts/concept-parallax'; // コンセプトパララックス
+@use 'parts/top-parallax'; // ページトップスライダー
 @use 'parts/mobile-menu'; // モバイルメニュー
 
 @use "pages/home"; // トップ画面スタイル（ページ毎に作成）
+@use "pages/concept"; // コンセプト画面スタイル（ページ毎に作成）
+@use "pages/news"; // ニュース画面スタイル（ページ毎に作成）
+@use "pages/works"; // ワークス画面スタイル（ページ毎に作成）
+@use "pages/inquiry"; // お問い合わせ画面スタイル（ページ毎に作成）

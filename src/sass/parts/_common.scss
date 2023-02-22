@@ -1,13 +1,14 @@
 @use "../globals" as *;
-
+/* 共通クラス */
 html {
   font-size: 100%;
 }
 
 body {
-  background-color: $cBgGray;
+  background-color: $cWhite;
   color: $cBlack;
   @extend .font-md;
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
 }
 
 img {
@@ -57,40 +58,24 @@ li {
   font-size: 0.75rem;
 }
 .font-md {
-  font-size: 0.875rem;
+font-size: 0.875rem;
 }
 .font-lr {
   font-size: 1.125rem;
 }
 .font-lg {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 
-/* 共通クラス */
 .wrapper {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   max-width: $contentMaxWidth;
-  padding: 0 16px;
 }
 
-.flex {
-  display: flex;
-  flex-direction: column;
-  
-  @include mq(lg) {
-    flex-direction: row;
-  }
-}
-
-/*
-h1タグ用
-line-height にh1タグの高さよりも小さい値「1px」を指定することで、
-h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
-*/
 .logo {
-  width: 80px;
-  margin: 8px 0;
+  width: 130px;
+  /* 余白消し */
   line-height: 1px;
 
   & a {
@@ -98,38 +83,179 @@ h1タグの上下の余白が消えるため、ロゴ画像の高さと揃う
   }
 
   @include mq(lg) {
-    width: 100px;
-    margin-right: 60px;
+    width: 180px;
   }
 }
 
 .section-title {
-  @extend .mb-sm;
+  margin-bottom: 58px;
   font-weight: normal;
   line-height: 1;
+  text-align: center;
 
-  &::after {
-    content: "";
-    width: 40px;
-    height: 1px;
-    background-color: $cBlack;
-    display: block;
+  @include mq(lg) {
+    margin-bottom: 70px;
   }
 
   & .en {
     display: block;
     @extend .font-lg;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
     margin-bottom: 10px;
+
+    @include mq(lg) {
+      font-size: 2rem;
+    }
   }
 
   & .ja {
     display: block;
-    @extend .font-md;
-    margin-bottom: 24px;
+    @extend .font-sm;
 
     @include mq(lg) {
-      margin-bottom: 36px;
+      font-size: 0.875rem;
     }
+  }
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+  text-align: center;
+  font-weight: normal;
+  @extend .font-md;
+
+  @include mq(lg) {
+    font-size: 1.25rem;
+  }
+
+  &::before, &::after {
+    border-top: 1px solid $cBlack;
+    content: "";
+    width: 13%;
+
+    @include mq(lg) {
+      width: 16%;
+    }
+  }
+
+  &::before {
+    margin-left: 3em;
+
+    @include mq(lg) {
+      margin-left: 8em;
+    }
+  }
+
+  &::after {
+    margin-right: 3em;
+
+    @include mq(lg) {
+      margin-right: 8em;
+    }
+  }
+}
+
+.section-link {
+  text-align: right;
+
+  @include mq(lg) {
+    @include link-hovers();
+  }
+}
+
+.home-link {
+  text-align: center;
+
+  @include mq(lg) {
+    @include link-hovers();
+  }
+}
+
+.arrow-anime {
+  display: inline-block;
+  position: relative;
+  @extend .font-sm;
+  letter-spacing: 0.25em;
+  padding-left: 40px;
+  
+  @include mq(lg) {
+    font-size: 0.875rem;
+    letter-spacing: 0.35em;
+    padding-left: 50px; 
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2em;
+    height: 1em;
+    top: 0.3em;
+    left: 0px;
+    background-image: url(../../images/arrowright.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  
+    @include animation(
+      $name: kf-arrow-anime,
+      $iteration-count: infinite,
+      $duration: 2s,
+      $timing-function: linear
+    );
+  }
+}
+
+.news-list {
+  padding: 20px 35px;
+  border-bottom: 1px dotted $cNewsBorder;
+  
+  @include mq(lg) {
+    padding: 30px 45px;
+    @include link-hovers();
+  }
+  
+  &:first-child {
+    border-top: 1px dotted $cNewsBorder;
+  }
+}
+
+.news-date-cat {
+  margin-bottom: 16px;
+
+  @include mq(lg) {
+    @include link-hovers();
+  }
+
+  & > a {
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 18px;
+    line-height: 18px;
+    background: $cBlack;
+    color: $cWhite;
+    @extend .font-sm;
+    text-align: center;
+  }
+}
+
+/* フェードモード時 共通調整 */
+.swiper-fade {
+  .swiper-slide {
+    transition-property: opacity !important;
+  }
+}
+
+@keyframes kf-arrow-anime {
+  0%,
+  50%,
+  100% {
+    transform: translateX(-15%);
+  }
+  30% {
+    transform: none;
   }
 }

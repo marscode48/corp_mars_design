@@ -1,0 +1,18 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+/* ワークス画面スタイル */
+.works-page {
+  @extend .wrapper;
+
+  &__head {
+    @extend .mb-lg;
+  }
+
+  &__body {
+    @extend .mb-lg;
+  }
+
+  &__foot {
+    @extend .mb-lg;
+  }
+}

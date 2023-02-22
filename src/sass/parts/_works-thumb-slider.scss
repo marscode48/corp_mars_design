@@ -1,0 +1,233 @@
+@use "../globals" as *;
+/* ワークスサムネイルスライダー */
+.works-page {
+  overflow: hidden;
+
+  & .swiper {
+    max-width: $contentMaxWidth;
+    margin: auto;
+  }
+
+  & .swiper-main {
+    overflow: visible;
+  }
+
+  & .swiper-thumb {
+    padding-top: 10px;
+  }
+
+  & .swiper-fade .swiper-slide-active {
+    pointer-events: auto;
+  }
+
+  & .swiper-controller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 62.5%;
+
+    @include mq(lg) {
+      padding-top: 42.5%;
+    }
+  }
+
+  & .swiper-button-prev, & .swiper-button-next {
+    display: grid;
+    place-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    cursor: pointer;
+    transition: all .25s ease-out;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  & .swiper-button-prev::before, & .swiper-button-next::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border-radius: 50%;
+    background-color: $cWorksBtn;
+    opacity: 0.6;
+    
+    @include mq(lg) {
+      transition: all .25s ease-out;
+    }
+  }
+
+  & .swiper-button-prev:hover::before, & .swiper-button-next:hover::before {
+
+    @include mq(lg) {
+      transform: scale(1.2);
+    }
+  }
+
+  & .swiper-button-prev::after, & .swiper-button-next::after {
+    width: .6rem;
+    height: .6rem;
+    content: "";
+    border: solid $cBlack;
+    border-width: 1.5px 1.5px 0 0;
+  }
+
+  & .swiper-button-prev {
+    right: calc(100% - 3.2rem);
+
+    @include mq(lg) {
+      right: calc(100% - 7.2rem);
+    }
+
+    &::after {
+      margin-left: 0.2rem;
+      transform: rotate(-135deg);
+    }
+  }
+
+  & .swiper-button-next {
+    left: calc(100% - 3.2rem);
+    
+    @include mq(lg) {
+      left: calc(100% - 7.2rem);
+    }
+
+    &::after {
+      margin-right: 0.2rem;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+  }
+
+  & .swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  & .swiper-scrollbar {
+    position: relative;
+    margin-top: .8rem;
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      margin: auto;
+      content: "";
+      background-color: $cWhite;
+    }
+  }
+
+  & .swiper-scrollbar-drag {
+    height: 20px;
+    padding: 8px 0;
+    cursor: pointer;
+    background-color: $cWorksBar;
+    background-clip: content-box;
+
+    &:hover {
+      @include mq(lg) {
+        background-color: $cWorksBarHover;
+      }
+    }
+
+    &:active {
+      background-color: $cWorksBarHover;
+    }
+  }
+
+  & .slide {
+    display: block;
+    overflow: hidden;
+  }
+
+  & .slide-image, & .thumb-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  & .slide-image img, & .thumb-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  & .slide-image {
+    padding-top: 62.5%;
+    border-radius: 4px;
+
+    @include mq(lg) {
+      padding-top: 42.5%;
+    }
+  }
+
+  & .slide-image img {
+    object-fit: contain;
+  }
+
+  & .slide-title {
+    padding: 2rem 2rem 0;
+    font-weight: bold;
+    font-size: 1.125rem;
+
+    @include mq(lg) {
+      padding: 2rem 6rem 0;
+    }
+  }
+
+  & .slide-text {
+    margin-top: 16px;
+    padding: 0rem 2rem 2rem;
+
+    @include mq(lg) {
+      padding: 0 6rem 3rem;
+    }
+  }
+
+  & .thumb-image {
+    padding-top: 100%;
+    transition: all .25s ease-out;
+    border-radius: 4px;
+
+    &:hover {
+      @include mq(lg) {
+        transform: translateY(-10px);
+      }
+
+      & img {
+        transform: translateY(0);
+      }
+    }
+
+    & img {
+      height: calc(100% + 10px);
+      transition: all .25s ease-out;
+      transform: translateY(-10px);
+    }
+  }
+
+  & .swiper-slide-thumb-active {
+    transition: .8s cubic-bezier(.2, 1, .2, 1);
+    opacity: 0.3;
+
+    & .thumb-image {
+      transform: translateY(-10px);
+
+      & img {
+        transform: translateY(0);
+      }
+    }
+  }
+}

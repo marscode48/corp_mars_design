@@ -6,16 +6,32 @@
 header
 -------------------------------------------*/
 .header {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
+
   height: 80px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  &.triggered {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+  }
   
   &__inner {
-    
+    @extend .wrapper;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: none;
+
     @include mq(lg) {
-      display: flex;
-      align-items: center;
+      display: block;
     }
   }
 
@@ -25,33 +41,15 @@ header
   }
 
   &__li {
-    margin-right: 30px;
-    
-    &:last-child {
-      margin-right: 0;
+    line-height: 1;
+
+    @include mq(lg) {
+      @include link-hovers();
     }
   }
 
-  &__contact {
-    display: none;
-    @extend .font-sm;
-
-    @include mq(lg) {
-      width: 200px;
-      height: 80px;
-      line-height: 80px;
-      background-color: $cBlack;
-      color: $cWhite;
-      display: inline-block;
-      text-align: center;
-    }
-
-    &:hover {
-
-      @include mq(lg) {
-        background-color: $cBtnHover;
-      }
-    }
+  &__li + &__li {
+    margin-left: 30px;
   }
 }
 
@@ -59,14 +57,8 @@ header
 /*-------------------------------------------
 Mainvisual
 -------------------------------------------*/
-#mainvisual {
+.mainvisual {
   @extend .mb-lg;
-
-  & img {
-    width: 100%;
-    height: calc(100vh - 80px);
-    object-fit: cover;
-  }
 }
 
 
@@ -75,251 +67,225 @@ News
 -------------------------------------------*/
 .news {
   @extend .mb-lg;
+  position: relative;
 
-  &__ul {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    height: calc(100% + 120px);
+    width: 100%;
+    background: $cBgGray;
+    z-index: -1;
     
     @include mq(lg) {
-      display: flex;
-      justify-content: space-between;
+      height: 900px;
+      bottom: -60px;
     }
   }
 
-  &__li {
-    padding: 10px 0;
+  &__container {
+    @extend .wrapper;
+    z-index: 1;
+  }
+
+  &__inner {
     margin-bottom: 20px;
+  }
+}
+
+/*-------------------------------------------
+Concept
+-------------------------------------------*/
+.concept {
+  @extend .wrapper;
+  @extend .mb-lg;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    background: $cBgYellow;
+    padding: 40px 20px;
+    overflow: hidden;
 
     @include mq(lg) {
-      width: calc(100%/3);
-      border-right: 1px solid $cBlack;
-      padding: 10px 20px;
-    }
-    
-    &:first-child {
-      
-      @include mq(lg) {
-        padding-left: 0;
-      }
-    }
-    
-    &:last-child {
-      margin-bottom: 0;
-      
-      @include mq(lg) {
-        border-right: none;
-        padding-right: 0;
-      }
+      padding: 50px;
     }
   }
 
-  &__date {
-    margin-bottom: 16px;
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
 
-    span {
-      width: 50px;
-      height: 20px;
-      line-height: 20px;
-      background-color: $cBlack;
-      color: $cWhite;
-      display: inline-block;
-      @extend .font-sm;
-      margin-left: 10px;
+    @include mq(lg) {
+      width: 30%;
+    }
+
+    &.inview {
+      & .concept__heading-inner .en::before {
+        @include animation($name: scaleX, $duration: 0.3s, $delay: 1s);
+      }
+    }
+  
+    &-inner .en {
+      position: relative;
+
+      &::before {
+        display: none;
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 100px;
+        top: 50%;
+        left: -120px;
+        background: $cBlack;
+        transform: scaleX(0);
+        transform-origin: right;
+  
+        @include mq(lg) {
+          display: block;
+        }
+      }
+    }
+
+    &-inner .section-link {
       text-align: center;
     }
   }
+
+  &__lead {
+    margin: 0 auto;
+    writing-mode: vertical-rl;
+    vertical-align: top;
+    letter-spacing: 0.3em;
+    line-height: 3;
+    @extend .font-md;
+    @extend .mb-sm;
+    
+    @include mq(lg) {
+      font-size: 1rem;
+      letter-spacing: 0.5em;
+      line-height: 3.5;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}
+
+@keyframes scaleX {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+
+/*-------------------------------------------
+Flow
+-------------------------------------------*/
+.flow {
+  @extend .wrapper;
+  @extend .mb-lg;
+  
+  &__inner {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+  }
+}
+
+
+/*-------------------------------------------
+Works
+-------------------------------------------*/
+.works {
+  @extend .mb-lg;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -40px;
+    left: 0;
+    height: calc(100% + 80px);
+    width: 100%;
+    background: $cBgGray;
+    
+    @include mq(lg) {
+      height: calc(100% + 120px);
+      bottom: -60px;
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  &__header, &__footer {
+    @extend .wrapper;
+  }
+
+  & .section-title {
+    /* swiperによるpadding-topの差分 */
+    margin-bottom: calc(58px - 20px);
+  }
+  
+  &__inner {
+    @extend .wrapper;
+    width: 100%;
+
+    @include mq(lg) {
+      width: 90%;
+    }
+  }
 }
 
 /*-------------------------------------------
-About
+Inquiry
 -------------------------------------------*/
-.about {
+.inquiry {
   @extend .mb-lg;
 
-  @include mq(lg) {
-    display: flex;
+  &__header, &__footer {
+    @extend .wrapper;
   }
-
-  &__img {
-    margin-bottom: 30px;
   
-    @include mq(lg) {
-      width: 55%;
-      margin-bottom: 0;
-    }
-
-    img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-
-      @include mq(lg) {     
-        height: 400px;
-      }
-    }
-  }
-
-  &__text {
-    padding: 0 16px;
-  
-    @include mq(lg) {
-      width: 45%;
-      padding: 180px 5% 0 5%;
-    }
-  
-    p {
-      line-height: 2.2;
-    }
-  }
-}
-
-
-/*-------------------------------------------
-Business
--------------------------------------------*/
-.business {
-  @extend .mb-lg;
-
-  &__flex {
+  &__inner {
+    @extend .wrapper;
+    width: 100%;
 
     @include mq(lg) {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 10%;
+      width: 90%;
     }
   }
-  
-  &__left {
-    margin-bottom: 30px;
-  
-    @include mq(lg) {
-      width: 46%;
-      margin-top: 100px;
-    }
-  }
-  
-  &__right {
 
-    @include mq(lg) {
-      width: 46%;
-    }
+  &__link {
+    display: block;
   }
-  
-  &__item {
-    margin-bottom: 30px;
-  
-    @include mq(lg) {
-      margin-bottom: 50px;
-    }
-  
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  
-  &__title {
-    font-weight: bold;
-    margin: 0 0 10px 18px;
+
+  &__message {
     position: relative;
+    z-index: 2;
+    text-align: center;
+  }
   
-    &::before {
-      content: "";
-      width: 8px;
-      height: 1px;
-      background-color: $cBlack;
-      position: absolute;
-      top: 50%;
-      left: -18px;
-    }
-  }
-}
-
-
-/*-------------------------------------------
-Company
--------------------------------------------*/
-.company {
-
-  @include mq(lg) {
-    height: 750px;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
-  &__text {
-    background-color: $cWhite;
-    padding: 40px 20px;
-    margin-bottom: 20px;
-  
-    @include mq(lg) {
-      width: 55%;
-      padding: 100px 8% 100px 6%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-
-  &__img {
+  &__left, &__right {
+    @extend .font-lr;
+    color: $cWhite;
 
     @include mq(lg) {
-      width: 53%;
-      position: absolute;
-      top: 115px;
-      right: 0;
+      font-size: 2rem;
     }
-  
-    img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-    }
-  }  
-  
-  &__info {
-    margin-bottom: 0;
-  
-    @include mq(lg) {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-  }
-
-  & dt {
-    margin-top: 20px;
-
-    @include mq(lg) {
-      width: 20%;
-      margin-top: 10px;
-    }
-
-    &:first-of-type {
-
-      @include mq(lg) {
-        margin-top: 0;
-      }
-    }
-  }
-
-  & dd {
-    margin-top: 5px;
-    padding-left: 14px;
-
-    @include mq(lg) {
-      width: 80%;
-      margin-top: 10px;
-    }
-
-    &:first-of-type {
-
-      @include mq(lg) {
-        margin-top: 0;
-      }
-    }
-  }
-
-  &__add {
-    margin-left: 20%;
   }
 }
 
@@ -328,29 +294,83 @@ Company
 Footer
 -------------------------------------------*/
 .footer {
-  background-color: $cWhite;
-  padding-bottom: 20px;
-
-  &__flex {
+  background-color: $cBgGray;
+  
+  &__inner {
+    @extend .wrapper;
     padding: 40px 0;
+    position: relative;
+  }
+
+  & .top-link {
+    position: absolute;
+    transform: rotate(-90deg);
+    right: 0%;
+    top: 0%;
+    z-index: 2;
 
     @include mq(lg) {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      top: -10%;
+      @include link-hovers();
     }
   }
 
-  & .logo {
-    margin-right: 0;
-    margin-bottom: 10px;
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    @include mq(lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+  }
+
+  &__info {
+    & .info {
+      margin-top: 20px;
+      @extend .font-sm;
+    }
+  }
+
+  &__nav {
+    padding-top: 20px;
 
     @include mq(lg) {
-      margin: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    
+    @include mq(lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__li {
+    line-height: 1;
+
+    @include mq(lg) {
+      @include link-hovers();
+    }
+  }
+
+  &__li + &__li {
+    margin-top: 20px;
+
+    @include mq(lg) {
+      margin-top: 0;
+      margin-left: 30px;
     }
   }
 
   &__copyright {
-    @extend .pb-sm;
+    text-align: center;
+    padding-top: 40px;
   }
 }
